@@ -1,4 +1,3 @@
-available-course-formats
 introduction
 motivation
 target-audience
@@ -17,5 +16,5 @@ citation-examples
 fyi-boxes
 dropdown-summaries
 print-out-session-info
-references
 goal-recreate-and-extend-the-bash-tool-head-in-python
+references
