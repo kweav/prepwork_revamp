@@ -18,3 +18,4 @@ fyi-boxes
 dropdown-summaries
 print-out-session-info
 references
+goal-recreate-and-extend-the-bash-tool-head-in-python
