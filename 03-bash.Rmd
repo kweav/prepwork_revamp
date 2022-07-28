@@ -1,0 +1,16 @@
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+## Learning Objectives
+
+## What is bash/unix?
+
+## Common tools
+
+## stdout and stdin
+
+## piping
+
+## Which tool would you use?
+

@@ -1,0 +1,19 @@
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+## Learning Objectives
+
+## Resources
+
+* [Bash syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/unix.html)
+
+## What are some common Bash tools?
+
+which ones to show in prep work for bash
+
+cd ../
+ls
+head
+tail
+grep

@@ -1,0 +1,21 @@
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+## Introduction
+
+## Motivation
+
+## Target Audience
+
+## Curriculum
+
+## Goals
+
+* Understand why we use both Bash and Python in Computational Biology to analyze biological data
+* Understand the basic data types in Python
+* Open file streams
+* Use conditionals
+* Use a for-loop to iterate
+* Write print statements
+* Use pseudo-coding to identify problems/steps to a solution
