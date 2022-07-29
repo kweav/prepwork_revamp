@@ -2,7 +2,14 @@
 ottrpal::set_knitr_image_path()
 ```
 
+## Goal
+
+
 ## Learning Objectives
+
+After going through this module, students should be able to:
+
+*
 
 ## Resources
 
