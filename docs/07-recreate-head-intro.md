@@ -1,12 +1,29 @@
 
 
-## Goal -- recreate and extend the Bash tool `head` in Python
+# Applied Python Exercise Outline
 
-One of the strengths of Python that was previously mentioned is its versatility and how it can be used to extend and visualize the results of analyses performed with command line. Therefore, the overarching goal of these prepwork modules is to recreate and extend the functionality of a common Bash tool using Python. These modules will guide you through recreating `head`, adding some functionality outside of the tool's basic behavior.
+## Goal
+
+Outline recreating and extending the bash tool `head` in Python
+
+## Learning Objectives
+
+After going through this module, students should be able to:
+
+* Explain what the tool `head` does
+* List the different tasks that make up `head`'s main function
+* State what the assignment is following these modules
+
+## Intro
+
+One of the strengths of Python that was previously mentioned is its versatility and how it can be used to extend and visualize the results of analyses performed with the command line. Therefore, the overarching goal of these prepwork modules is to recreate and extend the functionality of a common bash tool using Python. These modules will guide you through recreating `head`, adding some functionality outside of the tool's basic behavior.
 
 As a reminder, `head` is used to display the first n number of lines in a file. If no number is specified, the tools defaults to displaying 10 lines.
 
+## Coding Blueprint
+
 In these modules, you will be guided through writing code that does each of the following to recreate `head`:
+
 1. displaying every line in an input file
 2. displaying just the first line in an input file
 3. displaying a specified number of lines from the beginning of an input file
@@ -14,7 +31,10 @@ In these modules, you will be guided through writing code that does each of the 
 5. displaying a default number of lines from the beginning of an input file if another number isn't specified as an additional input
 
 Then, you will be guided through writing code that extends the recreated `head` program such that additionally it can
+
 6. skip a file header before displaying the output
+
+## Final Assignment
 
 Finally, you will be asked to take your recreated `head` program and edit it such that it would `tail` an input file instead.
 

@@ -16,5 +16,10 @@ citation-examples
 fyi-boxes
 dropdown-summaries
 print-out-session-info
-goal-recreate-and-extend-the-bash-tool-head-in-python
+applied-python-exercise-outline
+goal
+learning-objectives-1
+intro
+coding-blueprint
+final-assignment
 references
