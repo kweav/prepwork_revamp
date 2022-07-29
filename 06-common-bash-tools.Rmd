@@ -8,7 +8,10 @@ ottrpal::set_knitr_image_path()
 
 * [Bash syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/unix.html)
 
-## What are some common Bash tools?
+## Navigation
+
+
+## Common tools
 
 which ones to show in prep work for bash
 
@@ -17,3 +20,9 @@ ls
 head
 tail
 grep
+
+## stdout and stdin
+
+## piping
+
+## Which tool would you use?
