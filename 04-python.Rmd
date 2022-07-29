@@ -4,7 +4,13 @@ ottrpal::set_knitr_image_path()
 
 # Python
 
+## Goal
+
+Get a basic familiarity with what kind of language Python is and why we're using it
+
 ## Learning Objectives
+
+After going through this module, students should be able to:
 
 * Be able to list the advantages and limitations of Python as a programming language
 * Explain why Python is a complement to bash
