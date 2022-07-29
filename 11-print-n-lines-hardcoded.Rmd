@@ -1,0 +1,26 @@
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+## Learning Objectives
+
+## python fundamentals and datatypes
+* for loop
+* variable
+* strings
+* booleans
+* integers
+
+## Goal -- recreate the Bash tool `head` in Python
+
+### Print a specific number of lines
+
+
+### Intended code
+```{python}
+filename = "/Users/kateweaver/TA_courses/prepwork_revamp/short_test.vcf"
+n_lines = 10
+for i, line in enumerate(open(filename)):
+  if i < n_lines:
+    print(line, end="")
+```

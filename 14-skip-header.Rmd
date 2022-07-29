@@ -1,0 +1,24 @@
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+## Learning Objectives
+
+## Goal -- recreate the Bash tool `head` in Python; adding some new functionality 
+
+### skip header
+
+### Intended Code
+```{python, eval = FALSE}
+import sys
+filename = sys.argv[1]
+if len(sys.argv) > 2:
+  n_lines = int(sys.argv[2])
+else:
+  n_lines = 10
+counter = 0
+for line in open(filename):
+  if counter < n_lines and not line.startswith("#"):
+    print(line, end="")
+    counter = counter + 1
+```

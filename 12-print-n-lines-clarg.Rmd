@@ -1,0 +1,28 @@
+```{r, include = FALSE}
+ottrpal::set_knitr_image_path()
+```
+
+## Learning Objectives
+
+## python fundamentals and datatypes
+* for loop
+* variable
+* strings
+* booleans
+* integers
+* lists
+* len() function
+
+## Goal -- recreate the Bash tool `head` in Python
+
+### print n lines command line arg
+
+### Intended Code
+```{python, eval = FALSE}
+import sys
+filename = sys.argv[1]
+n_lines = int(sys.argv[2])
+for i, line in enumerate(open(filename)):
+  if i < n_lines:
+    print(line, end="")
+```
