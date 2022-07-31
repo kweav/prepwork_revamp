@@ -40,4 +40,4 @@ Then, you will be guided through writing code that extends the recreated `head` 
 
 Finally, you will be asked to take your recreated `head` program and edit it such that it would `tail` an input file instead.
 
-Each of these 7 tasks will focus on using a specific python fundamental or data type like for loops, conditionals, integers, dictionaries or lists. Each guided section will help you to break the task into small manageable pieces, write pseudocode for these smaller tasks, and then build the code. For the final task, you will be asked to both pseudocode and code on your own.
+Each of these 7 tasks will focus on using a specific python fundamental or data type like for loops, conditionals, or lists. Each guided section will help you to break the task into small manageable pieces, write pseudocode for these smaller tasks, and then build the code. For the final task, you will be asked to both pseudocode and code on your own.
