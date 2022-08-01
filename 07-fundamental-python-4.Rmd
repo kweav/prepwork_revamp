@@ -31,14 +31,14 @@ Finally, sometimes in Python we'll use the `import` keyword to import packages t
 
 Often you will not need to import an entire library or module, but rather a specific function or variable. For example, if we wanted to have access to the `log` function which is in the `math` library, we could either
 
-```
+```{python, eval=False}
 import math
 a = math.log(5)
 ```
 
 But we could also just get the `log` function using the `from` keyword.
 
-```
+```{python, eval=False}
 from math import log
 a = log(5)
 ```
@@ -47,7 +47,7 @@ This is much easier to read and write. However this should be used with caution 
 
 We can also import multiple functions/variables in a single line.
 
-```
+```{python, eval=False}
 from math import log, exp, sin
 ```
 
@@ -55,7 +55,9 @@ from math import log, exp, sin
 
 Sometimes it is too bulky to type out the complete name of the module and function that you have imported each time you wish to use it. Instead, Python has the `as` keyword which allows us to given modules or even individual functions alternate names. One that we will use repeatedly in this class is
 
-```import matplotlib.pyplot as plt```
+```{python, eval=False}
+import matplotlib.pyplot as plt
+```
 
 Anytime we type `plt`, Python interprets this as `matplotlib.pyplot`. So if we want to call the `subplots` function from this module, we can simply type `plt.subplots()`.
 
