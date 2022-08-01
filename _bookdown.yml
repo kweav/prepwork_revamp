@@ -1,5 +1,5 @@
 book_filename: "QBB Prepwork"
-chapter_name: "Chapter"
+chapter_name: "Chapter "
 repo: https://github.com/kweav/prepwork_revamp/
 rmd_files: ["index.Rmd",
             "01-goals.Rmd",
@@ -26,5 +26,5 @@ bibliography: [book.bib]
 delete_merged_file: true
 language:
   ui:
-    chapter_name: "Chapter"
+    chapter_name: "Chapter "
 output_dir: "docs"
