@@ -30,7 +30,7 @@ You all are a cohort of graduate students. The best way to succeed, not just in 
 
 ## Assistance
 
-If at any time you encounter difficulty, please feel free to reach out to one of the TAs
+If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.
 
 * Kate Weaver kweave23@jhu.edu
 * Stephanie (Steph) Yan syan11@jhu.edu
