@@ -149,6 +149,7 @@ Or it may be more complex, like seeing if the day of the week starts with the le
 
 ```{python}
 counter = 0
+dow = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 for day_of_week in dow:
     if day_of_week.startswith("T") or day_of_week.startswith("S"):
         counter = counter + 1

@@ -64,10 +64,14 @@ testlist = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
 ```
 
 ```{python}
+testlist = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
 8 in testlist
 ```
 
 ```{python}
+dog_favorite_toys = {"Gibbs": "football",
+                     "Duke": "squirrel",
+                     "Barnaby": "frisbee"}
 "Gibbs" in dog_favorite_toys
 ```
 
@@ -76,6 +80,7 @@ testlist = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
 If you add `not` before `in`, you can test whether an item is not contained in some collection of items. While `7 in testlist` was False, because 7 was not in the collection of items in `testlist`, `7 not in testlist` should be True, because 7 is in fact not in the `testlist` collection.
 
 ```{python}
+testlist = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
 7 not in testlist
 ```
 
@@ -141,6 +146,9 @@ Data types and structures that are collections of items (e.g., a string which is
 
 ```{python}
 len("acgt")
+dog_favorite_toys = {"Gibbs": "football",
+                     "Duke": "squirrel",
+                     "Barnaby": "frisbee"}
 len(dog_favorite_toys)
 len([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
 ```
