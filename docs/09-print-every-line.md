@@ -22,10 +22,10 @@ After going through this module, students should be able to:
 
 Within this module, you will write code that displays every line in an input file. To complete this goal, consider the most basic tasks that would be required.
 
-First, we need to SET the input file
-Second, FOR every line in the open file
-  PRINT the line
-END FOR
+First, we need to SET the input file<br />
+Second, FOR every line in the open file<br />
+&nbsp;&nbsp;PRINT the line<br />
+END FOR<br />
 
 ### SET the input file
 

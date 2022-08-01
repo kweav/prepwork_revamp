@@ -27,22 +27,22 @@ Let's start with and edit the pseudocode from the last module to meet the needs 
 
 Last module's pseudocode:
 
-First, we need to SET the input file
-Second, FOR every line in the open file
-  PRINT the line
-END FOR
+First, we need to SET the input file <br />
+Second, FOR every line in the open file <br />
+&nbsp;&nbsp;  PRINT the line <br />
+END FOR <br />
 
 In this module, we want to only print the line if it's the first line of the file. Keeping the for loop, edit the pseudocode, inserting a step that asks which line position it is numerically in the file.
 
 ***
 <details><summary> ANSWER: </summary>
 
-First, we need to SET the input file
-Second, FOR every line in the open file
-  IF the first line
-    PRINT the line
-  END IF
-END FOR
+First, we need to SET the input file <br />
+Second, FOR every line in the open file <br />
+&nbsp;&nbsp;  IF the first line <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    PRINT the line <br />
+&nbsp;&nbsp;  END IF <br />
+END FOR <br />
 
 </details>
 ***

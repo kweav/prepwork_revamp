@@ -28,13 +28,13 @@ Let's again start with and edit the pseudocode from the last module to meet the 
 
 Last module's pseudocode:
 
-First, we need to SET the input file
-Next, we need to SET the desired number of displayed lines
-Then, FOR every line in the open file
-  IF a desired line (by its numerical position)
-    PRINT the line
-  END IF
-END FOR
+First, we need to SET the input file <br />
+Next, we need to SET the desired number of displayed lines <br />
+Then, FOR every line in the open file <br />
+&nbsp;&nbsp;  IF a desired line (by its numerical position) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    PRINT the line <br />
+&nbsp;&nbsp;  END IF <br />
+END FOR <br />
 
 Do we need to change this pseudocode at all or does it accurately reflect what we want to accomplish with our new script? 
 

@@ -32,36 +32,36 @@ Let's again start with and edit the pseudocode from the last module to meet the 
 
 Last module's pseudocode:
 
-First, we need to SET the input file
-Next, IF the user-specified a desired number of lines to display
-  THEN we need to SET the desired number of displayed lines
-END IF
-OTHERWISE 
-  THEN we need to SET the desired number of displayed lines to a default
-END OTHERWISE
-Then, FOR every line in the open file
-  IF a desired line (by its numerical position)
-    PRINT the line
-  END IF
-END FOR
+First, we need to SET the input file <br />
+Next, IF the user-specified a desired number of lines to display <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines <br />
+END IF <br />
+OTHERWISE <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines to a default <br />
+END OTHERWISE <br />
+Then, FOR every line in the open file <br />
+&nbsp;&nbsp;  IF a desired line (by its numerical position) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    PRINT the line <br />
+&nbsp;&nbsp;  END IF <br />
+END FOR <br />
 
 We do want to edit this past pseudocode, adding a condition that should be true before we print a line. Edit that line of the pseudocode, expanding it with logical expression language to reflect this change in the program behavior.
 
 ***
 <details><summary> ANSWER: </summary>
 
-First, we need to SET the input file
-Next, IF the user-specified a desired number of lines to display
-  THEN we need to SET the desired number of displayed lines
-END IF
-OTHERWISE 
-  THEN we need to SET the desired number of displayed lines to a default
-END OTHERWISE
-Then, FOR every line in the open file
-  IF a desired line (by its numerical position) AND NOT a header line (line doesn't start with a pound sign `#`)
-    PRINT the line
-  END IF
-END FOR
+First, we need to SET the input file <br />
+Next, IF the user-specified a desired number of lines to display <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines <br />
+END IF <br />
+OTHERWISE <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines to a default <br />
+END OTHERWISE <br />
+Then, FOR every line in the open file <br />
+&nbsp;&nbsp;  IF a desired line (by its numerical position) AND NOT a header line (line doesn't start with a pound sign `#`) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    PRINT the line <br />
+&nbsp;&nbsp;  END IF <br />
+END FOR <br />
 
 </details>
 ***
@@ -71,20 +71,20 @@ We also can no longer assume that the numerical position of the line within the 
 ***
 <details><summary> ANSWER: </summary>
 
-First, we need to SET the input file
-Next, IF the user-specified a desired number of lines to display
-  THEN we need to SET the desired number of displayed lines
-END IF
-OTHERWISE 
-  THEN we need to SET the desired number of displayed lines to a default
-END OTHERWISE
-SET counter of number of lines that have been displayed to 0
-Then, FOR every line in the open file
-  IF a desired line (counter hasn't reached desired number of lines) AND NOT a header line
-    PRINT the line
-    SET counter to ADD one
-  END IF
-END FOR
+First, we need to SET the input file <br />
+Next, IF the user-specified a desired number of lines to display <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines <br />
+END IF <br />
+OTHERWISE <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines to a default <br />
+END OTHERWISE <br />
+SET counter of number of lines that have been displayed to 0 <br />
+Then, FOR every line in the open file <br />
+&nbsp;&nbsp;  IF a desired line (counter hasn't reached desired number of lines) AND NOT a header line <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    PRINT the line <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    SET counter to ADD one <br />
+&nbsp;&nbsp;  END IF <br />
+END FOR <br />
 
 </details>
 ***
