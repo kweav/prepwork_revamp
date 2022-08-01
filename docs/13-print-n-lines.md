@@ -1,0 +1,175 @@
+
+
+# Applied Python Exercise 5
+
+## Goal -- print a default number of lines from the beginning of an input file if another number isn't specified as an additional input
+
+Write Python code that recreates the Bash tool `head`, displaying a default number of lines in an input file if a specific number of lines isn't specified.
+
+## Learning Objectives
+
+After going through this module, students should be able to:
+
+* State the sub-steps needed to meet the coding goal
+* Use the following datatypes, structures, and fundamentals to meet the coding goal:
+  * importing modules
+  * variable assignment
+  * list indexing
+  * list length
+  * integer conversion
+  * opening a file
+  * for loop
+  * logical expression
+  * conditional statement
+  * printing output
+  
+## Coding Blueprint
+
+Let's again start with and edit the pseudocode from the last module to meet the needs of this module.
+
+Last module's pseudocode:
+
+First, we need to SET the input file
+Next, we need to SET the desired number of displayed lines
+Then, FOR every line in the open file
+  IF a desired line (by its numerical position)
+    PRINT the line
+  END IF
+END FOR
+
+We do want to edit this past pseudocode, adding some clarity to how we're going to SET the desired number of displayed lines. Specifically, we're either setting the desired number as a user-specified input, or as a default number if no user-input is given. Edit that line of the pseudocode, expanding it with conditional expression language to reflect this change in the program behavior.
+
+ANSWER:
+
+First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+  THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE 
+  THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+Then, FOR every line in the open file
+  IF a desired line (by its numerical position)
+    PRINT the line
+  END IF
+END FOR
+
+## Building the code
+
+**Create a new Python script**
+
+### Usage statement and module importing
+
+We again want to import the `sys` module so that users specify the input file and can specify the desired number of lines (if they want). Within your new Python script, import the module. 
+
+We'll want to update our usage statement comment to reflect that only the filename is required. Adding brackets (`[`, `]`) around an argument description in the usage statement is the preferred way to say that the argument is not required as input. Within your Python script, update your previous usage statement from the fourth Python exercise module to show that the number of lines to display is no longer a required argument.
+
+ANSWER:
+
+```python
+#USAGE: python scriptname.py input_filename [number_lines_to_display]
+import sys
+```
+
+### SET the input filename
+
+Within your Python script, set the filename variable to be equal to the first command line argument like you did in fourth Python exercise module.
+
+ANSWER:
+
+```python
+filename = sys.argv[1]
+```
+
+### IF the user-specified a desired number of lines to display
+
+In the previous Python exercise module, we wanted the second command line argument to be the number of lines that would be displayed by the program. In this module, we want to see if the user provided a desired number of lines as a command line argument. To do this, let's consider what information we know and what variables/objects/functions are available to us.
+
+Command-line arguments are stored in the `sys.argv` object which we already said is a list. We've discussed previously that lists have a length associated with them where their length is equal to the number of elements in the list. Given that `sys.argv[0]` is always the name of the script, if no arguments are passed to a script when calling it from the command line, the length of the list would be 1. If only one argument is passed, then the length would be 2. And finally, if two arguments are passed, then the length would be 3. Consult your notes on the `len()` Python built-in function, and write code in your Python script that checks if the length of the `sys.argv` list suggests that the user specified a number of lines to display.
+
+ANSWER:
+
+```python
+if len(sys.argv) > 2:
+```
+
+### THEN SET the desired number of lines
+
+If the user did specify the number of desired lines, we want define the variable for the desired number of lines to equal this value. Within your Python script and indented under the conditional you've just written, follow the method we used in the fourth Python exercise module to define this variable.
+
+ANSWER:
+
+```python
+  n_lines = int(sys.argv[2])
+```
+
+### OTHERWISE 
+
+If the user didn't provide a specified number of lines, then we want alternate behavior in how we define the desired number of lines variable. Consult the notes on conditionals to see how to specify what structure should be used to specify behavior for when the `if` conditional evaluates to False. Within your Python script, aligned with the `if`, add the appropriate conditional statement.
+
+ANSWER:
+
+```python
+else:
+```
+
+### THEN SET the desired number of lines to a default
+
+In the third Python exercise module, we previously hardcoded the number of lines we wanted to display. Within your Python script, indented under the `else` statement, write code that defines the default number of lines as 10.
+
+ANSWER:
+
+```python
+  n_lines = 10
+```
+
+Now that we've managed to set the input file and the desired number of lines to values that are specified by the user or a default value, we can reuse the rest of the code for the next three steps that we used in the previous two Python exercise modules. 
+
+### FOR every line in the open file
+
+To loop through every line in the open file, use the `for` statement structure from the second, third, and fourth Python exercise modules. Write this line of code within your Python script.
+
+ANSWER:
+
+```python
+for i, line in enumerate(open(filename)):
+```
+
+### IF a desired line (by its numerial position)
+
+To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third and fourth Python exercise modules. Write this line of code within your Python script, indenting correctly under the `for` loop statement.
+
+ANSWER:
+
+```python
+  if i < n_lines:
+```
+
+### PRINT the line
+
+Finally, reuse the code from the first four Python exercise modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
+
+ANSWER:
+
+```python
+    print(line.strip('\r\n'))
+```
+
+Within your Python script, you should have the ten lines of code together which makes our complete intended goal code -- code that recreates the Bash tool `head` -- a program that prints a user specified number of lines from the beginning a user-specified input file, unless no specific number of lines is specified, then it prints a default of 10 lines.
+
+**Use the command line to run the Python script and look at the output**
+  
+## Complete Intended Goal Code
+
+```python
+#USAGE: python scriptname.py input_filename [number_lines_to_display]
+import sys #import module
+filename = sys.argv[1] #SET input filename
+if len(sys.argv) > 2: #IF user-specified number of lines provided
+  n_lines = int(sys.argv[2]) #SET the desired number of lines
+else: #OTHERWISE
+  n_lines = 10 #SET the desired number of lines to a default
+for i, line in enumerate(open(filename)): #FOR every line in the open file
+  if i < n_lines: #IF a desired line by its numerical position
+    print(line.strip('\r\n')) #PRINT the line
+```

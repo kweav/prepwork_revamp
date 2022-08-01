@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter1 Introduction | QBB Prepwork</title>
+  <title>Chapter2 Logistics | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta property="og:title" content="Chapter2 Logistics | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter2 Logistics | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="logistics.html"/>
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="bash.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -410,38 +410,34 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter1</span> Introduction</h1>
-<div id="learning-objectives" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
-<p>This set of prepwork modules is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you’ve completed the prepwork, you should be able to</p>
-<ul>
-<li>Navigate around a file system using the command line</li>
-<li>Understand why we use both bash and Python in Computational Biology to analyze biological data</li>
-<li>Understand the basic data types in Python</li>
-<li>Open file streams</li>
-<li>Use conditionals</li>
-<li>Use a for-loop to iterate</li>
-<li>Write print statements</li>
-<li>Use pseudo-coding to identify problems/steps to a solution</li>
-</ul>
+<div id="logistics" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter2</span> Logistics</h1>
+<div id="goal" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Goal</h2>
+<p>Be able to run Python scripts from whatever machine you are working on, including accessing local files</p>
 </div>
-<div id="motivation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Motivation</h2>
-<p>We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.</p>
-<p>For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.</p>
-<p>For the people already confortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.</p>
-<p>You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure in your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.</p>
+<div id="macs" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Macs</h2>
+<p>If you are using a Mac to complete the prepwork, you should be in good shape. Python should be already installed on your computer. You will also need a plain text editor such as TextEdit, TextMate, Sublime, etc. (NOT a wordprocessor like Word, Pages, etc.). Finally, you will need to open iTerm or another comparable terminal program. This will bring up a command line terminal. You can verify that Python is installed by running the command <code>which python</code> on the command line. If the result is a filepath ending with some version of ‘python’, you are all set.</p>
+<p>If for some reason Python is not installed or you would prefer to work online, jump to the <a href="#Online-Python">Online Python</a> section.</p>
 </div>
-<div id="assistance" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assistance</h2>
-<p>If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.</p>
-<ul>
-<li>Kate Weaver <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a></li>
-<li>Stephanie (Steph) Yan <a href="mailto:syan11@jhu.edu" class="email">syan11@jhu.edu</a></li>
-<li>Dylan Taylor <a href="mailto:dtaylo95@jhu.edu" class="email">dtaylo95@jhu.edu</a></li>
-<li>Andrew Bortvin <a href="mailto:abortvi2@jhu.edu" class="email">abortvi2@jhu.edu</a></li>
-</ul>
+<div id="windows" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Windows</h2>
+<p>Unfortunately, Python does not come pre-installed on the Windows OS. You have a couple of options. First, you can install it by downloading the installer from <a href="https://www.python.org/downloads/windows/">here</a>. Select whatever Python3 version you want (I would go with 3.10). Then follow the instructions when you run the downloaded installer. Finally, verify that Python was successfully installed by opening <code>Command Prompt</code> and running the command <code>python -V</code>. This should tell you what version of Python is installed on your system. In addition to Python and Command Prompt, you will also need a plain text editor like Notepad, Sublime, etc.</p>
+<p>If you would prefer not to install Python, jump to the <a href="#Online-Python">Online Python</a> section.</p>
+</div>
+<div id="unix" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Unix</h2>
+<p>If you are on a Unix system, Python should be pre-installed. If not, chances are that you are comfortable installing it yourself using <code>apt-get</code>, <code>dnf</code>, or whatever the appropriate package manager is for your distro. You will also need a terminal and plain text editor.</p>
+<p>If for some reason Python is not installed or you would prefer to work online, jump to the <a href="#Online-Python">Online Python</a> section.</p>
+</div>
+<div id="online-python" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Online Python</h2>
+<p>During your first year in the CMDB program, you will be provided with a laptop with everything you will need preloaded on it. However, for the prepwork you can make use of a Python interpreter available online <a href="https://www.online-python.com">here</a>. The online interface includes both a text editing interface to write your scripts in and save them using the “disk” icon about the editor. Below the editor is a “Run” button that executes your code, printing any output in the window below the editor. You can also load external files to make them accessible to your script with the “folder” icon about the editor. Finally, there is a text field that you can use to pass arguments to your script.</p>
+</div>
+<div id="submitting-your-final-script" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Submitting your final script</h2>
+<p>Once you have completed the last module, you will need to submit the script you have produced (the tail script). To do this, please name it LASTNAME_tail.py and email it to Kate Weaver at <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a>.</p>
 
 </div>
 </div>
@@ -458,8 +454,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bash.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

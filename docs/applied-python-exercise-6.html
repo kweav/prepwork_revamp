@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter1 Introduction | QBB Prepwork</title>
+  <title>Chapter17 Applied Python Exercise 6 | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta property="og:title" content="Chapter17 Applied Python Exercise 6 | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter17 Applied Python Exercise 6 | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="logistics.html"/>
+<link rel="prev" href="applied-python-exercise-5.html"/>
+<link rel="next" href="applied-python-exercise-7.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -410,38 +410,273 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter1</span> Introduction</h1>
-<div id="learning-objectives" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
-<p>This set of prepwork modules is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you’ve completed the prepwork, you should be able to</p>
+<div id="applied-python-exercise-6" class="section level1" number="17">
+<h1><span class="header-section-number">Chapter17</span> Applied Python Exercise 6</h1>
+<div id="goal-recreate-the-bash-tool-head-in-python-adding-some-new-functionality-that-skips-header-lines" class="section level2" number="17.1">
+<h2><span class="header-section-number">17.1</span> Goal – recreate the Bash tool <code>head</code> in Python; adding some new functionality that skips header lines</h2>
+<p>Write Python code that recreates the Bash tool <code>head</code>, displaying a default number of lines in an input file if a specific number of lines isn’t specified; but extend the tool so that it skips header lines (specifically, for this example, lines that start with a pound sign (<code>#</code>)).</p>
+</div>
+<div id="learning-objectives-15" class="section level2" number="17.2">
+<h2><span class="header-section-number">17.2</span> Learning Objectives</h2>
+<p>After going through this module, students should be able to:</p>
 <ul>
-<li>Navigate around a file system using the command line</li>
-<li>Understand why we use both bash and Python in Computational Biology to analyze biological data</li>
-<li>Understand the basic data types in Python</li>
-<li>Open file streams</li>
-<li>Use conditionals</li>
-<li>Use a for-loop to iterate</li>
-<li>Write print statements</li>
-<li>Use pseudo-coding to identify problems/steps to a solution</li>
+<li>State the sub-steps needed to meet the coding goal</li>
+<li>Use the following datatypes, structures, and fundamentals to meet the coding goal:
+<ul>
+<li>importing modules</li>
+<li>variable assignment</li>
+<li>list indexing</li>
+<li>list length</li>
+<li>integer conversion</li>
+<li>opening a file</li>
+<li>initializing a counter variable before a for loop</li>
+<li>updating a counter variablbe within a the body of a for loop</li>
+<li>for loop</li>
+<li>chaining logical expressions</li>
+<li>looking at the character a line starts with</li>
+<li>conditional statement</li>
+<li>printing output</li>
+</ul></li>
 </ul>
 </div>
-<div id="motivation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Motivation</h2>
-<p>We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.</p>
-<p>For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.</p>
-<p>For the people already confortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.</p>
-<p>You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure in your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.</p>
+<div id="coding-blueprint-6" class="section level2" number="17.3">
+<h2><span class="header-section-number">17.3</span> Coding Blueprint</h2>
+<p>Let’s again start with and edit the pseudocode from the last module to meet the needs of this module.</p>
+<p>Last module’s pseudocode:</p>
+<p>First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE
+THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+Then, FOR every line in the open file
+IF a desired line (by its numerical position)
+PRINT the line
+END IF
+END FOR</p>
+<p>We do want to edit this past pseudocode, adding a condition that should be true before we print a line. Edit that line of the pseudocode, expanding it with logical expression language to reflect this change in the program behavior.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<p>First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE
+THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+Then, FOR every line in the open file
+IF a desired line (by its numerical position) AND NOT a header line (line doesn’t start with a pound sign <code>#</code>)
+PRINT the line
+END IF
+END FOR</p>
+</details>
+<hr />
+<p>We also can no longer assume that the numerical position of the line within the file corresponds to the number of lines that have been printed since we’re filtering out the header. Therefore, we need to track the number of lines that have been printed. Add two lines to the pseudocode that will help you do this, and further edit the conditional that we check before printing a line. As a hint for those, this is the first time we’ll be using the third optional component of a <code>for</code> loop: initializing a variable before the <code>for</code> loop (and then subsequently) updating it within the body of the loop.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<p>First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE
+THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+SET counter of number of lines that have been displayed to 0
+Then, FOR every line in the open file
+IF a desired line (counter hasn’t reached desired number of lines) AND NOT a header line
+PRINT the line
+SET counter to ADD one
+END IF
+END FOR</p>
+</details>
+<hr />
 </div>
-<div id="assistance" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assistance</h2>
-<p>If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.</p>
-<ul>
-<li>Kate Weaver <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a></li>
-<li>Stephanie (Steph) Yan <a href="mailto:syan11@jhu.edu" class="email">syan11@jhu.edu</a></li>
-<li>Dylan Taylor <a href="mailto:dtaylo95@jhu.edu" class="email">dtaylo95@jhu.edu</a></li>
-<li>Andrew Bortvin <a href="mailto:abortvi2@jhu.edu" class="email">abortvi2@jhu.edu</a></li>
-</ul>
+<div id="building-the-code-5" class="section level2" number="17.4">
+<h2><span class="header-section-number">17.4</span> Building the code</h2>
+<p><strong>Create a new Python script</strong></p>
+<div id="usage-statement-and-module-importing-1" class="section level3" number="17.4.1">
+<h3><span class="header-section-number">17.4.1</span> Usage statement and module importing</h3>
+<p>The usage statement and module importing from the previous Python exercise module are still accurate for this module, so go ahead and reuse the usage and import statements from the fifth python exercise module within your new Python script.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb110"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb110-1"><a href="applied-python-exercise-6.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="co">#USAGE: python scriptname.py input_filename [number_lines_to_display]</span></span>
+<span id="cb110-2"><a href="applied-python-exercise-6.html#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="set-the-input-filename-2" class="section level3" number="17.4.2">
+<h3><span class="header-section-number">17.4.2</span> SET the input filename</h3>
+<p>Within your Python script, set the filename variable to be equal to the first command line argument like you did in fourth and fifth Python exercise modules.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="applied-python-exercise-6.html#cb111-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="if-the-user-specified-a-desired-number-of-lines-to-display-1" class="section level3" number="17.4.3">
+<h3><span class="header-section-number">17.4.3</span> IF the user-specified a desired number of lines to display</h3>
+<p>Within your Python script, set up the conditional statement structure like you did in the fifth Python exercise module to check if the user has provided a desired number of lines to display.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="applied-python-exercise-6.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(sys.argv) <span class="op">&gt;</span> <span class="dv">2</span>:</span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="then-set-the-desired-number-of-lines-1" class="section level3" number="17.4.4">
+<h3><span class="header-section-number">17.4.4</span> THEN SET the desired number of lines</h3>
+<p>Within your Python script, use the variable assignment statement from the fourth and fifth Python exercise modules to define the desired number of lines as specified by the user, indenting under the conditional statement.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb113"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb113-1"><a href="applied-python-exercise-6.html#cb113-1" aria-hidden="true" tabindex="-1"></a>  n_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>])</span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="otherwise-1" class="section level3" number="17.4.5">
+<h3><span class="header-section-number">17.4.5</span> OTHERWISE</h3>
+<p>Use the alternate conditional statement structure from the fifth Python exercise module to start defining the alternate behavior in how we define the desired number of lines variable if the user didn’t specify a specific value. Put this statement in your Python script.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="applied-python-exercise-6.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="then-set-the-desired-number-of-lines-to-a-default-1" class="section level3" number="17.4.6">
+<h3><span class="header-section-number">17.4.6</span> THEN SET the desired number of lines to a default</h3>
+<p>Use the alternate variable assignment statement from the fifth Python exercise module to define the desired number of lines varialbe if the user didn’t specify a specific value. Put this statement in your Python script, indented correctly.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="applied-python-exercise-6.html#cb115-1" aria-hidden="true" tabindex="-1"></a>  n_lines <span class="op">=</span> <span class="dv">10</span></span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="set-counter-of-number-of-lines-that-have-been-displayed-to-0" class="section level3" number="17.4.7">
+<h3><span class="header-section-number">17.4.7</span> SET counter of number of lines that have been displayed to 0</h3>
+<p>Because we no longer assume that the numerical position of the line within the file corresponds to the number of lines that are printed since we’re filtering out the header lines, we need to define a counter variable we can use to track the number of lines that we print. When first initializing this variable, we haven’t printed any lines. Therefore, you want to set the counter variable equal to the value of zero. Do this within your Python script.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="applied-python-exercise-6.html#cb116-1" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="for-every-line-in-the-open-file-7" class="section level3" number="17.4.8">
+<h3><span class="header-section-number">17.4.8</span> FOR every line in the open file</h3>
+<p>Next, we no longer need to track the position of the line in the f ile, only wanting to work with each line line-by-line in the open file. Therefore, we can go back to the <code>for</code> loop statement that we used in the first Python exercise module. Add the appropriate <code>for</code> loop statement to your Python script.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="applied-python-exercise-6.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(filename):</span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="if-a-desired-line-because-counter-hasnt-reached-the-desired-number-of-lines-and-not-a-header-line" class="section level3" number="17.4.9">
+<h3><span class="header-section-number">17.4.9</span> IF a desired line (because counter hasn’t reached the desired number of lines) and NOT a header line</h3>
+<p>Let’s break this task down into two separate conditions and then chain the conditions together into one conditional expression.</p>
+<p>First, we want to check if the value of the counter is less than the number of desired lines. Write an expression that will evaluate to a boolean variable answering whether an integer is less than another integer using the appropriate variable names.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="applied-python-exercise-6.html#cb118-1" aria-hidden="true" tabindex="-1"></a>counter <span class="op">&lt;</span> n_lines</span></code></pre></div>
+</details>
+<hr />
+<p>Next, we want to verify that the specific line we’re working with is not a header line. Specifically, does the line not start with a pound sign (<code>"#"</code>)? Consult the Python notes on negating a boolean expression and checking if a string variable starts with a specific character. Then write an expression that will evaluate to a boolean variable answering whether the line does not start with the pound sign (<code>"#"</code>). Make sure to use the appropriate variable name in the expression.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="applied-python-exercise-6.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="kw">not</span> line.startswith(<span class="st">&quot;#&quot;</span>)</span></code></pre></div>
+</details>
+<hr />
+<p>Now, chain the expressions together within your Python script to form a chained conditional expression, within the body of the <code>for</code> loop, indented correctly under your <code>for</code> loop statement. Recall that you want both booleans to be True for the conditional’s body (printing the line) to be executed.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="applied-python-exercise-6.html#cb120-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> counter <span class="op">&lt;</span> n_lines <span class="kw">and</span> <span class="kw">not</span> line.startswith(<span class="st">&quot;#&quot;</span>):</span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="print-the-line-6" class="section level3" number="17.4.10">
+<h3><span class="header-section-number">17.4.10</span> PRINT the line</h3>
+<p>Finally, reuse the code from the first five Python exercise modules to print the line, adding this <code>print()</code> statement indented correctly under the conditional within your Python script.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="applied-python-exercise-6.html#cb121-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="set-counter-to-add-one" class="section level3" number="17.4.11">
+<h3><span class="header-section-number">17.4.11</span> SET counter to ADD one</h3>
+<p>If we were to end writing the program now, our script would print every line in the file that wasn’t a header line. Therefore, we have to update the counter every time we print a line so we have an accurate count of the number of lines we’ve printed. Write a variable assignment statement within your Python script that updates the value of the counter variable, adding one to it. Make sure it is appropriately indented in line with the print statement under the conditional statement.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="applied-python-exercise-6.html#cb122-1" aria-hidden="true" tabindex="-1"></a>    counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
+</details>
+<hr />
+<p>Within your Python script, you should now have the twelve lines of code together which makes our complete intended goal code – code that prints a user specified number of lines from the beginning of a user specified input file, skipping header lines that begin with a pound sign (<code>#</code>).</p>
+<p><strong>Use the command line to run the Python script and look at the output</strong></p>
+</div>
+</div>
+<div id="complete-intended-goal-code-5" class="section level2" number="17.5">
+<h2><span class="header-section-number">17.5</span> Complete Intended Goal Code</h2>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="applied-python-exercise-6.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="co">#USAGE: #USAGE: python scriptname.py input_filename [number_lines_to_display]</span></span>
+<span id="cb123-2"><a href="applied-python-exercise-6.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys <span class="co">#import module</span></span>
+<span id="cb123-3"><a href="applied-python-exercise-6.html#cb123-3" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> sys.argv[<span class="dv">1</span>] <span class="co">#SET the input filename</span></span>
+<span id="cb123-4"><a href="applied-python-exercise-6.html#cb123-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">len</span>(sys.argv) <span class="op">&gt;</span> <span class="dv">2</span>: <span class="co">#IF user-specified number of lines provided</span></span>
+<span id="cb123-5"><a href="applied-python-exercise-6.html#cb123-5" aria-hidden="true" tabindex="-1"></a>  n_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>]) <span class="co">#SET the desired number of lines</span></span>
+<span id="cb123-6"><a href="applied-python-exercise-6.html#cb123-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: <span class="co">#OTHERWISE</span></span>
+<span id="cb123-7"><a href="applied-python-exercise-6.html#cb123-7" aria-hidden="true" tabindex="-1"></a>  n_lines <span class="op">=</span> <span class="dv">10</span> <span class="co">#SET the desired number of lines to a default</span></span>
+<span id="cb123-8"><a href="applied-python-exercise-6.html#cb123-8" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span> <span class="co">#SET counter of number of lines that have been displayed ot 0</span></span>
+<span id="cb123-9"><a href="applied-python-exercise-6.html#cb123-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(filename): <span class="co">#FOR every line in the open file</span></span>
+<span id="cb123-10"><a href="applied-python-exercise-6.html#cb123-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> counter <span class="op">&lt;</span> n_lines <span class="kw">and</span> <span class="kw">not</span> line.startswith(<span class="st">&quot;#&quot;</span>): <span class="co">#IF the counter hasn&#39;t reached the max number of desired lines AND NOT a header line</span></span>
+<span id="cb123-11"><a href="applied-python-exercise-6.html#cb123-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span>
+<span id="cb123-12"><a href="applied-python-exercise-6.html#cb123-12" aria-hidden="true" tabindex="-1"></a>    counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span> <span class="co">#SET counter to add one</span></span></code></pre></div>
+</details>
+<hr />
 
 </div>
 </div>
@@ -458,8 +693,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="applied-python-exercise-5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applied-python-exercise-7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,6 +1,6 @@
 ---
 title: "QBB Prepwork"
-date: "July, 2022"
+date: "August, 2022"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
@@ -15,5 +15,5 @@ output:
 
 # About this Course {-}
 
-- The material for this course can be viewed without login requirement on this [Bookdown website](https://kweav.github.io/prepwork_revamp/). This format might be most appropriate for you if you rely on screen-reader technology.
-- This course is open source, you can find the [source material for this course on GitHub](https://github.com/kweav/prepwork_revamp).
+- The material for this course can be viewed without login requirement on this [Bookdown website](LINK HERE). This format might be most appropriate for you if you rely on screen-reader technology.
+- This course is open source, you can find the [source material for this course on GitHub](LINK HERE).

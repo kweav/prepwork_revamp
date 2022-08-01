@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter1 Introduction | QBB Prepwork</title>
+  <title>Chapter9 Fundamentals of Python - Iteration, Indexing, and for Loops | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta property="og:title" content="Chapter9 Fundamentals of Python - Iteration, Indexing, and for Loops | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter9 Fundamentals of Python - Iteration, Indexing, and for Loops | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="logistics.html"/>
+<link rel="prev" href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html"/>
+<link rel="next" href="fundamentals-of-python---importing-and-commenting.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -410,39 +410,163 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter1</span> Introduction</h1>
-<div id="learning-objectives" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
-<p>This set of prepwork modules is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you’ve completed the prepwork, you should be able to</p>
+<div id="fundamentals-of-python---iteration-indexing-and-for-loops" class="section level1" number="9">
+<h1><span class="header-section-number">Chapter9</span> Fundamentals of Python - Iteration, Indexing, and for Loops</h1>
+<div id="goal-7" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Goal</h2>
+<p>Understanding how to access data in Python data structures through indexing and <code>for</code> loops</p>
+</div>
+<div id="learning-objectives-7" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Learning objectives</h2>
+<p>After going through this module, students should be able to:</p>
 <ul>
-<li>Navigate around a file system using the command line</li>
-<li>Understand why we use both bash and Python in Computational Biology to analyze biological data</li>
-<li>Understand the basic data types in Python</li>
-<li>Open file streams</li>
-<li>Use conditionals</li>
-<li>Use a for-loop to iterate</li>
-<li>Write print statements</li>
-<li>Use pseudo-coding to identify problems/steps to a solution</li>
+<li>Define iteration</li>
+<li>Define and use indexing</li>
+<li>List ‘iterable’ data types</li>
+<li>Use a <code>for</code> loop</li>
 </ul>
 </div>
-<div id="motivation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Motivation</h2>
-<p>We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.</p>
-<p>For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.</p>
-<p>For the people already confortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.</p>
-<p>You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure in your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.</p>
-</div>
-<div id="assistance" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assistance</h2>
-<p>If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.</p>
+<div id="iterating" class="section level2" number="9.3">
+<h2><span class="header-section-number">9.3</span> Iterating</h2>
+<p>What is iterating and why do we want it? Iterating is going through a collection of items item-by-item. You likely want to use iterating if you want to apply the same set of operations on each item, or scan through the collection of items and catalog some information about the collection. We’ll see an example of use a <code>for</code> loop structure to iterate through lists in a few sections.</p>
+<div id="iterable-data-types" class="section level4" number="9.3.0.1">
+<h4><span class="header-section-number">9.3.0.1</span> Iterable data types</h4>
+<p>Iterable data types are those which are a collection of items that can be iterated through item-by-item:</p>
 <ul>
-<li>Kate Weaver <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a></li>
-<li>Stephanie (Steph) Yan <a href="mailto:syan11@jhu.edu" class="email">syan11@jhu.edu</a></li>
-<li>Dylan Taylor <a href="mailto:dtaylo95@jhu.edu" class="email">dtaylo95@jhu.edu</a></li>
-<li>Andrew Bortvin <a href="mailto:abortvi2@jhu.edu" class="email">abortvi2@jhu.edu</a></li>
+<li>Strings</li>
+<li>List</li>
+<li>Sets</li>
+<li>Dictionaries</li>
+</ul>
+</div>
+</div>
+<div id="indexing" class="section level2" number="9.4">
+<h2><span class="header-section-number">9.4</span> Indexing</h2>
+<p>What is indexing? Indexing is a way to refer to individual elements in an ordered, iterable object (like lists or strings) by their position or location within the ordered, iterable object. An index or these positions/indices are specifically integer data types. Floats, strings, and other such data types cannot be used to index.</p>
+<p>The indexing “operator” in python is brackets, <code>[]</code>. So like the arithmetic, comparison, and logic operators discussed earlier, the indexing operator is a special symbol(s) with a pre-determined set of behaviors associated with it. The brackets directly follow the name of whatever ordered, iterable object you wish to index, and the index position(s) you wish to extract or change are included in between the brackets. If you try to use an indexing operator to index an unordered object like a set, you will see the following error: <code>TypeError: 'set' object is not subscriptable</code>.</p>
+<p>In Python, indexing starts from 0. So for a list of days of the week <code>dow = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]</code>, even though Sunday is the first day of the week, and the first element in the list, its position or index is 0. And Saturday, the last or 7th day of the week has an index or position of 6. If you try to index this list with a position of 1 (e.g., <code>dow[1]</code>), that position refers to Monday. And if you try to index this list with a position of 7 (e.g., <code>dow[7]</code>), you’ll see the following error that says there is no index of 7 in the data structure or list <code>dow</code>: <code>IndexError: list index out of range</code>. If you want to extract an element from a list and store it in a variable, then you’d use the following pattern like we saw earlier with variable assignment: <code>last_day_of_week = dow[-1]</code>. Note that the list name, indexing operator, and index position are on the right side of the equals sign. Note that the <code>dow</code> list is unchanged compared to its original identity.</p>
+<p>Recall that lists are mutable which means that in addition to using indexing to extract information from the list, grabbing a list element that is in a specific position, you can also use indexing to change the list and overwrite information within the list, modifying a list element that is in a specific position. Becasue of this, if you want to modify a specific list position, where would the list name, indexing operator, and index position be in relation to the equals sign in a variable assignment expression? For example, let’s say that you decide to outlaw Mondays and replace them with a second Thursday, the data that you want to store in the variable is <code>"Thursday"</code> and the variable that you want to store it in is <code>dow</code> but specifically <code>dow</code> at position 1, so <code>dow[1]</code>. Then your variable assignment statement would be <code>dow[1] = "Thursday"</code> and the <code>dow</code> list is changed compared to its original identity: <code>['Sunday', 'Thursday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']</code></p>
+<div id="slicing" class="section level3" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Slicing</h3>
+<p>What is slicing? Slicing is a fancy way of indexing to extract a subset of elements from an interable object using a range of the positions within the ordered,iterable object.</p>
+<p>The starting index is inclusive and the ending index is exclusive. That means that every position corresponding to a number in between the starting index and the ending index will be included and the starting index position is included, but the ending index position is not included. This also means that you can tell how many positions you are requesting by subtracting the starting index from the ending index.</p>
+<p>Here’s a really cool <a href="https://towardsdatascience.com/the-basics-of-indexing-and-slicing-python-lists-2d12c90a94cf">suggested resource about slicing</a> with examples and visuals.
+* Terms within this resource that you are not expected to understand include “list comprehension” and “numpy Arrays” and “pandas DataFrames”.
+* Another term within this resource, <code>for</code> loops, will be explained in the next section of this module.</p>
+</div>
+</div>
+<div id="for-loops" class="section level2" number="9.5">
+<h2><span class="header-section-number">9.5</span> <code>for</code> loops</h2>
+<p><code>for</code> loops are a very commonly used tool for iterating in Python and are often necessary when processing file inputs.</p>
+<p>A <code>for</code> loop has several components.
+1. The <code>for</code> statement
+2. The body of the <code>for</code> loop
+3. Any variable initialization before the <code>for</code> statement</p>
+<p>The first two of these three components are part of every <code>for</code> loop. The last component is only sometimes required. We’ll begin by discussing the <code>for</code> statement and the body of the <code>for loop</code> and then will provide examples of loops that have variable initialization before the statement and those that do not.</p>
+<div id="the-for-statement" class="section level3" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> The <code>for</code> statement</h3>
+<p>The <code>for</code> statement has 5 parts to it, in order:
+1. the word <code>for</code>
+2. the variable name for whatever is being extracted within each iteration or step of the <code>for</code> loop
+3. the word <code>in</code>
+4. the iterable variable name for the variable from which something is being extracted within each iteration or step of the <code>for</code> loop
+5. A colon, <code>:</code></p>
+<p>There 3 common <code>for</code> statement patterns in python. Try to connect the 5 parts of the <code>for</code> statement to these patterns.</p>
+<ol style="list-style-type: decimal">
+<li><code>for value_from_iterable_variable in some_iterable_variable:</code></li>
+</ol>
+<p>This statement uses the above pattern (its setup broken down below) in order to work with the items contained in a collection of items item-by-item.
+1. the word <code>for</code>
+2. then names the variable that each item from the <code>some_iterable_variable</code> will be stored in: <code>value_from_iterable_variable</code>
+3. the <code>in</code> membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the <code>some_iterable_variable</code>
+4. the name of the variable for the collection over which we want to iterate and extract its items item-by-item: <code>some_iterable_variable</code>
+5. A colon, <code>:</code></p>
+<ol start="2" style="list-style-type: decimal">
+<li><code>for index in range(len(some_iterable_variable_name)):</code> or <code>for index in range(some_integer):</code></li>
+</ol>
+<p>The <code>range()</code> function is a built-in Python function that is used to return a list of numbers from 0 up to, but not including some integer number. You would use this above statement pattern (its setup broken down below) in order to work with the ordered position numbers rather than the items themselves that are stored in a collection of items. With indexing, you could still access the items item-by-item, but the variable name for whatever is being extracted is storing integers, the index positions, not the items.
+1. the word <code>for</code>
+2. then names the variable that each item from the <code>range()</code> function will be stored in: <code>index</code>
+3. the <code>in</code> membership operator to specify that we want items contained in the list the <code>range()</code> function returns
+4. the <code>range()</code> function that returns a list of numbers either specified by the <code>len()</code> function and the length of <code>some_iterable_variable_name</code> or just some integer value (<code>some_integer</code>)
+5. A colon, <code>:</code></p>
+<ol start="3" style="list-style-type: decimal">
+<li><code>for index, value_from_iterable_variable in enumerate(some_iterable_variable_name):</code></li>
+</ol>
+<p>This third statement is a combination of the first two statements where for each iteration or step in the <code>for</code> loop, you have access to both the value and the index of the value from the iterable variable at the same time. This is achieved because the pattern uses a special base python function <code>enumerate()</code>. You can <a href="https://docs.python.org/3/library/functions.html#enumerate">read more about this function from the online python manual</a>, but suffice it to say that the function takes in an iterable object like a list or a string. Then rather than just returning the elements of the iterable object, it also returns the corresponding indices enumerated or counted out for each of the elements in the iterable object.</p>
+<p>For example, if we have a list <code>test_list = ["daisy", "poppy", "daylily", "sunflower", "begonia"]</code>. In a <code>for</code> loop statement following the first pattern, <code>for flower in test_list:</code>, only elements from the list are returned, specifically to the variable <code>flower</code>. And the <code>flower</code> variable will be “daisy” in the first iteration of the for loop, “poppy” in the second iteration, “daylily” in the third iteration, “sunflower” in the fourth, and finally “begonia” in the fifth. If we instead follow the third pattern and use the <code>enumerate</code> function, specifically, <code>for index, flower in enumerate(test_list)</code>, the <code>flower</code> variable will take on the same values for each iteration of the loop as the first pattern example. The <code>index</code> variable will take on the values <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, and <code>4</code> respectively.</p>
+<p>The setup is broken down below for this pattern
+1. the word <code>for</code>
+2. the names the variables that each index and each item from the <code>some_iterable_variable_name</code> will be stored in: <code>index</code>, <code>value_from_iterable_variable</code>
+3. the <code>in</code> membership operator to specify that we want items contained in the output from <code>enumerate()</code>
+4. the <code>enumerate()</code> function with the <code>some_iterable_variable_name</code> over which we want to extract items and their indexes item-by-item.
+5. A colon, <code>:</code></p>
+</div>
+<div id="for-loop-body" class="section level3" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> <code>for</code> loop body</h3>
+<p><strong>Indentation</strong></p>
+<p>The <code>for</code> loop body is going to be indented below the <code>for</code> loop statement. This is necessary because indenting tells Python what is done as part of the <code>for</code> loop, and when to re-start the next iteration of the <code>for</code> loop.</p>
+<p>As an example, consider this for loop:</p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb64-1" aria-hidden="true" tabindex="-1"></a>dogowners <span class="op">=</span> [<span class="st">&quot;Kate&quot;</span>, <span class="st">&quot;Dylan&quot;</span> ,<span class="st">&quot;Mike&quot;</span>, <span class="st">&quot;Andrew&quot;</span>]</span>
+<span id="cb64-2"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, dogname <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="st">&quot;Gibbs&quot;</span>, <span class="st">&quot;Chela&quot;</span>, <span class="st">&quot;Barnaby&quot;</span>, <span class="st">&quot;Duke&quot;</span>]):</span>
+<span id="cb64-3"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb64-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;The owner of&quot;</span>, dogname, <span class="st">&quot;is&quot;</span>, dogowners[index])</span></code></pre></div>
+<pre><code>## The owner of Gibbs is Kate
+## The owner of Chela is Dylan
+## The owner of Barnaby is Mike
+## The owner of Duke is Andrew</code></pre>
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;What other information should we share about these dogs? Size? Breed? Favorite toy?&quot;</span>)</span></code></pre></div>
+<pre><code>## What other information should we share about these dogs? Size? Breed? Favorite toy?</code></pre>
+<p>First, notice that the print statement that is indented under the <code>for</code> statement will be printed four time, each one with a different dog name, and a different dog owner’s name. But the print statement that is not indented under the <code>for</code> statement, and instead is aligned with it, will only be executed once, after the other 4 lines have printed and the <code>for</code> loop is complete.</p>
+<p>Second, let’s go back a step and break down the pattern of the <code>for</code> statement.
+* Which pattern of the 3 was used?
+* Why do you think that pattern was used?
+* Is there another pattern that could have been used as effectively?</p>
+<p>Like with conditional statement, the order of execution within the body of the loop (all lines that are indented) follows a downwards linear pattern. Lines listed earlier/first will be executed first and lines listed later will be executed later. Once every iteration of the <code>for</code> loop is complete, then lines outside of the <code>for</code> loop will be executed, like how the final print statement that asks what other dog innformation should be shared is only displayed after the <code>for</code> loop body is complete.</p>
+</div>
+<div id="initializing-variables-before-the-for-loop" class="section level3" number="9.5.3">
+<h3><span class="header-section-number">9.5.3</span> initializing variables before the <code>for</code> loop</h3>
+<p>An example of when you might want to initialzie variables before the <code>for</code> loop that will be edited within the <code>for</code> loop body is when you may want to count how many times a condition is met within a <code>for</code> loop. In such a case, you would initialize a variable before the for loop and then add one to the counter within the <code>for</code> loop body every time the condition is met.</p>
+<p>This condition could be as simple as number of times the for loop iterates and so you add one to the counter every single iteration:</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-1" aria-hidden="true" tabindex="-1"></a>dow <span class="op">=</span> [<span class="st">&#39;Sunday&#39;</span>, <span class="st">&#39;Monday&#39;</span>, <span class="st">&#39;Tuesday&#39;</span>, <span class="st">&#39;Wednesday&#39;</span>, <span class="st">&#39;Thursday&#39;</span>, <span class="st">&#39;Friday&#39;</span>, <span class="st">&#39;Saturday&#39;</span>]</span>
+<span id="cb68-2"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-2" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb68-3"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> day_of_week <span class="kw">in</span> dow:</span>
+<span id="cb68-4"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-4" aria-hidden="true" tabindex="-1"></a>    counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb68-5"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counter)</span></code></pre></div>
+<pre><code>## 7</code></pre>
+<p>Or it may be more complex, like seeing if the day of the week starts with the letter T or S. Here we’ll use the first pattern for the <code>for</code> statement because we’ll want to have access to the actual day of the week name, and then within the <code>for</code> loop body, we’ll use an if statement with two expressions returning True or False and an <code>or</code> logical operator between the two expressions. To see if the day of the week starts with the letter T or S, we’ll use a python built-in function <code>startswith()</code>. Note that we’re re-initializing the <code>counter</code> variable to 0 outside of the <code>for</code> loop and adding one every time the a or b expression evaluates to True.</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-1" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb70-2"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-2" aria-hidden="true" tabindex="-1"></a>dow <span class="op">=</span> [<span class="st">&#39;Sunday&#39;</span>, <span class="st">&#39;Monday&#39;</span>, <span class="st">&#39;Tuesday&#39;</span>, <span class="st">&#39;Wednesday&#39;</span>, <span class="st">&#39;Thursday&#39;</span>, <span class="st">&#39;Friday&#39;</span>, <span class="st">&#39;Saturday&#39;</span>]</span>
+<span id="cb70-3"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> day_of_week <span class="kw">in</span> dow:</span>
+<span id="cb70-4"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> day_of_week.startswith(<span class="st">&quot;T&quot;</span>) <span class="kw">or</span> day_of_week.startswith(<span class="st">&quot;S&quot;</span>):</span>
+<span id="cb70-5"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-5" aria-hidden="true" tabindex="-1"></a>        counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb70-6"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counter)</span></code></pre></div>
+<pre><code>## 4</code></pre>
+</div>
+<div id="pseudo-coding-a-for-loop" class="section level3" number="9.5.4">
+<h3><span class="header-section-number">9.5.4</span> Pseudo-coding a for loop</h3>
+<p>When writing pseudo-code and knowing that you’ll need to use a <code>for</code> loop, we find that it’s easiest to go back to the basic structure of a <code>for</code> loop.</p>
+<ol style="list-style-type: decimal">
+<li>Start by filling in your <code>for</code> statement</li>
+</ol>
+<ul>
+<li>Write the <code>for</code>, <code>in</code>, and <code>:</code> and leave blanks for what you’re extracting information from (part 5) and what you’re extracting (part 3)</li>
+<li>Then start on part 5.
+<ul>
+<li>Add in the variable name for what you’re extracting information from</li>
+<li>Do you want to index or just extract a value or do both?</li>
+</ul></li>
+<li>Then fill in informative variable names for part 3 of the <code>for</code> statement</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Outline in words what you want to do within the <code>for</code> loop body</li>
+</ol>
+<ul>
+<li>remember to indent what should be done for each iteration of the loop</li>
+<li>use your <code>for</code> statement part 3 variable names as much as possible within this outline</li>
+<li>remember that order matters and the steps are going to be executed sequentially within the loop.</li>
 </ul>
 
+</div>
 </div>
 </div>
 <hr>
@@ -458,8 +582,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="fundamentals-of-python---importing-and-commenting.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

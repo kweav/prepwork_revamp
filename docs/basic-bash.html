@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter1 Introduction | QBB Prepwork</title>
+  <title>Chapter6 Basic bash | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta property="og:title" content="Chapter6 Basic bash | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter6 Basic bash | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="logistics.html"/>
+<link rel="prev" href="pseudo-code.html"/>
+<link rel="next" href="fundamentals-of-python---intro-data-types.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -410,38 +410,52 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter1</span> Introduction</h1>
-<div id="learning-objectives" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
-<p>This set of prepwork modules is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you’ve completed the prepwork, you should be able to</p>
+<div id="basic-bash" class="section level1" number="6">
+<h1><span class="header-section-number">Chapter6</span> Basic bash</h1>
+<div id="goal-4" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Goal</h2>
+<p>A basic grasp of navigating bash and executing a python script</p>
+</div>
+<div id="learning-objectives-4" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Learning Objectives</h2>
+<p>After going through this module, students should be able to:</p>
 <ul>
-<li>Navigate around a file system using the command line</li>
-<li>Understand why we use both bash and Python in Computational Biology to analyze biological data</li>
-<li>Understand the basic data types in Python</li>
-<li>Open file streams</li>
-<li>Use conditionals</li>
-<li>Use a for-loop to iterate</li>
-<li>Write print statements</li>
-<li>Use pseudo-coding to identify problems/steps to a solution</li>
+<li>Move between directories in bash</li>
+<li>Run a python script from within bash</li>
+<li>Open a “man page”</li>
+<li>Explain what the tool <code>head</code> does</li>
 </ul>
 </div>
-<div id="motivation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Motivation</h2>
-<p>We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.</p>
-<p>For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.</p>
-<p>For the people already confortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.</p>
-<p>You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure in your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.</p>
-</div>
-<div id="assistance" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assistance</h2>
-<p>If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.</p>
+<div id="resources" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Resources</h2>
 <ul>
-<li>Kate Weaver <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a></li>
-<li>Stephanie (Steph) Yan <a href="mailto:syan11@jhu.edu" class="email">syan11@jhu.edu</a></li>
-<li>Dylan Taylor <a href="mailto:dtaylo95@jhu.edu" class="email">dtaylo95@jhu.edu</a></li>
-<li>Andrew Bortvin <a href="mailto:abortvi2@jhu.edu" class="email">abortvi2@jhu.edu</a></li>
+<li><a href="http://bxlab.github.io/cmdb-bootcamp/cheatsheet/unix.html">Bash syntax cheatsheet</a></li>
 </ul>
+</div>
+<div id="navigation" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Navigation</h2>
+<p>In order to move around the filesystem, you only need the command <code>cd</code>, short for change directory. There are also 3 special notations for navigation, <code>~</code>, <code>.</code>, and <code>..</code>. These represent your home directory, your current directory, and you current parent directory, respectively. So,assume the following directory structure.</p>
+<pre><code>/
+    Users/
+        cmdb/
+            Documents/
+            Movies/
+        guest/
+    Lib/
+        Some/
+        Stuff/</code></pre>
+<p>If we were in the folder “cmdb”, we would use <code>cd Documents</code> to move to the Documents folder. To get to the Users folder, we would use <code>cd ../</code>. You can also chain multiple moves together. To move from the cmdb to the Stuff folder, you would use <code>cd ../../Lib/Stuff</code>. We can also see where we are with the <code>pwd</code> command, short for “print working directory”.</p>
+</div>
+<div id="running-a-python-script" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Running a python script</h2>
+<p>In order to run a python script in bash, you need to use the python interpreter, the name of the script, and any arguments (additional information) being passed to the script.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="basic-bash.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> myscript.py</span>
+<span id="cb12-2"><a href="basic-bash.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> myscript.py arg1 arg2</span></code></pre></div>
+</div>
+<div id="the-head-tool" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> The head tool</h2>
+<p>There are many bash tools, but right now we will focus on one, <code>head</code>. This tool takes reads through a text file, printing out the first <em>n</em> lines, where <em>n</em> is an arbitrary number passed as an argument with <code>-n</code>. If <em>n</em> is not specified, <code>head</code> defaults to 10.</p>
+<p>If you were to forget the default number of lines or need more information about <code>head</code>, you can look at the manual page for it, aka its “man” page. To do this, type <code>man head</code>. You will get a text manual with a general description of the tool, an explanation of all of the possible arguments, and more. You can navigate with the up and down arrows. To move more quickly, hold down <em>fn</em>. To exit, push <em>q</em>.</p>
 
 </div>
 </div>
@@ -458,8 +472,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pseudo-code.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="fundamentals-of-python---intro-data-types.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

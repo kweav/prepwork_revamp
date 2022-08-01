@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter1 Introduction | QBB Prepwork</title>
+  <title>Chapter4 Python | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta property="og:title" content="Chapter4 Python | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter4 Python | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="logistics.html"/>
+<link rel="prev" href="bash.html"/>
+<link rel="next" href="pseudo-code.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -410,38 +410,77 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter1</span> Introduction</h1>
-<div id="learning-objectives" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
-<p>This set of prepwork modules is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you’ve completed the prepwork, you should be able to</p>
+<div id="python" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter4</span> Python</h1>
+<div id="goal-2" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> Goal</h2>
+<p>Get a basic familiarity with what kind of language Python is and why we’re using it</p>
+</div>
+<div id="learning-objectives-2" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Learning Objectives</h2>
+<p>After going through this module, students should be able to:</p>
 <ul>
-<li>Navigate around a file system using the command line</li>
-<li>Understand why we use both bash and Python in Computational Biology to analyze biological data</li>
-<li>Understand the basic data types in Python</li>
-<li>Open file streams</li>
-<li>Use conditionals</li>
-<li>Use a for-loop to iterate</li>
-<li>Write print statements</li>
-<li>Use pseudo-coding to identify problems/steps to a solution</li>
+<li>Be able to list the advantages and limitations of Python as a programming language</li>
+<li>Explain why Python is a complement to bash</li>
+<li>Understand why Python is being used for this class</li>
 </ul>
 </div>
-<div id="motivation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Motivation</h2>
-<p>We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.</p>
-<p>For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.</p>
-<p>For the people already confortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.</p>
-<p>You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure in your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.</p>
+<div id="what-python-is" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> What Python is</h2>
+<p>Python is a popular language for many applications, including bioinformatics. That is because it is easy to learn and read. In addition, it is well documented and supported by a large community. The are a vast number of packages extending Python’s functionality, including many specifically geared towards biological and bioinformatic applications.</p>
+<p>Python is a high-level programming language. What that means is that much of fiddly details needed to make your code work is hidden under the hood and you will never need to worry about them. This makes writing code simple and fast. In addition, Python does not need to be compiled. This allows you to execute code as you write it.</p>
+<p>Finally, Python is an object-oriented programming language meaning that every variable and function in python is actually a class that has built-in attributes and functions. While this may not make sense yet, it makes Python a very powerful language.</p>
 </div>
-<div id="assistance" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assistance</h2>
-<p>If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.</p>
-<ul>
-<li>Kate Weaver <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a></li>
-<li>Stephanie (Steph) Yan <a href="mailto:syan11@jhu.edu" class="email">syan11@jhu.edu</a></li>
-<li>Dylan Taylor <a href="mailto:dtaylo95@jhu.edu" class="email">dtaylo95@jhu.edu</a></li>
-<li>Andrew Bortvin <a href="mailto:abortvi2@jhu.edu" class="email">abortvi2@jhu.edu</a></li>
-</ul>
+<div id="what-python-is-not" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> What Python is not</h2>
+<p>Although it is a clear language to read and write, Python is not a miracle cure for programming. You will still need to learn the syntax of the language, as well as it’s relatively small base vocabulary. Finally, you will still need to be able to translate strategies for answering questions or performing tasks into a logical set of steps that can be executed.</p>
+<p>Python is also slower than compiled langauges and bash. This is especially true when dealing with loops. However, there are ways to significantly speed up the execution of Python. Many python packages have compiled C-code hidden within their function calls, such that you have the convenience of Python but the speed of a compiled language.</p>
+</div>
+<div id="why-do-we-need-python-if-we-have-bash" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Why do we need Python if we have bash?</h2>
+<p>While bash has many powerful functions and basic programming logic, it is not a true programming language but rather a command-line interpreter. There are several advantages and some disadvantages to using Python over bash.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Bash</th>
+<th align="center">Python</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Difficult to write</td>
+<td align="center">Easy to write</td>
+</tr>
+<tr class="even">
+<td align="center">Hard to read</td>
+<td align="center">Easy to read</td>
+</tr>
+<tr class="odd">
+<td align="center">Less powerful</td>
+<td align="center">More powerful</td>
+</tr>
+<tr class="even">
+<td align="center">Faster</td>
+<td align="center">Slower</td>
+</tr>
+<tr class="odd">
+<td align="center">No third-party programs needed</td>
+<td align="center">Third-party programs may be needed</td>
+</tr>
+</tbody>
+</table>
+<p>Ultimately, you should be using these two approaches together to take advantage of the strengths of each. You will find that creating an analysis pipeline is quite effective when using bash to connect the inputs and outputs of multiple programs (including your own Python scripts) to take raw data through processing and analysis.</p>
+</div>
+<div id="why-python-is-right-for-this-class" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Why Python is right for this class</h2>
+<p>Given the range of student backgrounds and exposure to coding, Python offers a useful middle ground of easy to read and learn code while maintaining the power and flexibility that more advanced coders may need.</p>
+<p>If you perform any data analysis in biology (and you will), it is inevitable that you will encounter programs written in Python. You may never see the code, but exposure to programming concepts now will give you a greater understanding of</p>
+<ol style="list-style-type: decimal">
+<li>how the programs work</li>
+<li>troubleshooting issues when running them</li>
+<li>tackling common problems like reformatting data</li>
+</ol>
+<p>Most importantly, writing code in Python should be fun, not scary. And that is what will keep you using the skills that you learn in this class.</p>
 
 </div>
 </div>
@@ -458,8 +497,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bash.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pseudo-code.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
