@@ -447,7 +447,14 @@ PRINT the line
 END IF
 END FOR</p>
 <p>Do we need to change this pseudocode at all or does it accurately reflect what we want to accomplish with our new script?</p>
-<p>ANSWER: No we don’t need to change the pseudocode from the last module because it still accurately reflects the goal we want to accomplish within this module.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<p>No we don’t need to change the pseudocode from the last module because it still accurately reflects the goal we want to accomplish within this module.</p>
+</details>
+<hr />
 </div>
 <div id="building-the-code-3" class="section level2" number="15.4">
 <h2><span class="header-section-number">15.4</span> Building the code</h2>
@@ -456,48 +463,88 @@ END FOR</p>
 <p>The <code>sys</code> module is useful for this in Python. Specifically, it allows you to use a structure called <code>sys.argv</code> which is a list that stores the command line arguments passed to a Python script. <code>sys.argv[0]</code> is always the script name with the additional information/arguments starting at index 1 or <code>sys.argv[1]</code>.</p>
 <p>When you use <code>sys.argv</code> in a script, it’s a good practice to include a USAGE statement comment at the beginning of the script showing how the script should be called. In our case, we want the user to pass the input filename as the first argument and the desired number of lines as the second: <code>#USAGE: python scriptname.py input_filename number_lines_to_display</code> (Note that calling the python interpreter is not included in the list since it’s before the script name).</p>
 <p>So in building our code, we want to make sure to import the <code>sys</code> module and set a USAGE comment statement. Within your new Python script, do these two things.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb92"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb92-1"><a href="applied-python-exercise-4.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co">#USAGE: python scriptname.py input_filename number_lines_to_display</span></span>
 <span id="cb92-2"><a href="applied-python-exercise-4.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span></code></pre></div>
+</details>
+<hr />
 <div id="set-the-input-filename" class="section level3" number="15.4.1">
 <h3><span class="header-section-number">15.4.1</span> SET the input filename</h3>
 <p>In the code for the past modules, we’ve set the filename as a hardcoded string variable. Now you want to set it as the first command line argument passed to the program when calling the script. Do this within your Python script.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb93"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="applied-python-exercise-4.html#cb93-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="set-the-desired-number-of-lines-1" class="section level3" number="15.4.2">
 <h3><span class="header-section-number">15.4.2</span> SET the desired number of lines</h3>
 <p>In the code for the last module, we set the desired number of lines as a hardcoded integer variable. Now you want to set it as second command line argument passed to the program when calling the script. Do this within your Python script.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb94"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb94-1"><a href="applied-python-exercise-4.html#cb94-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> sys.argv[<span class="dv">2</span>]</span></code></pre></div>
-<p>However, we need the varaible to be an integer, and the values in the <code>sys.argv</code> list are always stored as strings, even if they are numbers. Therefore, edit the line within your Python script to convert the value that is being stored to an integer.</p>
-<p>ANSWER:</p>
+<p>However, we need the variable to be an integer, and the values in the <code>sys.argv</code> list are always stored as strings, even if they are numbers. Therefore, edit the line within your Python script to convert the value that is being stored to an integer.</p>
 <div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="applied-python-exercise-4.html#cb95-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>])</span></code></pre></div>
+</details>
+<hr />
 <p>Now that we’ve managed to set the input file and the desired number of lines to values that are specified by the user on the command line, we can reuse the rest of the code for the next three steps that we used in the previous module.</p>
 </div>
 <div id="for-every-line-in-the-open-file-5" class="section level3" number="15.4.3">
 <h3><span class="header-section-number">15.4.3</span> FOR every line in the open file</h3>
 <p>To loop through every line in the open file, use the <code>for</code> statement structure from the second and third Python exercise modules. Write this line of code within your Python script.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb96"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb96-1"><a href="applied-python-exercise-4.html#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)):</span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="if-a-desired-line-by-its-numerical-position-1" class="section level3" number="15.4.4">
 <h3><span class="header-section-number">15.4.4</span> IF a desired line (by its numerical position)</h3>
 <p>To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third Python exercise module. Write this line of code within your Python script, indenting correctly under the <code>for</code> loop statement.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="applied-python-exercise-4.html#cb97-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines:</span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="print-the-line-4" class="section level3" number="15.4.5">
 <h3><span class="header-section-number">15.4.5</span> PRINT the line</h3>
 <p>Finally, reuse the code from the first three Python exercise modules to print the line, adding this <code>print()</code> statement indented correctly under the conditional within your Python script.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb98"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb98-1"><a href="applied-python-exercise-4.html#cb98-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+</details>
+<hr />
 <p>Within your Python script, you should have the seven lines of code together which makes our complete intended goal code – code that prints a user specified number of lines from the beginning of a user specified input file.</p>
 <p><strong>Use the command line to run the Python script and look at the output</strong></p>
 </div>
 </div>
 <div id="complete-intended-goal-code-3" class="section level2" number="15.5">
 <h2><span class="header-section-number">15.5</span> Complete Intended Goal Code</h2>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb99"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb99-1"><a href="applied-python-exercise-4.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co">#USAGE: python scriptname.py input_filename number_lines_to_display</span></span>
 <span id="cb99-2"><a href="applied-python-exercise-4.html#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys <span class="co">#import module</span></span>
 <span id="cb99-3"><a href="applied-python-exercise-4.html#cb99-3" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> sys.argv[<span class="dv">1</span>] <span class="co"># SET the input filename</span></span>
@@ -505,6 +552,8 @@ END FOR</p>
 <span id="cb99-5"><a href="applied-python-exercise-4.html#cb99-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)): <span class="co">#FOR every line in the open file</span></span>
 <span id="cb99-6"><a href="applied-python-exercise-4.html#cb99-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines: <span class="co">#IF a desired line by its numerical position</span></span>
 <span id="cb99-7"><a href="applied-python-exercise-4.html#cb99-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
+</details>
+<hr />
 
 </div>
 </div>

@@ -39,8 +39,8 @@ In addition to providing each sample's genotyping information for each variant, 
 
 Using the Python skills that you have practiced and more that you will learn in Quantitative Biology Bootcamp, you will learn to further parse a `.vcf` file, extracting and visualize specific information like the allele frequencies and genotyptes to make allele frequency histograms and PCAs of the genetic variation:
 
-[!Allele Frequency Histogram](resources/images/af_hist.png)
+![Allele Frequency Histogram](resources/images/af_hist.png)
 
-[!PCA](resources/images/pca.png)
+![PCA](resources/images/pca.png)
 
 The skills that you learn throughout Quantitative Biology Bootcamp will help you gain comfort and skills working with many other bioinformatic data files beyond just this `.vcf` file. Upon completing the course, students should be comfortable using and writing software to work with large-scale biological data. The motivation of this goal is to develop computational and statistical competence in preparation for courses, rotations, thesis research, and careers. Rather than blindly outsourcing bioinformatic components of their work, students will be empowered to understand methodological details and their associated advantages and limitations. This will in turn advance the broader goal of rigor in experimental design, promoting robust and unbiased results.

@@ -444,8 +444,12 @@ IF the first line
 PRINT the line
 END IF
 END FOR</p>
-<p>I this module, we no longer want to print the line if and only if it’s the first line of the file. We now want to print the line if it’s any of the first several lines of the file, where the actual number of lines is specified or set or defined, much like how we define the input file name. Edit the pseudocode, adding one line, and editing another line to reflect this change in the goal.</p>
-<p>ANSWER:</p>
+<p>In this module, we no longer want to print the line if and only if it’s the first line of the file. We now want to print the line if it’s any of the first several lines of the file, where the actual number of lines is specified or set or defined, much like how we define the input file name. Edit the pseudocode, adding one line, and editing another line to reflect this change in the goal.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <p>First, we need to SET the input file
 Next, we need to SET the desired number of displayed lines
 Then, FOR every line in the open file
@@ -453,6 +457,8 @@ IF a desired line (by its numerical position)
 PRINT the line
 END IF
 END FOR</p>
+</details>
+<hr />
 </div>
 <div id="building-the-code-2" class="section level2" number="14.4">
 <h2><span class="header-section-number">14.4</span> Building the code</h2>
@@ -461,43 +467,80 @@ END FOR</p>
 <div id="set-the-input-file-4" class="section level3" number="14.4.1">
 <h3><span class="header-section-number">14.4.1</span> SET the input file</h3>
 <p>To SET what the input file is, we will use the variable assignment code from the first and second Python exercise modules. Within your Python script, write that variable assignment expression.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb86"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="applied-python-exercise-3.html#cb86-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span></span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="set-the-desired-number-of-lines" class="section level3" number="14.4.2">
 <h3><span class="header-section-number">14.4.2</span> SET the desired number of lines</h3>
 <p>To SET the desired number of beginning lines to display, write a variable assignment expression, using some integer value as the desired number. Add this new line of code within your Python script.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="applied-python-exercise-3.html#cb87-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="dv">10</span></span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="for-every-line-in-the-open-file-4" class="section level3" number="14.4.3">
 <h3><span class="header-section-number">14.4.3</span> FOR every line in the open file</h3>
 <p>To loop through every line in the open file, use the <code>for</code> statement structure from the second Python exercise module. Write this line of code within your Python script.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb88"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="applied-python-exercise-3.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)):</span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="if-a-desired-line-by-its-numerical-position" class="section level3" number="14.4.4">
 <h3><span class="header-section-number">14.4.4</span> IF a desired line (by its numerical position)</h3>
 <p>Next, edit the body of the <code>for</code> loop, specifically the conditional expression, such that it asks if the line is one of the desired beginning lines. Consult your notes on indexing in python to see what numerical comparison operator (e.g., <code>&lt;=</code>, <code>&lt;</code>, <code>==</code>) is necessary. Add this edited line of code within the <code>for</code> loop body within your Python script.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb89"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="applied-python-exercise-3.html#cb89-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines:</span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="print-the-line-3" class="section level3" number="14.4.5">
 <h3><span class="header-section-number">14.4.5</span> PRINT the line</h3>
 <p>Finally, resue the code from the first two Python exercise modules to print the line, adding this <code>print()</code> statement indented correctly under the conditional within your Python script.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb90"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb90-1"><a href="applied-python-exercise-3.html#cb90-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+</details>
+<hr />
 <p>Within your Python script, you should have the five lines of code together which makes our complete intended goal code – code that prints a specified number of lines from the beginning of a file.</p>
 <p><strong>Use the command line to run the Python script and look at the output</strong></p>
 </div>
 </div>
 <div id="complete-intended-goal-code-2" class="section level2" number="14.5">
 <h2><span class="header-section-number">14.5</span> Complete Intended Goal Code</h2>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb91"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="applied-python-exercise-3.html#cb91-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span> <span class="co">#SET the input filename</span></span>
 <span id="cb91-2"><a href="applied-python-exercise-3.html#cb91-2" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="dv">10</span> <span class="co">#SET the desired number of lines</span></span>
 <span id="cb91-3"><a href="applied-python-exercise-3.html#cb91-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)): <span class="co">#FOR every line in the open file</span></span>
 <span id="cb91-4"><a href="applied-python-exercise-3.html#cb91-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines: <span class="co">#IF a desired line by its numerical position</span></span>
 <span id="cb91-5"><a href="applied-python-exercise-3.html#cb91-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
+</details>
+<hr />
 
 </div>
 </div>
