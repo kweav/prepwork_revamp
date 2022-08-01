@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter1 Introduction | QBB Prepwork</title>
+  <title>Chapter7 Fundamentals of Python - Intro &amp; Data Types | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta property="og:title" content="Chapter7 Fundamentals of Python - Intro &amp; Data Types | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter7 Fundamentals of Python - Intro &amp; Data Types | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="logistics.html"/>
+<link rel="prev" href="basic-bash.html"/>
+<link rel="next" href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -410,38 +410,190 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter1</span> Introduction</h1>
-<div id="learning-objectives" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
-<p>This set of prepwork modules is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you’ve completed the prepwork, you should be able to</p>
+<div id="fundamentals-of-python---intro-data-types" class="section level1" number="7">
+<h1><span class="header-section-number">Chapter7</span> Fundamentals of Python - Intro &amp; Data Types</h1>
+<div id="goal-5" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Goal</h2>
+<p>Gain a basic familiarity with Python data types</p>
+</div>
+<div id="learning-objectives-5" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Learning Objectives</h2>
+<p>After going through this module, students should be able to:</p>
 <ul>
-<li>Navigate around a file system using the command line</li>
-<li>Understand why we use both bash and Python in Computational Biology to analyze biological data</li>
-<li>Understand the basic data types in Python</li>
-<li>Open file streams</li>
-<li>Use conditionals</li>
-<li>Use a for-loop to iterate</li>
-<li>Write print statements</li>
-<li>Use pseudo-coding to identify problems/steps to a solution</li>
+<li>Differentiate between the fundamental data types and structures in Python</li>
+<li>Define mutability</li>
+<li>Use variable assignment to store data/information within named variables</li>
 </ul>
 </div>
-<div id="motivation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Motivation</h2>
-<p>We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.</p>
-<p>For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.</p>
-<p>For the people already confortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.</p>
-<p>You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure in your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.</p>
-</div>
-<div id="assistance" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assistance</h2>
-<p>If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.</p>
+<div id="resources-1" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Resources</h2>
 <ul>
-<li>Kate Weaver <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a></li>
-<li>Stephanie (Steph) Yan <a href="mailto:syan11@jhu.edu" class="email">syan11@jhu.edu</a></li>
-<li>Dylan Taylor <a href="mailto:dtaylo95@jhu.edu" class="email">dtaylo95@jhu.edu</a></li>
-<li>Andrew Bortvin <a href="mailto:abortvi2@jhu.edu" class="email">abortvi2@jhu.edu</a></li>
+<li><a href="https://python-textbok.readthedocs.io/en/1.0/index.html">Object-Oriented Programming in Python is freely available documentation on programming in Python</a> and provides examples and thorough descriptions of fundamentals in Python programming. The table of contents is fairly well organized and has a lot of the buzz words contained in this module. There is more information covered in this book than will be required knowledge for you, but as a whole it likely will be a helpful resource to consult during the course.<br />
+</li>
+<li><a href="https://greenteapress.com/thinkpython2/html/index.html">Think Python 2nd Edition is freely available as web-based book</a> and explains lots of Python vocabulary, syntax, and operations. The table of contents is quite thorough in describing each chapter’s contents. There is more information covered in this book than will be required knowledge for you, but as a whole it likely will be a helpful resource to consult during the course. This resource does not have an easy means to navigate back to the table of contents though.</li>
+<li>There is a <a href="http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html">python syntax cheatsheet</a> that may be useful, especially throughout the course.</li>
+<li>Other website resources will be linked throughout this module for specific topics. If a resource uses terminology or functionality that you are not expected to learn, we will note it after linking the resource.</li>
+<li>Use of all linked resources is optional but strongly recommended.</li>
 </ul>
+</div>
+<div id="syntax" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Syntax</h2>
+<p>Python makes use of indentation to define blocks of code. This means that you cannot mix spaces and tabs (4 spaces are recommended). This makes Python easy to read, but requires you to keep track of the indentation level when things become very nested.</p>
+</div>
+<div id="data-types-and-structures" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> Data types and structures</h2>
+<p>“Data” is information – information that you want to process or perform operations on, simplify, visualize, etc. This information must be stored within Python scripts or else read in from files (<code>csv</code>, <code>txt</code>, etc.). Python stores and represents the data as different data types or within different structures. Another word for data in python is “object”. You often want to explicitly make sure that the data is stored as a specific type so that you can perform specific operations on it (e.g., do specific things with or manipulate/analyze the data in a specific way). Math operations can be performed with integers or floats, but not strings. You can index with integers, but not floats, etc. Terms like these specific data types will be explained in more detail next. Terms like “index” will be explained in more detail in a few sections.</p>
+<p>There are many data types and structures that are used in Python.</p>
+<ul>
+<li>Integers: Integers are whole numbers
+<ul>
+<li>These whole number are typed with just the numbers and do not include commas (<code>,</code>) or periods (<code>.</code>).</li>
+<li>Examples:
+<ul>
+<li>-2</li>
+<li>181</li>
+<li>10000056</li>
+<li>0</li>
+</ul></li>
+</ul></li>
+<li>Floats: Floats are numbers that have fractional or decimal parts.
+<ul>
+<li>These are typed with numbers and do have periods (<code>.</code>) or forward slashes (<code>/</code>) in them.</li>
+<li>Examples:
+<ul>
+<li>-2.5</li>
+<li>8/2</li>
+<li>79/3</li>
+</ul></li>
+</ul></li>
+<li>Strings: Strings are words, phrases, or just single characters that are strung together and enclosed by single (<code>'</code>) or double (<code>"</code>) quotes.
+<ul>
+<li>Examples:
+<ul>
+<li>“acgt”</li>
+<li>“Banana”</li>
+<li>“Hello, World!”</li>
+<li>“1”</li>
+<li>‘The quick brown fox jumped over the lazy Gibbs’</li>
+</ul></li>
+</ul></li>
+<li>Booleans: Booleans are variables that store <code>True</code> or <code>False</code>.
+<ul>
+<li>Unlike integers, floats, and strings which can have many possible values, data that is a boolean data type is either <code>True</code> or <code>False</code>.</li>
+</ul></li>
+<li>Lists: Lists are a data structure, specifically, collections of items that are enclosed in brackets. ( <code>[</code> and <code>]</code> ).
+<ul>
+<li>In Python, lists can be homogeneous, and contain items that are all the same data type (e.g., a list of strings or a list of integers); or lists can be heterogeneous, containing items that are different data types.</li>
+<li>In Python, lists are also ordered, meaning that the elements or items contained in the list have a specific position associated with them.</li>
+<li>Examples:
+<ul>
+<li>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]</li>
+<li>[“B”, “a”, “n”, “a”, “n”, “a”]</li>
+<li>[“a”, 1, “c”, 0, “g”, 1, “t”, 1]</li>
+<li>[“Hello,”, “World!”]</li>
+<li>[“The”, “quick”, “brown”, “fox”, “jumped”, “over”, “the”, “lazy”, “Gibbs”]</li>
+</ul></li>
+</ul></li>
+<li>Sets: Sets are another data structure, specifically, collections of unique (or non-duplicated) items that are enclosed in curly braces ( <code>{</code> and <code>}</code> ).
+<ul>
+<li>To make a list into a set, the repeated items from the list are removed. For example, the list [“B”, “a”, “n”, “a”, “n”, “a”] would be the set {“B”, “a”, “n”}. One super cool thing is if you define your set to be {“B”, “a”, “n”, “a”}, Python will simplify it be {“B”, “n”, “a”}. (Also, note this is an example of how the set is unordered.)</li>
+<li>Sets are useful if you want to track all the unique elements present in a large dataset and don’t care if or how many times each element is repeated.</li>
+<li>Note that sets do not have any order so if you print a set out, the order of elements may change</li>
+</ul></li>
+<li>Dictionaries. Dictionaries are another Python data structure, specifically collections of paired key,value items that are enclosed in curly braces. ( <code>{</code> and <code>}</code> ).
+<ul>
+<li>By paired key,values we mean that a specific key is used to reference some value. For example, in the following dictionary <code>dog_favorite_toys</code>, <code>"Gibbs"</code> is a key used to refer to the value <code>"football"</code> because his favorite toy is a squeaking football.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="fundamentals-of-python---intro-data-types.html#cb13-1" aria-hidden="true" tabindex="-1"></a>dog_favorite_toys <span class="op">=</span> {<span class="st">&quot;Gibbs&quot;</span>: <span class="st">&quot;football&quot;</span>,</span>
+<span id="cb13-2"><a href="fundamentals-of-python---intro-data-types.html#cb13-2" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;Duke&quot;</span>: <span class="st">&quot;squirrel&quot;</span>,</span>
+<span id="cb13-3"><a href="fundamentals-of-python---intro-data-types.html#cb13-3" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;Barnaby&quot;</span>: <span class="st">&quot;frisbee&quot;</span>}</span></code></pre></div>
+<ul>
+<li>(What previously listed data type is each of the keys and values within that dictionary? )</li>
+<li>Note that the key and value in a pair are separated by a colon (<code>:</code>) and the pairs are separated from each other by a comma (<code>,</code>)</li>
+<li>While sets are useful if you want to track all the unique elements present in a large dataset but don’t care if or how many times each element is repeated, dictionaries allow you to track the presence and associate further information like how many times the element is present. The key would be the element (like a gene ID), and the value would the number of times that element (gene ID) is present in the dataset. The key has to be unique within the dictionary. The values may not be unique, like multiple gene IDs may be present in the dataset the same number of times.</li>
+<li>Like sets, dictionaries do not have an order and are more like a jumbled bucket of information</li>
+</ul>
+<div id="data-represented-or-stored-as-an-unintended-data-types" class="section level3" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Data represented or stored as an unintended data types:</h3>
+<p>Note: While we know that -2 is an integer, if you represent this integer in the following ways, it is not considered an integer by Python:
+* -2.0
+* -2/1
+* “-2.0”</p>
+<p>In the first case, Python considers these representations to be floats, which can still be used for mathematical operations, but couldn’t be used to index. In the second case, Python considers the data to be a string, and it cannot be used in mathematical operations unless it is converted to a numerical (integer or float) data type. Examples of converting with the <code>int()</code> and <code>float()</code> functions are available in the <a href="http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html">Python syntax cheatsheet</a> that was mentioned earlier. Often when reading data into Python from a file, numbers will be interpreted by python as strings and need to be converted to the correct data type. The third case is interpreted by Python as float division even in the case of two integers, one that divides evenly into the other. In order to do integer division, you need to use <code>//</code>. This tells Python to return an integer and drop any remainder.</p>
+<p><code>5//2 = 2</code></p>
+</div>
+<div id="immutability" class="section level3" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Immutability</h3>
+<p>What does it mean for a data type to be immutable? It means that the value of an object with that data type cannot be changed without creating a new object.</p>
+</div>
+<div id="immutable-data-types" class="section level3" number="7.5.3">
+<h3><span class="header-section-number">7.5.3</span> Immutable data types</h3>
+<ul>
+<li>Strings</li>
+<li>Integer</li>
+<li>Float</li>
+<li>Boolean</li>
+</ul>
+<p>All other listed data types and structures from the previous section are mutable or can be changed. Pratically speaking, Python is smart enough to recreate a variable but reuse the variable name when needed, such as</p>
+<p><code>A = A + 1</code></p>
+</div>
+</div>
+<div id="variables" class="section level2" number="7.6">
+<h2><span class="header-section-number">7.6</span> Variables</h2>
+<p>What are variables? A Python variable is a symbolic name that is a reference to a data object. Once a data object is assigned to a variable, you can refer to the object by that name, retrieving it many times. While data objects can exist in Python without being stored in variables, you can’t reference and retrieve the data repeatedly without storing it in a variable. Within Python, you can have many variables each storing different values, and you distinguish between these variables according to their names.</p>
+<p>The variable name is set within a variable assignment statement. We use an <code>=</code> (equals sign) to store data in a specific variable, associating that variable name with the value of the data. Then the variable can be referenced throughout a script. To store data in a variable, the variable name is on the left of the equals sign, and the data is on the right, like the following pattern:</p>
+<p><code>variable_name =  "some data"</code></p>
+<p>You’ve already seen an example of this with the dictionary <code>dog_favorite_toys</code> above. The data we are storing is saved in a variable named dog_favorite_toys. By using variables to store data, you can reference the variable later and use or modify the data stored in the variable. Assigning a value to a variable name is also called “defining” a variable or “initializing” a variable.</p>
+<p>This variable assignment statement is considered an “expression” in Python. We’ll discuss more expressions in the next section of this module.</p>
+<p>Variables can be overwritten, either intentionally or unintentionally. So for an example intentionally changing a variable’s value, consider that you may be looking through results of a genetic screen, wondering if a specific gene of interest was affected by the screen. You would store the gene of interest in a variable named <code>gene_of_interest</code>, and you set a boolean variable <code>gene_found</code> to <code>False</code> because you don’t know if the gene of interest is in the large file. The script then looks through the file as long as the gene of interest isn’t found (and <code>gene_found</code> is <code>False</code>). Once the script finds the gene of interest, you want to overwrite the <code>gene_found</code> variable or change its value to <code>True</code>.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="fundamentals-of-python---intro-data-types.html#cb14-1" aria-hidden="true" tabindex="-1"></a>gene_of_interest <span class="op">=</span> <span class="st">&quot;DENN1B&quot;</span></span>
+<span id="cb14-2"><a href="fundamentals-of-python---intro-data-types.html#cb14-2" aria-hidden="true" tabindex="-1"></a>gene_found <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb14-3"><a href="fundamentals-of-python---intro-data-types.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Lots of other code that makes the script load and look through a large file</span></span>
+<span id="cb14-4"><a href="fundamentals-of-python---intro-data-types.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#While looking through the file, the script finds the gene_of_interest</span></span>
+<span id="cb14-5"><a href="fundamentals-of-python---intro-data-types.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Since the gene was found, overwrite the gene_found variable to be True and stop looking through the file</span></span>
+<span id="cb14-6"><a href="fundamentals-of-python---intro-data-types.html#cb14-6" aria-hidden="true" tabindex="-1"></a>gene_found <span class="op">=</span> <span class="va">True</span></span></code></pre></div>
+<p>For an example of unintentionally changing a variable’s value, you may reuse a variable name later in a script. Then that variable will no longer reference the value which was stored earlier.</p>
+<p>What can you name a variable? Anything?
+* Variable names should be meaningful and provide a description of what the variable contains. (However, comments within code can be used when defining a variable to accomplish this, especially if variable names are becoming unnecessarily long.)
+* Note that while the name of the variable should be meaningful, the name doesn’t matter in how Python treats the variable. I could name a variable <code>filename</code> and store an integer in it and Python will treat the variable as the numerical value it has, not a string filename like its name suggests.<br />
+* Variable names can contain numbers (e.g., 0, 1, 2, …), but they cannot start with numbers. (i.e., <code>file1</code> is an acceptable variable name, but <code>1file</code> is not)
+* There are “keywords” in Python 3 that are used in expressions and have very specific functionality associated with them. They cannot be used as variable names. You don’t need to memorize the list, but you <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">can find the list of keywords here</a>
+* The case of the variable is important. <code>myVariable</code> is a different variable name than <code>myvariable</code>.
+* It is acceptable to use a combination of upper and lowercase letters in variable names as well as underscores (<code>_</code>). This can be helpful for longer variable names like <code>gene_of_interest</code>.</p>
+</div>
+<div id="a-deeper-dive-into-lists" class="section level2" number="7.7">
+<h2><span class="header-section-number">7.7</span> A deeper dive into lists</h2>
+<p>Let’s revisit lists. While we’ve seen how to create them, we also need to know how to alter them. Since a list is a mutable data type, we can alter it without being recreated.</p>
+<p>In order to change a single element of a list, you simply need to reference the specific position using its “index”.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="fundamentals-of-python---intro-data-types.html#cb15-1" aria-hidden="true" tabindex="-1"></a>mylist <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span>
+<span id="cb15-2"><a href="fundamentals-of-python---intro-data-types.html#cb15-2" aria-hidden="true" tabindex="-1"></a>mylist[<span class="dv">0</span>] <span class="op">=</span> <span class="st">&quot;a&quot;</span></span>
+<span id="cb15-3"><a href="fundamentals-of-python---intro-data-types.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mylist)</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, 2, 3, 4]</code></pre>
+<p>You’ll notice that the position numbering starts at zero instead of one. We’ll talk more about indexing later.</p>
+<p>What about adding items to a list? Lists have several built-in methods (a function built-in to a class, and yes, a list is a class. It’s an object-oriented langauge thing). We will be using the <code>append</code> method.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="fundamentals-of-python---intro-data-types.html#cb17-1" aria-hidden="true" tabindex="-1"></a>mylist.append(<span class="dv">5</span>)</span>
+<span id="cb17-2"><a href="fundamentals-of-python---intro-data-types.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mylist)</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, 2, 3, 4, 5]</code></pre>
+<p>As you can see, we’ve added an element to the end of our list. Another way to add elements is to combine lists. To do this, we can used the plus sign.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="fundamentals-of-python---intro-data-types.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mylist <span class="op">+</span> [<span class="dv">6</span>, <span class="dv">7</span>])</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, 2, 3, 4, 5, 6, 7]</code></pre>
+<p>But what if we wanted to put an item in the middle of the list? We could use the list method <code>insert</code>. This places the item in the given position and shifts everything higher than that over.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="fundamentals-of-python---intro-data-types.html#cb21-1" aria-hidden="true" tabindex="-1"></a>mylist.insert(<span class="dv">3</span>, <span class="st">&#39;b&#39;</span>)</span>
+<span id="cb21-2"><a href="fundamentals-of-python---intro-data-types.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mylist)</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, 2, 3, &#39;b&#39;, 4, 5]</code></pre>
+<p>We can also look for items in a list. If we wanted to search for “b”, we could use the <code>index</code> method.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="fundamentals-of-python---intro-data-types.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mylist.index(<span class="st">&quot;b&quot;</span>))</span></code></pre></div>
+<pre><code>## 3</code></pre>
+<p>This prints out <code>3</code>, the index of “b” in the list. We can also remove items from a list either with the <code>pop</code> or <code>remove</code> methods. <code>pop</code> takes an index of the item to be removed while <code>remove</code> takes the object that you want to remove.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="fundamentals-of-python---intro-data-types.html#cb25-1" aria-hidden="true" tabindex="-1"></a>mylist.remove(<span class="st">&quot;b&quot;</span>)</span>
+<span id="cb25-2"><a href="fundamentals-of-python---intro-data-types.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mylist)</span></code></pre></div>
+<pre><code>## [&#39;a&#39;, 2, 3, 4, 5]</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="fundamentals-of-python---intro-data-types.html#cb27-1" aria-hidden="true" tabindex="-1"></a>mylist.pop(<span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## &#39;a&#39;</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="fundamentals-of-python---intro-data-types.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mylist)</span></code></pre></div>
+<pre><code>## [2, 3, 4, 5]</code></pre>
+<p>The last method we’ll look at is <code>sort</code>. Like its name implies, this reorganizes the list in place. However, you cannot mix strings and numbers when sorting. So sorting <code>[3, 2, 1]</code> will work, but not <code>[3, 2, "a"]</code>.</p>
 
 </div>
 </div>
@@ -458,8 +610,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="basic-bash.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

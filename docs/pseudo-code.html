@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter1 Introduction | QBB Prepwork</title>
+  <title>Chapter5 Pseudo-code | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta property="og:title" content="Chapter5 Pseudo-code | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter5 Pseudo-code | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="logistics.html"/>
+<link rel="prev" href="python.html"/>
+<link rel="next" href="basic-bash.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -410,38 +410,90 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter1</span> Introduction</h1>
-<div id="learning-objectives" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
-<p>This set of prepwork modules is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you’ve completed the prepwork, you should be able to</p>
+<div id="pseudo-code" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter5</span> Pseudo-code</h1>
+<div id="goal-3" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Goal</h2>
+<p>Understanding how to break a problem down into basic steps that can be translated into code</p>
+</div>
+<div id="learning-objectives-3" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Learning Objectives</h2>
+<p>After going through this module, students should be able to:</p>
 <ul>
-<li>Navigate around a file system using the command line</li>
-<li>Understand why we use both bash and Python in Computational Biology to analyze biological data</li>
-<li>Understand the basic data types in Python</li>
-<li>Open file streams</li>
-<li>Use conditionals</li>
-<li>Use a for-loop to iterate</li>
-<li>Write print statements</li>
-<li>Use pseudo-coding to identify problems/steps to a solution</li>
+<li>Explain the purpose of pseudocode</li>
+<li>Dissect a problem into basic building blocks</li>
+<li>Verbalize the goal of each step</li>
 </ul>
 </div>
-<div id="motivation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Motivation</h2>
-<p>We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.</p>
-<p>For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.</p>
-<p>For the people already confortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.</p>
-<p>You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure in your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.</p>
+<div id="what-is-pseudocoding" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> What is pseudocoding?</h2>
+<p>Pseudocoding is a way of informally describing the logic behind solving a potentially complicated task by breaking it down into individual steps and explaing the steps in plain language.</p>
+<p>An example of pseudocode for the task of assigning pass/fail grades to students in a class:</p>
+<pre><code>SET students          ## Add students to a variable
+SET grades            ## Add student grades to a variable
+INITIALIZE outcomes   ## We also need somewhere to store the results
+SET cutoff            ## We need some passing criteria
+FOR each student in students ## We need to take the same action for each student
+    IF student&#39;s grade is greater than or equal to cutoff
+        then ADD &#39;pass&#39; to outcomes  ## Update the outcomes
+    OTHERWISE
+        add &#39;fail&#39; to outcomes
+    END IF
+END FOR</code></pre>
+<p>You’ll notice that all of the code that is to be repeated for each student is indented to indicate what is included in the repeated block. The same is true under the conditional statement. This helps us keep track of what steps constitute a subtask when code is repeated or run only under certain conditions. There is also the challenge of matching up the grade with the student. This can be accomplished in many different ways and will vary with what language is being used. Here, we keep it language-agnostic.</p>
 </div>
-<div id="assistance" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assistance</h2>
-<p>If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.</p>
+<div id="why-pseudocode-instead-of-just-writing-a-script" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Why pseudocode instead of just writing a script?</h2>
+<p>The advantage of writing pseudocode first rather than just writing a script in your programming language of choice is that it is</p>
 <ul>
-<li>Kate Weaver <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a></li>
-<li>Stephanie (Steph) Yan <a href="mailto:syan11@jhu.edu" class="email">syan11@jhu.edu</a></li>
-<li>Dylan Taylor <a href="mailto:dtaylo95@jhu.edu" class="email">dtaylo95@jhu.edu</a></li>
-<li>Andrew Bortvin <a href="mailto:abortvi2@jhu.edu" class="email">abortvi2@jhu.edu</a></li>
+<li>Helps transition novice programmers into thinking through the logic needed to solve a task</li>
+<li>Easier to breakdown and express tasks in natural language</li>
+<li>Not dependent on langauge-specific syntax</li>
 </ul>
+<p>Even once you become a proficient programmer and feel comfortable writing code directly, more complex tasks can be facilited by pseudocoding the task. This also makes breaking code into discrete parts for collaborative coding much easier and can be used to talk about expected outputs and inputs for each subtask.</p>
+</div>
+<div id="good-practices" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Good practices</h2>
+<p>While there is no set of standards for pseudocoding, there are ways to make it more effective. The most important thing you can do is to be consistent. When you pick a term (e.g. repeat or set), make sure that it has the same meaning each time you use it. It can be helpful to put these action words in all caps to highlight them. Some general rules for effective pseudocoding are:</p>
+<ul>
+<li>Make the first work the key action for the step and capitalize</li>
+<li>Only list one step per line</li>
+<li>Indent to show heirarchy of actions and improve readability</li>
+<li>End multiline blocks of code with <code>END</code></li>
+<li>Make your pseudocode programming language independent</li>
+<li>Keep it simple, concise, and readable</li>
+</ul>
+</div>
+<div id="exercise" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Exercise</h2>
+<p>Let’s try a more complicated example to practice. Let’s say our task is to take a text file and return the line number of any line that contains a keyword. However, we want to ignore any comment line in the file, denoted by a “#” as the first character.</p>
+<p>First, we’ll need a way to keep track of the line numbers</p>
+<pre><code>SET counter to 0</code></pre>
+<p>Next, we need step line by line through the file</p>
+<pre><code>FOR each line in the file</code></pre>
+<p>Then we need to check if the line is not a comment</p>
+<pre><code>    IF the line does not begin with #</code></pre>
+<p>Next, we need to know if the keyword appears in the line</p>
+<pre><code>        IF the line contains the keyword</code></pre>
+<p>Finally, if both conditions are true, we need to report the line number</p>
+<pre><code>            PRINT counter</code></pre>
+<p>Now we can close the conditional statements</p>
+<pre><code>        END IF
+    END IF</code></pre>
+<p>Now we need to advance our counter since we’re about to move to the next line</p>
+<pre><code>    INCREMENT counter by 1</code></pre>
+<p>Finally let’s close the for loop</p>
+<pre><code>END FOR</code></pre>
+<p>Putting it all together, we have the following pseudocode</p>
+<pre><code>SET counter to 0
+FOR each line in the file
+    IF the line does not begin with #
+        IF the line contains the keyword
+            PRINT counter
+        END IF
+    END IF
+END FOR</code></pre>
+<p>And we’re done!</p>
 
 </div>
 </div>
@@ -458,8 +510,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="python.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="basic-bash.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

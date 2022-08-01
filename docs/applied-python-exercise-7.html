@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter1 Introduction | QBB Prepwork</title>
+  <title>Chapter18 Applied Python Exercise 7 | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta property="og:title" content="Chapter18 Applied Python Exercise 7 | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter18 Applied Python Exercise 7 | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="logistics.html"/>
+<link rel="prev" href="applied-python-exercise-6.html"/>
+<link rel="next" href="conclusion-looking-ahead.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -410,38 +410,101 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter1</span> Introduction</h1>
-<div id="learning-objectives" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
-<p>This set of prepwork modules is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you’ve completed the prepwork, you should be able to</p>
+<div id="applied-python-exercise-7" class="section level1" number="18">
+<h1><span class="header-section-number">Chapter18</span> Applied Python Exercise 7</h1>
+<p>Reminder: you will turn in your final script from this module by emailing it to your TA Kate Weaver (<a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a>). Please name it LASTNAME_tail.py replace “LASTNAME” with your last name.</p>
+<div id="goal-print-the-desired-number-of-lines-from-the-end-of-the-input-file" class="section level2" number="18.1">
+<h2><span class="header-section-number">18.1</span> Goal – Print the desired number of lines from the end of the input file</h2>
+<p>The goal of this module is to edit your recreated <code>head</code> program from the fifth Python exercise module such that it <code>tail</code>’s an input file. As such, it should print the desired number of lines from the end of the input file, rather than from the beginning.</p>
+</div>
+<div id="learning-objectives-16" class="section level2" number="18.2">
+<h2><span class="header-section-number">18.2</span> Learning Objectives</h2>
+<p>After going through this module, students should be able to:</p>
 <ul>
-<li>Navigate around a file system using the command line</li>
-<li>Understand why we use both bash and Python in Computational Biology to analyze biological data</li>
-<li>Understand the basic data types in Python</li>
-<li>Open file streams</li>
-<li>Use conditionals</li>
-<li>Use a for-loop to iterate</li>
-<li>Write print statements</li>
-<li>Use pseudo-coding to identify problems/steps to a solution</li>
+<li>State the sub-steps needed to meet the coding goal</li>
+<li>Use the following datatypes, structures, and fundamentals to meet the coding goal:
+<ul>
+<li>importing modules</li>
+<li>variable assignment</li>
+<li>list indexing</li>
+<li>list length</li>
+<li>integer conversion</li>
+<li>opening a file</li>
+<li>list initialization</li>
+<li>for loop</li>
+<li>appending to a list</li>
+<li>list slicing</li>
+<li>logical expression</li>
+<li>conditional statement</li>
+<li>printing output</li>
+</ul></li>
 </ul>
 </div>
-<div id="motivation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Motivation</h2>
-<p>We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.</p>
-<p>For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.</p>
-<p>For the people already confortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.</p>
-<p>You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure in your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.</p>
+<div id="coding-blueprint-7" class="section level2" number="18.3">
+<h2><span class="header-section-number">18.3</span> Coding Blueprint</h2>
+<p>We recommend that you start with the final pseudocode from the fifth Python exercise module:</p>
+<p>First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE
+THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+Then, FOR every line in the open file
+IF a desired line (by its numerical position)
+PRINT the line
+END IF
+END FOR</p>
+<p>Edit this pseudocode such that it reflects what you want to do. Keep lines that are still applicable, remove lines that are no longer applicable, add lines that you need.</p>
+<p>Consider that two separate <code>for</code> loops could be useful for this task. One that extracts and stores every line from the file and then one that prints every line from a subset of those that you’ve stored with the first loop.</p>
+<p>We’ve provided some pseudocode with blanks that we think will be helpful for you to fill out if you’re unsure of where to start or next steps:</p>
+<p>First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE
+THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+___ a storage list for lines in the file
+Then, FOR every line in the open file
+<del>IF a desired line (by its numerical position)</del>
+<del>PRINT the line</del>
+<del>END IF</del>
+___ the line to the storage list
+END FOR</p>
+<p>___ a subset of the storage list to be the last ____ items in the storage list
+___ every line in the subset
+_____ the line
+END FOR</p>
 </div>
-<div id="assistance" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assistance</h2>
-<p>If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.</p>
-<ul>
-<li>Kate Weaver <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a></li>
-<li>Stephanie (Steph) Yan <a href="mailto:syan11@jhu.edu" class="email">syan11@jhu.edu</a></li>
-<li>Dylan Taylor <a href="mailto:dtaylo95@jhu.edu" class="email">dtaylo95@jhu.edu</a></li>
-<li>Andrew Bortvin <a href="mailto:abortvi2@jhu.edu" class="email">abortvi2@jhu.edu</a></li>
-</ul>
+<div id="building-the-code-6" class="section level2" number="18.4">
+<h2><span class="header-section-number">18.4</span> Building the Code</h2>
+<p><strong>Create a new Python script</strong></p>
+<p>Much like how we used the base pseudocode from the fifth Python exercise module, start with the base code that you have from the fifth Python exercise module. Reuse code that is applicable to the task at hand and write new code for the new parts of the program that you specified in the new pseudocode. Consult the learning objectives above to see what data types, structures, and fundamentals we think you will need to build the code. Also, consult the notes on Python fundamentals. Remember to indent when appropriate.</p>
+<p><strong>Use the command line to run the Python script and look at the output</strong></p>
+<p><strong>Submit your completed script</strong></p>
+<!--
+## Completed Intended Goal Code
+
+
+```python
+#USAGE: LASTNAME_tail.py input_filename [desired_number_of_lines]
+import sys
+filename = sys.argv[1]
+if len(sys.argv) > 2:
+  n_lines = int(sys.argv[2])
+else:
+  n_lines = 10
+line_list = []
+for line in open(filename):
+  line_list.append(line)
+
+last_n_lines = line_list[len(line_list)-9:]
+#or last_n_lines = line_list[len(line_list)-9:len(line_list)+1]
+for line in last_n_lines:
+    print(line.strip('\r\n'))
+```
+-->
 
 </div>
 </div>
@@ -458,8 +521,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="applied-python-exercise-6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusion-looking-ahead.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

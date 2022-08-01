@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter1 Introduction | QBB Prepwork</title>
+  <title>Chapter12 Applied Python Exercise 1 | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta property="og:title" content="Chapter12 Applied Python Exercise 1 | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter1 Introduction | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter12 Applied Python Exercise 1 | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="assets/dasl_favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="logistics.html"/>
+<link rel="prev" href="applied-python-exercise-outline.html"/>
+<link rel="next" href="applied-python-exercise-2.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -410,38 +410,123 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter1</span> Introduction</h1>
-<div id="learning-objectives" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning objectives</h2>
-<p>This set of prepwork modules is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you’ve completed the prepwork, you should be able to</p>
+<div id="applied-python-exercise-1" class="section level1" number="12">
+<h1><span class="header-section-number">Chapter12</span> Applied Python Exercise 1</h1>
+<div id="goal-print-every-line-in-a-file" class="section level2" number="12.1">
+<h2><span class="header-section-number">12.1</span> Goal – Print every line in a file</h2>
+<p>Write Python code that works towards recreating the Bash tool <code>head</code>, displaying every line in a file: <code>random_snippet.vcf</code></p>
+</div>
+<div id="learning-objectives-10" class="section level2" number="12.2">
+<h2><span class="header-section-number">12.2</span> Learning Objectives</h2>
+<p>After going through this module, students should be able to:</p>
 <ul>
-<li>Navigate around a file system using the command line</li>
-<li>Understand why we use both bash and Python in Computational Biology to analyze biological data</li>
-<li>Understand the basic data types in Python</li>
-<li>Open file streams</li>
-<li>Use conditionals</li>
-<li>Use a for-loop to iterate</li>
-<li>Write print statements</li>
-<li>Use pseudo-coding to identify problems/steps to a solution</li>
+<li>State the sub-steps needed to meet the coding goal</li>
+<li>Use the following datatypes, structures, and fundamentals to meet the coding goal:
+<ul>
+<li>variable assignment</li>
+<li>strings</li>
+<li>opening a file</li>
+<li>for loop</li>
+<li>printing output</li>
+</ul></li>
 </ul>
 </div>
-<div id="motivation" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Motivation</h2>
-<p>We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.</p>
-<p>For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.</p>
-<p>For the people already confortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.</p>
-<p>You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure in your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.</p>
+<div id="coding-blueprint-1" class="section level2" number="12.3">
+<h2><span class="header-section-number">12.3</span> Coding Blueprint</h2>
+<p>Within this module, you will write code that displays every line in an input file. To complete this goal, consider the most basic tasks that would be required.</p>
+<p>First, we need to SET the input file
+Second, FOR every line in the open file
+PRINT the line
+END FOR</p>
+<div id="set-the-input-file" class="section level3" number="12.3.1">
+<h3><span class="header-section-number">12.3.1</span> SET the input file</h3>
+<p>Let’s focus on that first step: SET the input file. One important thing when breaking down tasks into smaller, manageable steps is asking yourself what information is available in your script, and what information you need to define or store in variables. The filename is something that will need to be assigned to a variable so that it is available information.</p>
 </div>
-<div id="assistance" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Assistance</h2>
-<p>If at any time you encounter difficulty, please feel free to reach out to one of the TAs. This includes if you need help debugging or you get an error running one of the modules.</p>
-<ul>
-<li>Kate Weaver <a href="mailto:kweave23@jhu.edu" class="email">kweave23@jhu.edu</a></li>
-<li>Stephanie (Steph) Yan <a href="mailto:syan11@jhu.edu" class="email">syan11@jhu.edu</a></li>
-<li>Dylan Taylor <a href="mailto:dtaylo95@jhu.edu" class="email">dtaylo95@jhu.edu</a></li>
-<li>Andrew Bortvin <a href="mailto:abortvi2@jhu.edu" class="email">abortvi2@jhu.edu</a></li>
-</ul>
+<div id="for-every-line-in-the-open-file" class="section level3" number="12.3.2">
+<h3><span class="header-section-number">12.3.2</span> FOR every line in the open file …</h3>
+<p>Let’s focus on the FOR portion of the pseudocode now, specifically building the <code>for</code> loop structure by considering each of the 3 components discussed earlier:</p>
+<ol style="list-style-type: decimal">
+<li>The <code>for</code> statement</li>
+</ol>
+<p>Which <code>for</code> statement pattern best fits the task you want to accomplish of printing every line in the file? We’ll see as we build the code that the first pattern, <code>for line in file</code>, will work very well for this task because all we need is to work with the items (lines) contained in a collection (the file) item-by-item.</p>
+<p>However, we will have to slightly edit this pattern to make sure we’re working with the contents of the file, and not the contents of the string variable storing the filename. If we don’t open the file and the <code>file</code> variable refers to the string of the filename, then <code>line</code> will just be the letters of the filename one at a time. Therefore, we’ll want to make sure that <code>file</code> refers to the open file.</p>
+</div>
+<div id="print-the-line" class="section level3" number="12.3.3">
+<h3><span class="header-section-number">12.3.3</span> PRINT the line</h3>
+<ol start="2" style="list-style-type: decimal">
+<li>The body of the <code>for</code> loop</li>
+</ol>
+<p>We’ve already defined this well - we want to PRINT the line.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Any variable initialization before the <code>for</code> statement</li>
+</ol>
+<p>Is there any need to initialize a variable before the <code>for</code> loop that you will edit within the body of the loop? In this case, because we’re printing every line in the file, there’s no need to initilalize a variable beforehand.</p>
+</div>
+</div>
+<div id="building-the-code" class="section level2" number="12.4">
+<h2><span class="header-section-number">12.4</span> Building the code</h2>
+<p><strong>Create a new Python script</strong></p>
+<div id="set-the-input-file-1" class="section level3" number="12.4.1">
+<h3><span class="header-section-number">12.4.1</span> SET the input file</h3>
+<p>To SET what the input file is, we will create a variable which stores the string of the filename for the input file.</p>
+<p>Consult the notes on variable assignment earlier to SET a variable equal to the input file. Within your Python script, write a line of code that does this.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb76"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="applied-python-exercise-1.html#cb76-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span></span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="for-every-line-in-the-open-file-1" class="section level3" number="12.4.2">
+<h3><span class="header-section-number">12.4.2</span> FOR every line in the open file</h3>
+<p>Then, that variable is just storing the name of the file. The actual file contents, or the lines of the file, aren’t available to Python until the file is opened. Consult the notes on the built-in Python function <code>open()</code> and use the determined structure of the <code>for</code> statement from the pseudocode section above to open the file and begin the <code>for</code> loop architecture. Within your Python script, write a line of code that does this.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="applied-python-exercise-1.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(filename):</span></code></pre></div>
+</details>
+<hr />
+</div>
+<div id="print-the-line-1" class="section level3" number="12.4.3">
+<h3><span class="header-section-number">12.4.3</span> PRINT the line</h3>
+<p>Now that we have the first component of the <code>for</code> loop, we can write the body of the <code>for</code> loop so that each line is printed as output. Consult the notes on the <code>print()</code> function indenting the body of the <code>for</code> loop under the <code>for</code> statement. Within your Python script, write a line of code that does this.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb78"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="applied-python-exercise-1.html#cb78-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(line)</span></code></pre></div>
+</details>
+<hr />
+<p>If we were just to use the code above, there would be a blank line printed at the end of each line from the file. We can remove the blank lines from the output by using another built-in Python function specifically <code>strip()</code>. Newline characters which apepar as blank lines in the output are either <code>"\n"</code> or <code>"\r"</code> within bioinformatic files. Since we’re not certain which of these our input file has, we’ll strip both of these characters off the end of each line using <code>strip("\r\n")</code>, specifically telling the <code>strip</code> function to remove both of those characters. We can tell the <code>strip</code> function to remove those characters from each line using the following syntax: <code>line.strip("\r\n")</code>. Use of this function with this syntax will remove or suppress those blank lines in the output. Edit the line of code within your Python script to do this.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="applied-python-exercise-1.html#cb79-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+</details>
+<hr />
+<p>Finally, within your Python script, you should have the three lines of code together which makes our complete intended goal code – code that prints every line in a file.</p>
+<p><strong>Use the command line to run the Python script and look at the output.</strong></p>
+</div>
+</div>
+<div id="complete-intended-goal-code" class="section level2" number="12.5">
+<h2><span class="header-section-number">12.5</span> Complete Intended Goal Code</h2>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="applied-python-exercise-1.html#cb80-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span> <span class="co">#SET the input filename</span></span>
+<span id="cb80-2"><a href="applied-python-exercise-1.html#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(filename): <span class="co">#FOR every line in the open file</span></span>
+<span id="cb80-3"><a href="applied-python-exercise-1.html#cb80-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
+</details>
+<hr />
 
 </div>
 </div>
@@ -458,8 +543,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="logistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="applied-python-exercise-outline.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applied-python-exercise-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
