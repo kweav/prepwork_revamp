@@ -36,7 +36,8 @@ END FOR
 
 In this module, we want to only print the line if it's the first line of the file. Keeping the for loop, edit the pseudocode, inserting a step that asks which line position it is numerically in the file.
 
-ANSWER:
+***
+<details><summary> ANSWER: </summary>
 
 First, we need to SET the input file
 Second, FOR every line in the open file
@@ -45,11 +46,20 @@ Second, FOR every line in the open file
   END IF
 END FOR
 
+</details>
+***
+
 ### SET the input file
 
 Much like how we reused the pseudocode of the last module, we'll be able to reuse much of the code from the last module. Do you think that defining a variable with the input file name is one of those reusable steps? 
 
-ANSWER: Yes, it is
+***
+<details><summary> ANSWER: </summary>
+
+Yes, it is
+
+</details>
+***
 
 ### FOR every line in the open file
 
@@ -59,19 +69,37 @@ Let's again focus on building the `for` loop structure by considering the 2 comp
 
   Do you think that the `for` statement from the last module is the best pattern for this problem? Consider that the `for` statement in the last module only provided you access to each line (or item) in the file (or collection of items), but did not provide you any information on which line position numerically it was in the file.
   
-  ANSWER: We should use the third `for` statement pattern instead which provides both the item and the item's position or index.
+  ***
+  <details><summary> ANSWER: </summary>
+ 
+  We should use the third `for` statement pattern instead which provides both the item and the item's position or index.
 
+  </details>
+  *** 
+  
 ### IF the first line and PRINT the line
 
 2. The body of the `for` loop
   
   Considering that the body of the for loop is where the pseudocode was added, we also need to add to the body of the `for` loop. However, does the code that we already have from the first module still work well for this module?
   
-  ANSWER: Yes, it does.
+  ***
+  <details><summary> ANSWER: </summary>
+  
+  Yes, it does.
+  
+  </details>
+  ***
   
   What can we use to see if the index or position of the line is the first line in the file? 
   
-  ANSWER: We can use a conditional and logical expression such that we'll PRINT the line, but only if it's the first line in the file.
+  ***
+  <details><summary> ANSWER: </summary>
+  
+  We can use a conditional and logical expression such that we'll PRINT the line, but only if it's the first line in the file.
+  
+  </details>
+  ***
   
 
 ## Building the code
@@ -82,38 +110,57 @@ Let's again focus on building the `for` loop structure by considering the 2 comp
 
 To SET what the input file is, we will use the variable assignment code from the first module. Within your Python script, write that variable assignment expression. 
 
-ANSWER:
+***
+<details><summary> ANSWER: </summary>
+
 ```{python, eval = FALSE}
 filename = "random_snippet.vcf"
 ```
+
+</details>
+***
 
 ### FOR every line in the open file
 
 Consult the notes on the third pattern of the `for` statement and edit the first modules `for` statement code to meet the needs of this module. Within your python script, write the revised `for` statement.
 
-ANSWER
+***
+<details><summary> ANSWER: </summary>
+
 ```{python, eval = FALSE}
 for i, line in enumerate(open(filename)):
 ```
 
+</details>
+***
 
 ### IF the first line
 
 Next, edit the body of the `for` loop from the first module such that it asks if the line is the first line. Consult your notes on indexing to see what integer you want the index to be equal to (e.g., 0 or 1). Write the conditional and logical expression code within your Python script within the `for` loop body.
 
-ANSWER:
+***
+<details><summary> ANSWER: </summary>
+
 ```{python, eval = FALSE}
   if i == 0:
 ```
+
+</details>
+***
 
 ### PRINT the line
 
 Finally, reuse the code from the first module to print the line (when it is the first line). Add this `print()` statement to your Python script, indenting correctly under the conditional statement.
 
-ANSWER:
+***
+<details><summary> ANSWER: </summary>
+
 ```{python, eval = FALSE}
     print(line.strip('\r\n'))
 ```
+
+</details>
+***
 
 Within your Python script, you should have the four lines of code together which makes our complete indended goal code -- code that prints just the first line in a file.
 
@@ -121,9 +168,15 @@ Within your Python script, you should have the four lines of code together which
 
 ## Complete Intended Goal Code
 
+***
+<details><summary> ANSWER: </summary>
+
 ```{python, eval = FALSE}
 filename = "random_snippet.vcf" #SET the input filename
 for i, line in enumerate(open(filename)): #FOR every line in the open file
   if i == 0: #IF the first line
     print(line.strip('\r\n')) #PRINT the line
 ```
+
+</details>
+***
