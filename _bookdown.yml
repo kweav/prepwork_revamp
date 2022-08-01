@@ -20,7 +20,7 @@ rmd_files: ["index.Rmd",
             "13-print-n-lines.Rmd",
             "14-skip-header.Rmd",
             "15-tail-it-instead.Rmd",
-            "16-looking-ahead.Rmd"]
+            "16-lookng-ahead.Rmd"]
 new_session: yes
 bibliography: [book.bib]
 delete_merged_file: true
