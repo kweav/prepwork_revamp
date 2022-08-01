@@ -53,6 +53,9 @@ Consider that two separate `for` loops could be useful for this task. One that e
 
 We've provided some pseudocode with blanks that we think will be helpful for you to fill out if you're unsure of where to start or next steps:
 
+***
+<details><summary> Pseudocode with blanks: </summary>
+
 First, we need to SET the input file
 Next, IF the user-specified a desired number of lines to display
   THEN we need to SET the desired number of displayed lines
@@ -72,6 +75,9 @@ ___ a subset of the storage list to be the last ____ items in the storage list
 ___ every line in the subset
   _____ the line
 END FOR
+
+</details>
+***
 
 ## Building the Code
 
