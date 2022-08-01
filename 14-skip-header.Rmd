@@ -2,9 +2,32 @@
 ottrpal::set_knitr_image_path()
 ```
 
+# Applied Python Exercise 6
+
+## Goal -- recreate the Bash tool `head` in Python; adding some new functionality that skips header lines
+
+Write Python code that recreates the Bash tool `head`, displaying a default number of lines in an input file if a specific number of lines isn't specified; but extend the tool so that it skips header lines (specifically, for this example, lines that start with a pound sign (`#`)).
+
 ## Learning Objectives
 
-## Goal -- recreate the Bash tool `head` in Python; adding some new functionality 
+After going through this module, students should be able to:
+
+* State the sub-steps needed to meet the coding goal
+* Use the following datatypes, structures, and fundamentals to meet the coding goal:
+  * importing modules
+  * variable assignment
+  * list indexing
+  * list length
+  * integer conversion
+  * opening a file
+  * initializing a counter variable before a for loop
+  * updating a counter variablbe within a the body of a for loop
+  * for loop
+  * chaining logical expressions
+  * looking at the character a line starts with
+  * conditional statement
+  * printing output
+  
 
 ## Coding Blueprint
 
@@ -37,12 +60,12 @@ OTHERWISE
   THEN we need to SET the desired number of displayed lines to a default
 END OTHERWISE
 Then, FOR every line in the open file
-  IF a desired line (by its numericl position) AND NOT a header line
+  IF a desired line (by its numericl position) AND NOT a header line (line doesn't start with a pound sign `#`)
     PRINT the line
   END IF
 END FOR
 
-We also, can no longer assume that the numerical position of the line within the file corresponds to the number of lines that have been printed since we're filtering out the header. Therefore, we need to track the number of lines that have been printed. Add two lines to the pseudocode that will help you do this, and further edit the conditional that we check before printing a line.
+We also can no longer assume that the numerical position of the line within the file corresponds to the number of lines that have been printed since we're filtering out the header. Therefore, we need to track the number of lines that have been printed. Add two lines to the pseudocode that will help you do this, and further edit the conditional that we check before printing a line. As a hint for those, this is the first time we'll be using the third optional component of a `for` loop: initializing a variable before the `for` loop (and then subsequently) updating it within the body of the loop.
 
 ANSWER:
 
@@ -64,6 +87,28 @@ END FOR
 ## Building the code
 
 **Create a new Python script**
+
+### Usage statement and module importing
+
+### SET the input filename
+
+### IF the user-specified a desired number of lines to display
+
+### THEN SET the desired number of lines
+
+### OTHERWISE 
+
+### THEN SET the desired number of lines to a default
+
+### SET counter of number of lines that have been displayed to 0
+
+### FOR every line in the open file
+
+### IF a desired line (because counter hasn't reached the desired number of lines) and NOT a header line
+
+### PRINT the line
+
+### SET counter to ADD one
 
 Within your Python script, you should have the twelve lines of code together which makes our complete intended goal code -- code that prints a user specified number of lines from the beginning of a user specified input file, skipping header lines that begin with a pound sign (`#`).
 

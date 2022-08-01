@@ -58,7 +58,7 @@ END FOR
 
 ## Building the code
 
-**Create a new Pythonn script**
+**Create a new Python script**
 
 ### Usage statement and module importing
 
