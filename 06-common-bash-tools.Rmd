@@ -43,7 +43,7 @@ If we were in the folder "cmdb", we would use `cd Documents` to move to the Docu
 
 In order to run a python script in bash, you need to use the python interpreter, the name of the script, and any arguments (additional information) being passed to the script.
 
-```{bash, eval=False}
+```{bash, eval=FALSE}
 python myscript.py
 python myscript.py arg1 arg2
 ```
