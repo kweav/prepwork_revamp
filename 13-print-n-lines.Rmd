@@ -62,9 +62,9 @@ END FOR
 
 ### Usage statement and module importing
 
-We again want to import the `sys` module so that usersspecify the input file and can specify the desired number of lines (if they want). Within your new Python script, import the module. 
+We again want to import the `sys` module so that users specify the input file and can specify the desired number of lines (if they want). Within your new Python script, import the module. 
 
-We'll want to update our usage statement comment to reflect that only the filename is required. Adding brackets (`[`, `]`) around an argument description in the usage statement is the preferred way to say that the argument is not required as input. Within your Python script, update your previous usage statement from the fourth Python exercise to show that the number of lines to display is no longer a required argument.
+We'll want to update our usage statement comment to reflect that only the filename is required. Adding brackets (`[`, `]`) around an argument description in the usage statement is the preferred way to say that the argument is not required as input. Within your Python script, update your previous usage statement from the fourth Python exercise module to show that the number of lines to display is no longer a required argument.
 
 ANSWER:
 ```{python, eval = FALSE}
@@ -114,6 +114,7 @@ else:
 
 In the third Python exercise module, we previously hardcoded the number of lines we wanted to display. Within your Python script, indented under the `else` statement, write code that defines the default number of lines as 10.
 
+ANSWER:
 ```{python, eval = FALSE}
   n_lines = 10
 ```
@@ -140,7 +141,7 @@ ANSWER:
 
 ### PRINT the line
 
-Finally, reuse the code from the first three Python exercise modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
+Finally, reuse the code from the first four Python exercise modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
 
 ANSWER:
 ```{python, eval =FALSE}
