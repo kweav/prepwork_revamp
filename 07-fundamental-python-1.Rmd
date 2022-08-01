@@ -173,7 +173,7 @@ print(mylist + [6, 7])
 But what if we wanted to put an item in the middle of the list? We could use the list method `insert`. This places the item in the given position and shifts everything higher than that over.
 
 ```{python}
-mylist.insert('b', 3)
+mylist.insert(3, 'b')
 print(mylist)
 ```
 
