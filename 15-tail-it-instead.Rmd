@@ -34,18 +34,18 @@ After going through this module, students should be able to:
 
 We recommend that you start with the final pseudocode from the fifth Python exercise module: 
 
-First, we need to SET the input file
-Next, IF the user-specified a desired number of lines to display
-  THEN we need to SET the desired number of displayed lines
-END IF
-OTHERWISE 
-  THEN we need to SET the desired number of displayed lines to a default
-END OTHERWISE
-Then, FOR every line in the open file
-  IF a desired line (by its numerical position)
-    PRINT the line
-  END IF
-END FOR
+First, we need to SET the input file <br />
+Next, IF the user-specified a desired number of lines to display <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines <br />
+END IF <br />
+OTHERWISE <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines to a default <br />
+END OTHERWISE <br />
+Then, FOR every line in the open file <br />
+&nbsp;&nbsp;  IF a desired line (by its numerical position) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    PRINT the line <br />
+&nbsp;&nbsp;  END IF <br />
+END FOR <br />
 
 Edit this pseudocode such that it reflects what you want to do. Keep lines that are still applicable, remove lines that are no longer applicable, add lines that you need.
 
@@ -56,25 +56,25 @@ We've provided some pseudocode with blanks that we think will be helpful for you
 ***
 <details><summary> Pseudocode with blanks: </summary>
 
-First, we need to SET the input file
-Next, IF the user-specified a desired number of lines to display
-  THEN we need to SET the desired number of displayed lines
-END IF
-OTHERWISE 
-  THEN we need to SET the desired number of displayed lines to a default
-END OTHERWISE
-___ a storage list for lines in the file 
-Then, FOR every line in the open file
-  ~~IF a desired line (by its numerical position)~~
-    ~~PRINT the line~~
-  ~~END IF~~
-  ___ the line to the storage list
-END FOR
+First, we need to SET the input file <br />
+Next, IF the user-specified a desired number of lines to display <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines <br />
+END IF <br />
+OTHERWISE  <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines to a default <br />
+END OTHERWISE <br />
+___ a storage list for lines in the file <br />
+Then, FOR every line in the open file <br />
+&nbsp;&nbsp;  ~~IF a desired line (by its numerical position)~~ <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    ~~PRINT the line~~ <br />
+&nbsp;&nbsp;  ~~END IF~~ <br />
+&nbsp;&nbsp;  ___ the line to the storage list <br />
+END FOR <br />
 
-___ a subset of the storage list to be the last ____ items in the storage list
-___ every line in the subset
-  _____ the line
-END FOR
+___ a subset of the storage list to be the last ____ items in the storage list <br />
+___ every line in the subset <br />
+&nbsp;&nbsp;  _____ the line <br />
+END FOR <br />
 
 </details>
 ***

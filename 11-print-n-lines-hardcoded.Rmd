@@ -29,25 +29,25 @@ Let's again start with and edit the pseudocode from the last module to meet the 
 
 Last module's pseudocode:
 
-First, we need to SET the input file
-Second, FOR every line in the open file
-  IF the first line
-    PRINT the line
-  END IF
-END FOR
+First, we need to SET the input file <br />
+Second, FOR every line in the open file <br />
+&nbsp;&nbsp;  IF the first line <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    PRINT the line <br />
+&nbsp;&nbsp;  END IF <br />
+END FOR <br />
 
 In this module, we no longer want to print the line if and only if it's the first line of the file. We now want to print the line if it's any of the first several lines of the file, where the actual number of lines is specified or set or defined, much like how we define the input file name. Edit the pseudocode, adding one line, and editing another line to reflect this change in the goal.
 
 ***
 <details><summary> ANSWER: </summary>
 
-First, we need to SET the input file
-Next, we need to SET the desired number of displayed lines
-Then, FOR every line in the open file
-  IF a desired line (by its numerical position)
-    PRINT the line
-  END IF
-END FOR
+First, we need to SET the input file <br />
+Next, we need to SET the desired number of displayed lines <br />
+Then, FOR every line in the open file <br />
+&nbsp;&nbsp;  IF a desired line (by its numerical position) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    PRINT the line <br />
+&nbsp;&nbsp;  END IF <br />
+END FOR <br />
 
 </details>
 ***
