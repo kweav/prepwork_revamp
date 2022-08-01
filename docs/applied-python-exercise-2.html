@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter13 Applied Python Exercise 2 | QBB Prepwork</title>
+  <title>Chapter 13 Applied Python Exercise 2 | QBB Prepwork</title>
   <meta name="description" content="Description about Course/Book." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter13 Applied Python Exercise 2 | QBB Prepwork" />
+  <meta property="og:title" content="Chapter 13 Applied Python Exercise 2 | QBB Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter13 Applied Python Exercise 2 | QBB Prepwork" />
+  <meta name="twitter:title" content="Chapter 13 Applied Python Exercise 2 | QBB Prepwork" />
   
   <meta name="twitter:description" content="Description about Course/Book." />
   
@@ -411,7 +411,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
 <div id="applied-python-exercise-2" class="section level1" number="13">
-<h1><span class="header-section-number">Chapter13</span> Applied Python Exercise 2</h1>
+<h1><span class="header-section-number">Chapter 13</span> Applied Python Exercise 2</h1>
 <div id="goal-print-the-first-line-in-a-file" class="section level2" number="13.1">
 <h2><span class="header-section-number">13.1</span> Goal – Print the first line in a file</h2>
 <p>Write Python code that works towards recreating the Bash tool <code>head</code>, displaying only the first line in a file: <code>random_snippet.vcf</code></p>
@@ -443,17 +443,30 @@ Second, FOR every line in the open file
 PRINT the line
 END FOR</p>
 <p>In this module, we want to only print the line if it’s the first line of the file. Keeping the for loop, edit the pseudocode, inserting a step that asks which line position it is numerically in the file.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <p>First, we need to SET the input file
 Second, FOR every line in the open file
 IF the first line
 PRINT the line
 END IF
 END FOR</p>
+</details>
+<hr />
 <div id="set-the-input-file-2" class="section level3" number="13.3.1">
 <h3><span class="header-section-number">13.3.1</span> SET the input file</h3>
 <p>Much like how we reused the pseudocode of the last module, we’ll be able to reuse much of the code from the last module. Do you think that defining a variable with the input file name is one of those reusable steps?</p>
-<p>ANSWER: Yes, it is</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<p>Yes, it is</p>
+</details>
+<hr />
 </div>
 <div id="for-every-line-in-the-open-file-2" class="section level3" number="13.3.2">
 <h3><span class="header-section-number">13.3.2</span> FOR every line in the open file</h3>
@@ -462,7 +475,14 @@ END FOR</p>
 <li>The <code>for</code> statement</li>
 </ol>
 <p>Do you think that the <code>for</code> statement from the last module is the best pattern for this problem? Consider that the <code>for</code> statement in the last module only provided you access to each line (or item) in the file (or collection of items), but did not provide you any information on which line position numerically it was in the file.</p>
-<p>ANSWER: We should use the third <code>for</code> statement pattern instead which provides both the item and the item’s position or index.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<p>We should use the third <code>for</code> statement pattern instead which provides both the item and the item’s position or index.</p>
+</details>
+<hr />
 </div>
 <div id="if-the-first-line-and-print-the-line" class="section level3" number="13.3.3">
 <h3><span class="header-section-number">13.3.3</span> IF the first line and PRINT the line</h3>
@@ -470,9 +490,23 @@ END FOR</p>
 <li>The body of the <code>for</code> loop</li>
 </ol>
 <p>Considering that the body of the for loop is where the pseudocode was added, we also need to add to the body of the <code>for</code> loop. However, does the code that we already have from the first module still work well for this module?</p>
-<p>ANSWER: Yes, it does.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<p>Yes, it does.</p>
+</details>
+<hr />
 <p>What can we use to see if the index or position of the line is the first line in the file?</p>
-<p>ANSWER: We can use a conditional and logical expression such that we’ll PRINT the line, but only if it’s the first line in the file.</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+<p>We can use a conditional and logical expression such that we’ll PRINT the line, but only if it’s the first line in the file.</p>
+</details>
+<hr />
 </div>
 </div>
 <div id="building-the-code-1" class="section level2" number="13.4">
@@ -481,36 +515,67 @@ END FOR</p>
 <div id="set-the-input-file-3" class="section level3" number="13.4.1">
 <h3><span class="header-section-number">13.4.1</span> SET the input file</h3>
 <p>To SET what the input file is, we will use the variable assignment code from the first module. Within your Python script, write that variable assignment expression.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="applied-python-exercise-2.html#cb81-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span></span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="for-every-line-in-the-open-file-3" class="section level3" number="13.4.2">
 <h3><span class="header-section-number">13.4.2</span> FOR every line in the open file</h3>
 <p>Consult the notes on the third pattern of the <code>for</code> statement and edit the first modules <code>for</code> statement code to meet the needs of this module. Within your python script, write the revised <code>for</code> statement.</p>
-<p>ANSWER</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="applied-python-exercise-2.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)):</span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="if-the-first-line" class="section level3" number="13.4.3">
 <h3><span class="header-section-number">13.4.3</span> IF the first line</h3>
 <p>Next, edit the body of the <code>for</code> loop from the first module such that it asks if the line is the first line. Consult your notes on indexing to see what integer you want the index to be equal to (e.g., 0 or 1). Write the conditional and logical expression code within your Python script within the <code>for</code> loop body.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="applied-python-exercise-2.html#cb83-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>:</span></code></pre></div>
+</details>
+<hr />
 </div>
 <div id="print-the-line-2" class="section level3" number="13.4.4">
 <h3><span class="header-section-number">13.4.4</span> PRINT the line</h3>
 <p>Finally, reuse the code from the first module to print the line (when it is the first line). Add this <code>print()</code> statement to your Python script, indenting correctly under the conditional statement.</p>
-<p>ANSWER:</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="applied-python-exercise-2.html#cb84-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+</details>
+<hr />
 <p>Within your Python script, you should have the four lines of code together which makes our complete indended goal code – code that prints just the first line in a file.</p>
 <p><strong>Use the command line to run the Python script and look at the output.</strong></p>
 </div>
 </div>
 <div id="complete-intended-goal-code-1" class="section level2" number="13.5">
 <h2><span class="header-section-number">13.5</span> Complete Intended Goal Code</h2>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
 <div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="applied-python-exercise-2.html#cb85-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span> <span class="co">#SET the input filename</span></span>
 <span id="cb85-2"><a href="applied-python-exercise-2.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)): <span class="co">#FOR every line in the open file</span></span>
 <span id="cb85-3"><a href="applied-python-exercise-2.html#cb85-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>: <span class="co">#IF the first line</span></span>
 <span id="cb85-4"><a href="applied-python-exercise-2.html#cb85-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
+</details>
+<hr />
 
 </div>
 </div>
