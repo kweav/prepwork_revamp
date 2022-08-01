@@ -108,7 +108,7 @@ ANSWER:
 
 ### PRINT the line
 
-Finally, reuse the code from the first module to print the line (when it is the first line). Add this `print()` statement to your Python script.
+Finally, reuse the code from the first module to print the line (when it is the first line). Add this `print()` statement to your Python script, indenting correctly under the conditional statement.
 
 ANSWER:
 ```{python, eval = FALSE}

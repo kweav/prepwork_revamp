@@ -43,7 +43,7 @@ OTHERWISE
   THEN we need to SET the desired number of displayed lines to a default
 END OTHERWISE
 Then, FOR every line in the open file
-  IF a desired line (by its numericl position)
+  IF a desired line (by its numerical position)
     PRINT the line
   END IF
 END FOR
@@ -60,7 +60,7 @@ OTHERWISE
   THEN we need to SET the desired number of displayed lines to a default
 END OTHERWISE
 Then, FOR every line in the open file
-  IF a desired line (by its numericl position) AND NOT a header line (line doesn't start with a pound sign `#`)
+  IF a desired line (by its numerical position) AND NOT a header line (line doesn't start with a pound sign `#`)
     PRINT the line
   END IF
 END FOR

@@ -33,7 +33,7 @@ Last module's pseudocode:
 First, we need to SET the input file
 Next, we need to SET the desired number of displayed lines
 Then, FOR every line in the open file
-  IF a desired line (by its numericl position)
+  IF a desired line (by its numerical position)
     PRINT the line
   END IF
 END FOR
@@ -85,7 +85,6 @@ ANSWER:
 n_lines = int(sys.argv[2])
 ```
 
-
 Now that we've managed to set the input file and the desired number of lines to values that are specified by the user on the command line, we can reuse the rest of the code for the next three steps that we used in the previous module. 
 
 ### FOR every line in the open file
@@ -97,9 +96,9 @@ ANSWER:
 for i, line in enumerate(open(filename)):
 ```
 
-### IF a desired line (by its numericl position)
+### IF a desired line (by its numerical position)
 
-To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third Python exercise module. Write this line of code within your Python script.
+To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third Python exercise module. Write this line of code within your Python script, indenting correctly under the `for` loop statement.
 
 ANSWER:
 ```{python, eval = FALSE}
@@ -108,7 +107,7 @@ ANSWER:
 
 ### PRINT the line
 
-Finally, resue the code from the first three Python exercise modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
+Finally, reuse the code from the first three Python exercise modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
 
 ANSWER:
 ```{python, eval =FALSE}

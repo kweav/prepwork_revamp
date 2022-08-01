@@ -43,7 +43,7 @@ ANSWER:
 First, we need to SET the input file
 Next, we need to SET the desired number of displayed lines
 Then, FOR every line in the open file
-  IF a desired line (by its numericl position)
+  IF a desired line (by its numerical position)
     PRINT the line
   END IF
 END FOR
