@@ -6,6 +6,8 @@ ottrpal::set_knitr_image_path()
 
 ## Goal -- Print some specified number of lines from the beginning of an input file: `random_snippet.vcf`
 
+Write Python code that works towards recreating the Bash tool `head`, displaying a specified number of lines from the beginning of a file.
+
 ## Learning Objectives
 
 After going through this module, students should be able to:

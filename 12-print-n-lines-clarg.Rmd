@@ -6,6 +6,8 @@ ottrpal::set_knitr_image_path()
 
 ## Goal -- Print a specific number of lines from the beginnning of an input file, allowing the specification of the number of lines outside of the code by the user
 
+Write Python code that works towards recreating the Bash tool `head`, displaying a user specified number of lines from the beginning of a user specified input file.
+
 ## Learning Objectives
 
 After going through this module, students should be able to:
@@ -82,7 +84,6 @@ ANSWER:
 ```{python, eval = FALSE}
 n_lines = int(sys.argv[2])
 ```
-
 
 
 Now that we've managed to set the input file and the desired number of lines to values that are specified by the user on the command line, we can reuse the rest of the code for the next three steps that we used in the previous module. 

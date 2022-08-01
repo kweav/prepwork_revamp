@@ -2,31 +2,96 @@
 ottrpal::set_knitr_image_path()
 ```
 
+# Applied Python Exercise 5
+
+## Goal -- print a default number of lines from the beginning of an input file if another number isn't specified as an additional input
+
+Write Python code that recreates the Bash tool `head`, displaying a default number of lines in an input file if a specific number of lines isn't specified.
+
 ## Learning Objectives
 
-## python fundamentals and datatypes applicable to this section
-* for loop
-* variable
-* strings
-* booleans
-* integers
-* lists
-* len() function
-* conditional
+After going through this module, students should be able to:
 
-## Goal -- recreate the Bash tool `head` in Python
+* State the sub-steps needed to meet the coding goal
+* Use the following datatypes, structures, and fundamentals to meet the coding goal:
+  * importing modules
+  * variable assignment
+  * list indexing
+  * list length
+  * integer conversion
+  * opening a file
+  * for loop
+  * logical expression
+  * conditional statement
+  * printing output
+  
+## Coding Blueprint
 
-### print n lines command line arg or use default
+Let's again start with and edit the pseudocode from the last module to meet the needs of this module.
 
-### Intended Code
+Last module's pseudocode:
+
+First, we need to SET the input file
+Next, we need to SET the desired number of displayed lines
+Then, FOR every line in the open file
+  IF a desired line (by its numericl position)
+    PRINT the line
+  END IF
+END FOR
+
+We do want to edit this past pseudocode, adding some clarity to how we're going to SET the desired number of displayed lines. Specifically, we're either setting the desired number as a user-specified input, or as a default number if no user-input is given. Edit that line of the pseudocode, expanding it with conditional expression language to reflect this change in the program behavior.
+
+ANSWER:
+
+First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+  THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE 
+  THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+Then, FOR every line in the open file
+  IF a desired line (by its numericl position)
+    PRINT the line
+  END IF
+END FOR
+
+## Building the code
+
+**Create a new Pythonn script**
+
+### Usage statement and module importing
+
+### SET the input filename
+
+### IF the user-specified a desired number of lines to display
+
+### THEN SET the desired number of lines
+
+### OTHERWISE 
+
+### THEN SET the desired number of lines to a default
+
+### FOR every line in the open file
+
+### IF a desired line (by its numerial position)
+
+### PRINT the line
+
+Within your Python script, you should have the ten lines of code together which makes our complete intended goal code -- code that recreates the Bash tool `head` -- a program that prints a user specified number of lines from the beginning a user-specified input file, unless no specific number of lines is specified, then it prints a default of 10 lines.
+
+**Use the command line to run the Python script and look at the output**
+  
+## Complete Intended Goal Code
 ```{python, eval = FALSE}
-import sys
-filename = sys.argv[1]
-if len(sys.argv) > 2:
-  n_lines = int(sys.argv[2])
-else:
-  n_lines = 10
-for i, line in enumerate(open(filename)):
-  if i < n_lines:
-    print(line, end="")
+#USAGE: python scriptname.py input_filename [number_lines_to_display]
+import sys #import module
+filename = sys.argv[1] #SET input filename
+if len(sys.argv) > 2: #IF user-specified number of lines provided
+  n_lines = int(sys.argv[2]) #SET the desired number of lines
+else: #OTHERWISE
+  n_lines = 10 #SET the desired number of lines to a default
+for i, line in enumerate(open(filename)): #FOR every line in the open file
+  if i < n_lines: #IF a desired line by its numerical position
+    print(line.strip('\r\n')) #PRINT the line
 ```

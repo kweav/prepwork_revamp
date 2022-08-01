@@ -6,19 +6,81 @@ ottrpal::set_knitr_image_path()
 
 ## Goal -- recreate the Bash tool `head` in Python; adding some new functionality 
 
-### skip header
+## Coding Blueprint
 
-### Intended Code
+Let's again start with and edit the pseudocode from the last module to meet the needs of this module.
+
+Last module's pseudocode:
+
+First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+  THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE 
+  THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+Then, FOR every line in the open file
+  IF a desired line (by its numericl position)
+    PRINT the line
+  END IF
+END FOR
+
+We do want to edit this past pseudocode, adding a condition that should be true before we print a line. Edit that line of the pseudocode, expanding it with logical expression language to reflect this change in the program behavior.
+
+ANSWER:
+
+First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+  THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE 
+  THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+Then, FOR every line in the open file
+  IF a desired line (by its numericl position) AND NOT a header line
+    PRINT the line
+  END IF
+END FOR
+
+We also, can no longer assume that the numerical position of the line within the file corresponds to the number of lines that have been printed since we're filtering out the header. Therefore, we need to track the number of lines that have been printed. Add two lines to the pseudocode that will help you do this, and further edit the conditional that we check before printing a line.
+
+ANSWER:
+
+First, we need to SET the input file
+Next, IF the user-specified a desired number of lines to display
+  THEN we need to SET the desired number of displayed lines
+END IF
+OTHERWISE 
+  THEN we need to SET the desired number of displayed lines to a default
+END OTHERWISE
+SET counter of number of lines that have been displayed to 0
+Then, FOR every line in the open file
+  IF a desired line (counter hasn't reached desired number of lines) AND NOT a header line
+    PRINT the line
+    SET counter to ADD one
+  END IF
+END FOR
+
+## Building the code
+
+**Create a new Python script**
+
+Within your Python script, you should have the twelve lines of code together which makes our complete intended goal code -- code that prints a user specified number of lines from the beginning of a user specified input file, skipping header lines that begin with a pound sign (`#`).
+
+**Use the command line to run the Python script and look at the output**
+
+## Complete Intended Goal Code
 ```{python, eval = FALSE}
-import sys
-filename = sys.argv[1]
-if len(sys.argv) > 2:
-  n_lines = int(sys.argv[2])
-else:
-  n_lines = 10
-counter = 0
-for line in open(filename):
-  if counter < n_lines and not line.startswith("#"):
-    print(line, end="")
-    counter = counter + 1
+#USAGE: #USAGE: python scriptname.py input_filename [number_lines_to_display]
+import sys #import module
+filename = sys.argv[1] #SET the input filename
+if len(sys.argv) > 2: #IF user-specified number of lines provided
+  n_lines = int(sys.argv[2]) #SET the desired number of lines
+else: #OTHERWISE
+  n_lines = 10 #SET the desired number of lines to a default
+counter = 0 #SET counter of number of lines that have been displayed ot 0
+for line in open(filename): #FOR every line in the open file
+  if counter < n_lines and not line.startswith("#"): #IF the counter hasn't reached the max number of desired lines AND NOT a header line
+    print(line.strip('\r\n')) #PRINT the line
+    counter = counter + 1 #SET counter to add one
 ```
