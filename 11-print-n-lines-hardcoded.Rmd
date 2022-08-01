@@ -104,7 +104,7 @@ Within your Python script, you should have the five lines of code together which
 **Use the command line to run the Python script and look at the output**
 
 ## Complete Intended Goal Code
-```{python}
+```{python, eval = FALSE}
 filename = "random_snippet.vcf" #SET the input filename
 n_lines = 10 #SET the desired number of lines
 for i, line in enumerate(open(filename)): #FOR every line in the open file
