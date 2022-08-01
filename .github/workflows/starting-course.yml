@@ -71,6 +71,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         id: pr
         with:
+          token: ${{ secrets.GH_TOKEN }}
           commit-message: Delete unnecessary files
           signoff: false
           branch: auto_copy_rendered_files

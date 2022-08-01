@@ -63,34 +63,55 @@ To SET what the input file is, we will create a variable which stores the string
 
 Consult the notes on variable assignment earlier to SET a variable equal to the input file. Within your Python script, write a line of code that does this. 
 
-ANSWER:
+***
+<details><summary> ANSWER: </summary>
+
 ```{python, eval = FALSE}
 filename = "random_snippet.vcf"
 ```
+
+</details>
+***
 
 ### FOR every line in the open file
 
 Then, that variable is just storing the name of the file. The actual file contents, or the lines of the file, aren't available to Python until the file is opened. Consult the notes on the built-in Python function `open()` and use the determined structure of the `for` statement from the pseudocode section above to open the file and begin the `for` loop architecture. Within your Python script, write a line of code that does this.
 
-ANSWER:
+***
+<details><summary> ANSWER: </summary>
+
 ```{python, eval = FALSE}
 for line in open(filename):
 ```
+
+</details>
+***
 
 ### PRINT the line
 
 Now that we have the first component of the `for` loop, we can write the body of the `for` loop so that each line is printed as output. Consult the notes on the `print()` function indenting the body of the `for` loop under the `for` statement. Within your Python script, write a line of code that does this.
 
-ANSWER:
+***
+<details><summary> ANSWER: </summary>
+
 ```{python, eval = FALSE}
   print(line)
 ```
 
+</details>
+***
+
 If we were just to use the code above, there would be a blank line printed at the end of each line from the file. We can remove the blank lines from the output by using another built-in Python function specifically `strip()`. Newline characters which apepar as blank lines in the output are either `"\n"` or `"\r"` within bioinformatic files.  Since we're not certain which of these our input file has, we'll strip both of these characters off the end of each line using `strip("\r\n")`, specifically telling the `strip` function to remove both of those characters. We can tell the `strip` function to remove those characters from each line using the following syntax: `line.strip("\r\n")`. Use of this function with this syntax will remove or suppress those blank lines in the output. Edit the line of code within your Python script to do this.
+
+***
+<details><summary> ANSWER: </summary>
 
 ```{python, eval = FALSE}
   print(line.strip('\r\n'))
 ```
+
+</details>
+***
 
 Finally, within your Python script, you should have the three lines of code together which makes our complete intended goal code -- code that prints every line in a file.
 
@@ -98,8 +119,14 @@ Finally, within your Python script, you should have the three lines of code toge
 
 ## Complete Intended Goal Code
 
+***
+<details><summary> ANSWER: </summary>
+
 ```{python, eval = FALSE}
 filename = "random_snippet.vcf" #SET the input filename
 for line in open(filename): #FOR every line in the open file
   print(line.strip('\r\n')) #PRINT the line
 ```
+
+</details>
+***
