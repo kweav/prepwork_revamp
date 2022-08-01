@@ -155,7 +155,7 @@ mylist[0] = "a"
 print(mylist)
 ```
 
-The output from this is `["a", 2, 3, 4]`. You'll notice that the position numbering starts at zero instead of one. We'll talk more about indexing later.
+You'll notice that the position numbering starts at zero instead of one. We'll talk more about indexing later.
 
 What about adding items to a list? Lists have several built-in methods (a function built-in to a class, and yes, a list is a class. It's an object-oriented langauge thing). We will be using the `append` method.
 
@@ -164,20 +164,20 @@ mylist.append(5)
 print(mylist)
 ```
 
-This prints out `["a", 2, 3, 4, 5]`. As you can see, we've added an element to the end of our list. Another way to add elements is to combine lists. To do this, we can used the plus sign.
+As you can see, we've added an element to the end of our list. Another way to add elements is to combine lists. To do this, we can used the plus sign.
 
 ```{python}
 print(mylist + [6, 7])
 ```
 
-This prints out `["a", 2, 3, 4, 5, 6, 7]`. But what if we wanted to put an item in the middle of the list? We could use the list method `insert`. This places the item in the given position and shifts everything higher than that over.
+But what if we wanted to put an item in the middle of the list? We could use the list method `insert`. This places the item in the given position and shifts everything higher than that over.
 
 ```{python}
 mylist.insert('b', 3)
 print(mylist)
 ```
 
-This prints out `["a", 2, 3, "b", 4, 5]`. We can also look for items in a list. If we wanted to search for "b", we could use the `index` method.
+We can also look for items in a list. If we wanted to search for "b", we could use the `index` method.
 
 ```{python}
 print(mylist.index("b"))
@@ -192,4 +192,4 @@ mylist.pop(0)
 print(mylist)
 ```
 
-This prints out `["a", 2, 3, 4, 5]` followed by `[2, 3, 4, 5]`. The last method we'll look at is `sort`. Like its name implies, this reorganizes the list in place. However, you cannot mix strings and numbers when sorting. So sorting `[3, 2, 1]` will work, but not `[3, 2, "a"]`.
+The last method we'll look at is `sort`. Like its name implies, this reorganizes the list in place. However, you cannot mix strings and numbers when sorting. So sorting `[3, 2, 1]` will work, but not `[3, 2, "a"]`.

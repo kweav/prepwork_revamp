@@ -2,6 +2,8 @@
 ottrpal::set_knitr_image_path()
 ```
 
+# Pseudo-code
+
 ## Goal
 
 Understanding how to break a problem down into basic steps that can be translated into code
