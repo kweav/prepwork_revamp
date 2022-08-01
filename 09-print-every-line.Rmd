@@ -89,7 +89,7 @@ ANSWER:
 If we were just to use the code above, there would be a blank line printed at the end of each line from the file. We can remove the blank lines from the output by using a `parameter` in the `print()` function, specifically `end=`. By default, the end of a printed line from the `print()` function in python is what's called a newline character (`\n`). This will appear as a blank line if what is being printed already has a newline character at the end of it, which our input file does. Therefore, we can set `end` equal to an empty string, which is just two quotes next to each other without any space, and this will remove or suppress those blank lines in the output. Edit the line of code within your Python script to do this.
 
 ```{python, eval = FALSE}
-  print(line, end="")
+  print(line.strip('\r\n'))
 ```
 
 Finally, within your Python script, you should have the three lines of code together which makes our complete intended goal code -- code that prints every line in a file.
@@ -101,5 +101,5 @@ Finally, within your Python script, you should have the three lines of code toge
 ```{python, eval = FALSE}
 filename = "random_snippet.vcf" #SET the input filename
 for line in open(filename): #FOR every line in the open file
-  print(line, end="") #PRINT the line
+  print(line.strip('\r\n')) #PRINT the line
 ```

@@ -25,7 +25,7 @@ After going through this module, students should be able to:
 
 ## Coding Blueprint
 
-Let's start with and edit the pseudocode from the last module to meet the needs of this module:
+Let's start with and edit the pseudocode from the last module to meet the needs of this module.
 
 Last module's pseudocode:
 
@@ -102,7 +102,7 @@ for i, line in enumerate(open(filename)):
 Next, edit the body of the `for` loop from the first module such that it asks if the line is the first line. Consult your notes on indexing to see what integer you want the index to be equal to (e.g., 0 or 1). Write the conditional and logical expression code within your Python script within the `for` loop body.
 
 ANSWER:
-```{python}
+```{python, eval = FALSE}
   if i == 0:
 ```
 
@@ -111,8 +111,8 @@ ANSWER:
 Finally, reuse the code from the first module to print the line (when it is the first line). Add this `print()` statement to your Python script.
 
 ANSWER:
-```{python}
-    print(line, end="")
+```{python, eval = FALSE}
+    print(line.strip('\r\n'))
 ```
 
 Within your Python script, you should have the four lines of code together which makes our complete indended goal code -- code that prints just the first line in a file.
@@ -121,9 +121,9 @@ Within your Python script, you should have the four lines of code together which
 
 ## Complete Intended Goal Code
 
-```{python}
+```{python, eval = FALSE}
 filename = "random_snippet.vcf" #SET the input filename
 for i, line in enumerate(open(filename)): #FOR every line in the open file
   if i == 0: #IF the first line
-    print(line, end="") #PRINT the line
+    print(line.strip('\r\n')) #PRINT the line
 ```

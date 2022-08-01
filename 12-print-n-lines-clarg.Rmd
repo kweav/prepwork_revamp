@@ -2,27 +2,129 @@
 ottrpal::set_knitr_image_path()
 ```
 
+# Applied Python Exercise 4
+
+## Goal -- Print a specific number of lines from the beginnning of an input file, allowing the specification of the number of lines outside of the code by the user
+
 ## Learning Objectives
 
-## python fundamentals and datatypes
-* for loop
-* variable
-* strings
-* booleans
-* integers
-* lists
-* len() function
+After going through this module, students should be able to:
 
-## Goal -- recreate the Bash tool `head` in Python
+* State the sub-steps needed to meet the coding goal
+* Use the following datatypes, structures, and fundamentals to meet the coding goal:
+  * importing modules
+  * variable assignment
+  * list indexing
+  * integer conversion
+  * opening a file
+  * for loop
+  * logical expression
+  * conditional statement
+  * printing output
 
-### print n lines command line arg
+## Coding Blueprint
 
-### Intended Code
+Let's again start with and edit the pseudocode from the last module to meet the needs of this module.
+
+Last module's pseudocode:
+
+First, we need to SET the input file
+Next, we need to SET the desired number of displayed lines
+Then, FOR every line in the open file
+  IF a desired line (by its numericl position)
+    PRINT the line
+  END IF
+END FOR
+
+Do we need to change this pseudocode at all or does it accurately reflect what we want to accomplish with our new script? 
+
+ANSWER: No we don't need to change the pseudocode from the last module because it still accurately reflects the goal we want to accomplish within this module. 
+
+## Building the code
+
+**Create a new Python script**
+
+We may not need to edit the pseudocode for this module, but we will need to edit the code. The end users of tools don't have access to the values of variables within code unless the variables can be passed information through the command line. So rather than defining the variables for the input filename and desired number of lines within the script as hardcoded, inflexible variables with specific values, we're going to define the variables based on input arguments used when running the script, increasing the flexibility of the tool.
+
+The `sys` module is useful for this in Python. Specifically, it allows you to use a structure called `sys.argv` which is a list that stores the command line arguments passed to a Python script. `sys.argv[0]` is always the script name with the additional information/arguments starting at index 1 or `sys.argv[1]`. 
+
+When you use `sys.argv` in a script, it's a good practice to include a USAGE statement comment at the beginning of the script showing how the script should be called. In our case, we want the user to pass the input filename as the first argument and the desired number of lines as the second: `#USAGE: python scriptname.py input_filename number_lines_to_display` (Note that calling the python interpreter is not included in the list since it's before the script name).
+
+So in building our code, we want to make sure to import the `sys` module and set a USAGE comment statement. Within your new Python script, do these two things.
+
+ANSWER:
 ```{python, eval = FALSE}
+#USAGE: python scriptname.py input_filename number_lines_to_display
 import sys
+```
+
+### SET the input filename
+
+In the code for the past modules, we've set the filename as a hardcoded string variable. Now you want to set it as the first command line argument passed to the program when calling the script. Do this within your Python script.
+
+ANSWER:
+```{python, eval = FALSE}
 filename = sys.argv[1]
+```
+
+### SET the desired number of lines
+
+In the code for the last module, we set the desired number of lines as a hardcoded integer variable. Now you want to set it as second command line argument passed to the program when calling the script. Do this within your Python script.
+
+ANSWER:
+```{python, eval = FALSE}
+n_lines = sys.argv[2]
+```
+
+However, we need the varaible to be an integer, and the values in the `sys.argv` list are always stored as strings, even if they are numbers. Therefore, edit the line within your Python script to convert the value that is being stored to an integer.
+
+ANSWER:
+```{python, eval = FALSE}
 n_lines = int(sys.argv[2])
+```
+
+
+
+Now that we've managed to set the input file and the desired number of lines to values that are specified by the user on the command line, we can reuse the rest of the code for the next three steps that we used in the previous module. 
+
+### FOR every line in the open file
+
+To loop through every line in the open file, use the `for` statement structure from the second and third Python exercise modules. Write this line of code within your Python script.
+
+ANSWER:
+```{python, eval = FALSE}
 for i, line in enumerate(open(filename)):
+```
+
+### IF a desired line (by its numericl position)
+
+To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third Python exercise module. Write this line of code within your Python script.
+
+ANSWER:
+```{python, eval = FALSE}
   if i < n_lines:
-    print(line, end="")
+```
+
+### PRINT the line
+
+Finally, resue the code from the first three Python exercise modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
+
+ANSWER:
+```{python, eval =FALSE}
+    print(line.strip('\r\n'))
+```
+
+Within your Python script, you should have the seven lines of code together which makes our complete intended goal code -- code that prints a user specified number of lines from the beginning of a user specified input file.
+
+**Use the command line to run the Python script and look at the output**
+
+## Complete Intended Goal Code
+```{python, eval = FALSE}
+#USAGE: python scriptname.py input_filename number_lines_to_display
+import sys #import module
+filename = sys.argv[1] # SET the input filename
+n_lines = int(sys.argv[2]) # SET the desired number of lines
+for i, line in enumerate(open(filename)): #FOR every line in the open file
+  if i < n_lines: #IF a desired line by its numerical position
+    print(line.strip('\r\n')) #PRINT the line
 ```

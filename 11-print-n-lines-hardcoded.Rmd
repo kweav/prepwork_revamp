@@ -48,13 +48,13 @@ END FOR
 
 ## Building the code
 
-** Create a new Python script**
+**Create a new Python script**
 
 Much like how we added one line and edited one line of the previous module's pseudocode, for the actual code, you will only need to add one line of code, and edit one line of code. 
 
 ### SET the input file 
 
-To SET what the input file is, we will use the variable assignment code from the first and second modules. Within your Python script, write that variable assignment expression. 
+To SET what the input file is, we will use the variable assignment code from the first and second Python exercise modules. Within your Python script, write that variable assignment expression. 
 
 ANSWER:
 ```{python, eval = FALSE}
@@ -72,7 +72,7 @@ n_lines = 10
 
 ### FOR every line in the open file
 
-To loop through every line in the open file, use the `for` statement structure from the second module. Write this line of code within your Python script.
+To loop through every line in the open file, use the `for` statement structure from the second Python exercise module. Write this line of code within your Python script.
 
 ANSWER:
 ```{python, eval = FALSE}
@@ -90,22 +90,22 @@ ANSWER:
 
 ### PRINT the line
 
-Finally, resue the code from the first two modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
+Finally, resue the code from the first two Python exercise modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
 
 ANSWER:
 ```{python, eval =FALSE}
-    print(line, end="")
+    print(line.strip('\r\n'))
 ```
 
 Within your Python script, you should have the five lines of code together which makes our complete intended goal code -- code that prints a specified number of lines from the beginning of a file.
 
 **Use the command line to run the Python script and look at the output**
 
-### Complete Intended Goal Code
+## Complete Intended Goal Code
 ```{python}
 filename = "random_snippet.vcf" #SET the input filename
 n_lines = 10 #SET the desired number of lines
 for i, line in enumerate(open(filename)): #FOR every line in the open file
   if i < n_lines: #IF a desired line by its numerical position
-    print(line, end="") #PRINT the line
+    print(line.strip('\r\n')) #PRINT the line
 ```
