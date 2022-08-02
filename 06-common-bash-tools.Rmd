@@ -41,12 +41,14 @@ If we were in the folder "cmdb", we would use `cd Documents` to move to the Docu
 
 ## Running a python script
 
-In order to run a python script in bash, you need to use the python interpreter, the name of the script, and any arguments (additional information) being passed to the script.
+In order to run a python script in bash (i.e. locally on your own machine), you need to use the python interpreter, the name of the script, and any arguments (additional information) being passed to the script.
 
 ```{bash, eval=FALSE}
 python myscript.py
 python myscript.py arg1 arg2
 ```
+
+Obviously this does not apply if you are using the online Python resources.
 
 ## The head tool
 
