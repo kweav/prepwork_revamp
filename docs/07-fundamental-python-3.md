@@ -77,21 +77,21 @@ There 3 common `for` statement patterns in python. Try to connect the 5 parts of
 
   This statement uses the above pattern (its setup broken down below) in order to work with the items contained in a collection of items item-by-item.
   
-    * the word `for`
-    * then names the variable that each item from the `some_iterable_variable` will be stored in: `value_from_iterable_variable`
-    * the `in` membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the `some_iterable_variable`
-    * the name of the variable for the collection over which we want to iterate and extract its items item-by-item: `some_iterable_variable`
-    * A colon, `:`
+  * the word `for`
+  * then names the variable that each item from the `some_iterable_variable` will be stored in: `value_from_iterable_variable`
+  * the `in` membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the `some_iterable_variable`
+  * the name of the variable for the collection over which we want to iterate and extract its items item-by-item: `some_iterable_variable`
+  * A colon, `:`
 
 2. `for index in range(len(some_iterable_variable_name)):` or `for index in range(some_integer):`
   
   The `range()` function is a built-in Python function that is used to return a list of numbers from 0 up to, but not including some integer number. You would use this above statement pattern  (its setup broken down below) in order to work with the ordered position numbers rather than the items themselves that are stored in a collection of items. With indexing, you could still access the items item-by-item, but the variable name for whatever is being extracted is storing integers, the index positions, not the items.
   
-    * the word `for`
-    * then names the variable that each item from the `range()` function will be stored in: `index`
-    * the `in` membership operator to specify that we want items contained in the list the `range()` function returns
-    * the `range()` function that returns a list of numbers either specified by the `len()` function and the length of `some_iterable_variable_name` or just some integer value (`some_integer`)
-    * A colon, `:`
+  * the word `for`
+  * then names the variable that each item from the `range()` function will be stored in: `index`
+  * the `in` membership operator to specify that we want items contained in the list the `range()` function returns
+  * the `range()` function that returns a list of numbers either specified by the `len()` function and the length of `some_iterable_variable_name` or just some integer value (`some_integer`)
+  * A colon, `:`
 
 
 3. `for index, value_from_iterable_variable in enumerate(some_iterable_variable_name):`
@@ -103,11 +103,11 @@ For example, if we have a list `test_list = ["daisy", "poppy", "daylily", "sunfl
 
 The setup is broken down below for this pattern
   
-    * the word `for`
-    * the names the variables that each index and each item from the `some_iterable_variable_name` will be stored in: `index`, `value_from_iterable_variable`
-    * the `in` membership operator to specify that we want items contained in the output from `enumerate()`
-    * the `enumerate()` function with the `some_iterable_variable_name` over which we want to extract items and their indexes item-by-item.
-    * A colon, `:`
+  * the word `for`
+  * the names the variables that each index and each item from the `some_iterable_variable_name` will be stored in: `index`, `value_from_iterable_variable`
+  * the `in` membership operator to specify that we want items contained in the output from `enumerate()`
+  * the `enumerate()` function with the `some_iterable_variable_name` over which we want to extract items and their indexes item-by-item.
+  * A colon, `:`
 
 
 ### `for` loop body

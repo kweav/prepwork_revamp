@@ -488,45 +488,51 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><code>for value_from_iterable_variable in some_iterable_variable:</code></li>
 </ol>
 <p>This statement uses the above pattern (its setup broken down below) in order to work with the items contained in a collection of items item-by-item.</p>
-<pre><code>* the word `for`
-* then names the variable that each item from the `some_iterable_variable` will be stored in: `value_from_iterable_variable`
-* the `in` membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the `some_iterable_variable`
-* the name of the variable for the collection over which we want to iterate and extract its items item-by-item: `some_iterable_variable`
-* A colon, `:`</code></pre>
+<ul>
+<li>the word <code>for</code></li>
+<li>then names the variable that each item from the <code>some_iterable_variable</code> will be stored in: <code>value_from_iterable_variable</code></li>
+<li>the <code>in</code> membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the <code>some_iterable_variable</code></li>
+<li>the name of the variable for the collection over which we want to iterate and extract its items item-by-item: <code>some_iterable_variable</code></li>
+<li>A colon, <code>:</code></li>
+</ul>
 <ol start="2" style="list-style-type: decimal">
 <li><code>for index in range(len(some_iterable_variable_name)):</code> or <code>for index in range(some_integer):</code></li>
 </ol>
 <p>The <code>range()</code> function is a built-in Python function that is used to return a list of numbers from 0 up to, but not including some integer number. You would use this above statement pattern (its setup broken down below) in order to work with the ordered position numbers rather than the items themselves that are stored in a collection of items. With indexing, you could still access the items item-by-item, but the variable name for whatever is being extracted is storing integers, the index positions, not the items.</p>
-<pre><code>* the word `for`
-* then names the variable that each item from the `range()` function will be stored in: `index`
-* the `in` membership operator to specify that we want items contained in the list the `range()` function returns
-* the `range()` function that returns a list of numbers either specified by the `len()` function and the length of `some_iterable_variable_name` or just some integer value (`some_integer`)
-* A colon, `:`</code></pre>
+<ul>
+<li>the word <code>for</code></li>
+<li>then names the variable that each item from the <code>range()</code> function will be stored in: <code>index</code></li>
+<li>the <code>in</code> membership operator to specify that we want items contained in the list the <code>range()</code> function returns</li>
+<li>the <code>range()</code> function that returns a list of numbers either specified by the <code>len()</code> function and the length of <code>some_iterable_variable_name</code> or just some integer value (<code>some_integer</code>)</li>
+<li>A colon, <code>:</code></li>
+</ul>
 <ol start="3" style="list-style-type: decimal">
 <li><code>for index, value_from_iterable_variable in enumerate(some_iterable_variable_name):</code></li>
 </ol>
 <p>This third statement is a combination of the first two statements where for each iteration or step in the <code>for</code> loop, you have access to both the value and the index of the value from the iterable variable at the same time. This is achieved because the pattern uses a special base python function <code>enumerate()</code>. You can <a href="https://docs.python.org/3/library/functions.html#enumerate">read more about this function from the online python manual</a>, but suffice it to say that the function takes in an iterable object like a list or a string. Then rather than just returning the elements of the iterable object, it also returns the corresponding indices enumerated or counted out for each of the elements in the iterable object.</p>
 <p>For example, if we have a list <code>test_list = ["daisy", "poppy", "daylily", "sunflower", "begonia"]</code>. In a <code>for</code> loop statement following the first pattern, <code>for flower in test_list:</code>, only elements from the list are returned, specifically to the variable <code>flower</code>. And the <code>flower</code> variable will be “daisy” in the first iteration of the for loop, “poppy” in the second iteration, “daylily” in the third iteration, “sunflower” in the fourth, and finally “begonia” in the fifth. If we instead follow the third pattern and use the <code>enumerate</code> function, specifically, <code>for index, flower in enumerate(test_list)</code>, the <code>flower</code> variable will take on the same values for each iteration of the loop as the first pattern example. The <code>index</code> variable will take on the values <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, and <code>4</code> respectively.</p>
 <p>The setup is broken down below for this pattern</p>
-<pre><code>* the word `for`
-* the names the variables that each index and each item from the `some_iterable_variable_name` will be stored in: `index`, `value_from_iterable_variable`
-* the `in` membership operator to specify that we want items contained in the output from `enumerate()`
-* the `enumerate()` function with the `some_iterable_variable_name` over which we want to extract items and their indexes item-by-item.
-* A colon, `:`</code></pre>
+<ul>
+<li>the word <code>for</code></li>
+<li>the names the variables that each index and each item from the <code>some_iterable_variable_name</code> will be stored in: <code>index</code>, <code>value_from_iterable_variable</code></li>
+<li>the <code>in</code> membership operator to specify that we want items contained in the output from <code>enumerate()</code></li>
+<li>the <code>enumerate()</code> function with the <code>some_iterable_variable_name</code> over which we want to extract items and their indexes item-by-item.</li>
+<li>A colon, <code>:</code></li>
+</ul>
 </div>
 <div id="for-loop-body" class="section level3" number="9.5.2">
 <h3><span class="header-section-number">9.5.2</span> <code>for</code> loop body</h3>
 <p><strong>Indentation</strong></p>
 <p>The <code>for</code> loop body is going to be indented below the <code>for</code> loop statement. This is necessary because indenting tells Python what is done as part of the <code>for</code> loop, and when to re-start the next iteration of the <code>for</code> loop.</p>
 <p>As an example, consider this for loop:</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb67-1" aria-hidden="true" tabindex="-1"></a>dogowners <span class="op">=</span> [<span class="st">&quot;Kate&quot;</span>, <span class="st">&quot;Dylan&quot;</span> ,<span class="st">&quot;Mike&quot;</span>, <span class="st">&quot;Andrew&quot;</span>]</span>
-<span id="cb67-2"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, dogname <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="st">&quot;Gibbs&quot;</span>, <span class="st">&quot;Chela&quot;</span>, <span class="st">&quot;Barnaby&quot;</span>, <span class="st">&quot;Duke&quot;</span>]):</span>
-<span id="cb67-3"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb67-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;The owner of&quot;</span>, dogname, <span class="st">&quot;is&quot;</span>, dogowners[index])</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb64-1" aria-hidden="true" tabindex="-1"></a>dogowners <span class="op">=</span> [<span class="st">&quot;Kate&quot;</span>, <span class="st">&quot;Dylan&quot;</span> ,<span class="st">&quot;Mike&quot;</span>, <span class="st">&quot;Andrew&quot;</span>]</span>
+<span id="cb64-2"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> index, dogname <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="st">&quot;Gibbs&quot;</span>, <span class="st">&quot;Chela&quot;</span>, <span class="st">&quot;Barnaby&quot;</span>, <span class="st">&quot;Duke&quot;</span>]):</span>
+<span id="cb64-3"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb64-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;The owner of&quot;</span>, dogname, <span class="st">&quot;is&quot;</span>, dogowners[index])</span></code></pre></div>
 <pre><code>## The owner of Gibbs is Kate
 ## The owner of Chela is Dylan
 ## The owner of Barnaby is Mike
 ## The owner of Duke is Andrew</code></pre>
-<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;What other information should we share about these dogs? Size? Breed? Favorite toy?&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;What other information should we share about these dogs? Size? Breed? Favorite toy?&quot;</span>)</span></code></pre></div>
 <pre><code>## What other information should we share about these dogs? Size? Breed? Favorite toy?</code></pre>
 <p>First, notice that the print statement that is indented under the <code>for</code> statement will be printed four time, each one with a different dog name, and a different dog owner’s name. But the print statement that is not indented under the <code>for</code> statement, and instead is aligned with it, will only be executed once, after the other 4 lines have printed and the <code>for</code> loop is complete.</p>
 <p>Second, let’s go back a step and break down the pattern of the <code>for</code> statement.</p>
@@ -551,19 +557,19 @@ Answers:
 <h3><span class="header-section-number">9.5.3</span> initializing variables before the <code>for</code> loop</h3>
 <p>An example of when you might want to initialzie variables before the <code>for</code> loop that will be edited within the <code>for</code> loop body is when you may want to count how many times a condition is met within a <code>for</code> loop. In such a case, you would initialize a variable before the for loop and then add one to the counter within the <code>for</code> loop body every time the condition is met.</p>
 <p>This condition could be as simple as number of times the for loop iterates and so you add one to the counter every single iteration:</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb71-1" aria-hidden="true" tabindex="-1"></a>dow <span class="op">=</span> [<span class="st">&#39;Sunday&#39;</span>, <span class="st">&#39;Monday&#39;</span>, <span class="st">&#39;Tuesday&#39;</span>, <span class="st">&#39;Wednesday&#39;</span>, <span class="st">&#39;Thursday&#39;</span>, <span class="st">&#39;Friday&#39;</span>, <span class="st">&#39;Saturday&#39;</span>]</span>
-<span id="cb71-2"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb71-2" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb71-3"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb71-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> day_of_week <span class="kw">in</span> dow:</span>
-<span id="cb71-4"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb71-4" aria-hidden="true" tabindex="-1"></a>    counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb71-5"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb71-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counter)</span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-1" aria-hidden="true" tabindex="-1"></a>dow <span class="op">=</span> [<span class="st">&#39;Sunday&#39;</span>, <span class="st">&#39;Monday&#39;</span>, <span class="st">&#39;Tuesday&#39;</span>, <span class="st">&#39;Wednesday&#39;</span>, <span class="st">&#39;Thursday&#39;</span>, <span class="st">&#39;Friday&#39;</span>, <span class="st">&#39;Saturday&#39;</span>]</span>
+<span id="cb68-2"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-2" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb68-3"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> day_of_week <span class="kw">in</span> dow:</span>
+<span id="cb68-4"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-4" aria-hidden="true" tabindex="-1"></a>    counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb68-5"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb68-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counter)</span></code></pre></div>
 <pre><code>## 7</code></pre>
 <p>Or it may be more complex, like seeing if the day of the week starts with the letter T or S. Here we’ll use the first pattern for the <code>for</code> statement because we’ll want to have access to the actual day of the week name, and then within the <code>for</code> loop body, we’ll use an if statement with two expressions returning True or False and an <code>or</code> logical operator between the two expressions. To see if the day of the week starts with the letter T or S, we’ll use a python built-in function <code>startswith()</code>. Note that we’re re-initializing the <code>counter</code> variable to 0 outside of the <code>for</code> loop and adding one every time the a or b expression evaluates to True.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb73-1" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb73-2"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb73-2" aria-hidden="true" tabindex="-1"></a>dow <span class="op">=</span> [<span class="st">&#39;Sunday&#39;</span>, <span class="st">&#39;Monday&#39;</span>, <span class="st">&#39;Tuesday&#39;</span>, <span class="st">&#39;Wednesday&#39;</span>, <span class="st">&#39;Thursday&#39;</span>, <span class="st">&#39;Friday&#39;</span>, <span class="st">&#39;Saturday&#39;</span>]</span>
-<span id="cb73-3"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> day_of_week <span class="kw">in</span> dow:</span>
-<span id="cb73-4"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb73-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> day_of_week.startswith(<span class="st">&quot;T&quot;</span>) <span class="kw">or</span> day_of_week.startswith(<span class="st">&quot;S&quot;</span>):</span>
-<span id="cb73-5"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb73-5" aria-hidden="true" tabindex="-1"></a>        counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb73-6"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb73-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counter)</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-1" aria-hidden="true" tabindex="-1"></a>counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb70-2"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-2" aria-hidden="true" tabindex="-1"></a>dow <span class="op">=</span> [<span class="st">&#39;Sunday&#39;</span>, <span class="st">&#39;Monday&#39;</span>, <span class="st">&#39;Tuesday&#39;</span>, <span class="st">&#39;Wednesday&#39;</span>, <span class="st">&#39;Thursday&#39;</span>, <span class="st">&#39;Friday&#39;</span>, <span class="st">&#39;Saturday&#39;</span>]</span>
+<span id="cb70-3"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> day_of_week <span class="kw">in</span> dow:</span>
+<span id="cb70-4"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> day_of_week.startswith(<span class="st">&quot;T&quot;</span>) <span class="kw">or</span> day_of_week.startswith(<span class="st">&quot;S&quot;</span>):</span>
+<span id="cb70-5"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-5" aria-hidden="true" tabindex="-1"></a>        counter <span class="op">=</span> counter <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb70-6"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb70-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counter)</span></code></pre></div>
 <pre><code>## 4</code></pre>
 </div>
 <div id="pseudo-coding-a-for-loop" class="section level3" number="9.5.4">
