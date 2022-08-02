@@ -481,7 +481,7 @@ END FOR<br /></p>
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb76"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="applied-python-exercise-1.html#cb76-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="applied-python-exercise-1.html#cb79-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span></span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -493,7 +493,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="applied-python-exercise-1.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(filename):</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="applied-python-exercise-1.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(filename):</span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -505,7 +505,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb78"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="applied-python-exercise-1.html#cb78-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(line)</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="applied-python-exercise-1.html#cb81-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(line)</span></code></pre></div>
 </details>
 <hr />
 <p>If we were just to use the code above, there would be a blank line printed at the end of each line from the file. We can remove the blank lines from the output by using another built-in Python function specifically <code>strip()</code>. Newline characters which apepar as blank lines in the output are either <code>"\n"</code> or <code>"\r"</code> within bioinformatic files. Since we’re not certain which of these our input file has, we’ll strip both of these characters off the end of each line using <code>strip("\r\n")</code>, specifically telling the <code>strip</code> function to remove both of those characters. We can tell the <code>strip</code> function to remove those characters from each line using the following syntax: <code>line.strip("\r\n")</code>. Use of this function with this syntax will remove or suppress those blank lines in the output. Edit the line of code within your Python script to do this.</p>
@@ -514,7 +514,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="applied-python-exercise-1.html#cb79-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="applied-python-exercise-1.html#cb82-1" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
 </details>
 <hr />
 <p>Finally, within your Python script, you should have the three lines of code together which makes our complete intended goal code – code that prints every line in a file.</p>
@@ -528,9 +528,9 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb80"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="applied-python-exercise-1.html#cb80-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span> <span class="co">#SET the input filename</span></span>
-<span id="cb80-2"><a href="applied-python-exercise-1.html#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(filename): <span class="co">#FOR every line in the open file</span></span>
-<span id="cb80-3"><a href="applied-python-exercise-1.html#cb80-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="applied-python-exercise-1.html#cb83-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span> <span class="co">#SET the input filename</span></span>
+<span id="cb83-2"><a href="applied-python-exercise-1.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(filename): <span class="co">#FOR every line in the open file</span></span>
+<span id="cb83-3"><a href="applied-python-exercise-1.html#cb83-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
 </details>
 <hr />
 

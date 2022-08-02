@@ -526,7 +526,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="applied-python-exercise-2.html#cb81-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="applied-python-exercise-2.html#cb84-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span></span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -538,7 +538,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb82"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="applied-python-exercise-2.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)):</span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="applied-python-exercise-2.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)):</span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -550,7 +550,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="applied-python-exercise-2.html#cb83-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>:</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="applied-python-exercise-2.html#cb86-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>:</span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -562,7 +562,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="applied-python-exercise-2.html#cb84-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="applied-python-exercise-2.html#cb87-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
 </details>
 <hr />
 <p>Within your Python script, you should have the four lines of code together which makes our complete indended goal code – code that prints just the first line in a file.</p>
@@ -576,10 +576,10 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb85"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="applied-python-exercise-2.html#cb85-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span> <span class="co">#SET the input filename</span></span>
-<span id="cb85-2"><a href="applied-python-exercise-2.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)): <span class="co">#FOR every line in the open file</span></span>
-<span id="cb85-3"><a href="applied-python-exercise-2.html#cb85-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>: <span class="co">#IF the first line</span></span>
-<span id="cb85-4"><a href="applied-python-exercise-2.html#cb85-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="applied-python-exercise-2.html#cb88-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span> <span class="co">#SET the input filename</span></span>
+<span id="cb88-2"><a href="applied-python-exercise-2.html#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)): <span class="co">#FOR every line in the open file</span></span>
+<span id="cb88-3"><a href="applied-python-exercise-2.html#cb88-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>: <span class="co">#IF the first line</span></span>
+<span id="cb88-4"><a href="applied-python-exercise-2.html#cb88-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
 </details>
 <hr />
 

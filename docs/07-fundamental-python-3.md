@@ -77,21 +77,21 @@ There 3 common `for` statement patterns in python. Try to connect the 5 parts of
 
   This statement uses the above pattern (its setup broken down below) in order to work with the items contained in a collection of items item-by-item.
   
-  1. the word `for`
-  2. then names the variable that each item from the `some_iterable_variable` will be stored in: `value_from_iterable_variable`
-  3. the `in` membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the `some_iterable_variable`
-  4. the name of the variable for the collection over which we want to iterate and extract its items item-by-item: `some_iterable_variable`
-  5. A colon, `:`
+    * the word `for`
+    * then names the variable that each item from the `some_iterable_variable` will be stored in: `value_from_iterable_variable`
+    * the `in` membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the `some_iterable_variable`
+    * the name of the variable for the collection over which we want to iterate and extract its items item-by-item: `some_iterable_variable`
+    * A colon, `:`
 
 2. `for index in range(len(some_iterable_variable_name)):` or `for index in range(some_integer):`
   
   The `range()` function is a built-in Python function that is used to return a list of numbers from 0 up to, but not including some integer number. You would use this above statement pattern  (its setup broken down below) in order to work with the ordered position numbers rather than the items themselves that are stored in a collection of items. With indexing, you could still access the items item-by-item, but the variable name for whatever is being extracted is storing integers, the index positions, not the items.
   
-  1. the word `for`
-  2. then names the variable that each item from the `range()` function will be stored in: `index`
-  3. the `in` membership operator to specify that we want items contained in the list the `range()` function returns
-  4. the `range()` function that returns a list of numbers either specified by the `len()` function and the length of `some_iterable_variable_name` or just some integer value (`some_integer`)
-  5. A colon, `:`
+    * the word `for`
+    * then names the variable that each item from the `range()` function will be stored in: `index`
+    * the `in` membership operator to specify that we want items contained in the list the `range()` function returns
+    * the `range()` function that returns a list of numbers either specified by the `len()` function and the length of `some_iterable_variable_name` or just some integer value (`some_integer`)
+    * A colon, `:`
 
 
 3. `for index, value_from_iterable_variable in enumerate(some_iterable_variable_name):`
@@ -101,13 +101,13 @@ This third statement is a combination of the first two statements where for each
 For example, if we have a list `test_list = ["daisy", "poppy", "daylily", "sunflower", "begonia"]`. In a `for` loop statement following the first pattern, `for flower in test_list:`, only elements from the list are returned, specifically to the variable `flower`. And the `flower` variable will be "daisy" in the first iteration of the for loop, "poppy" in the second iteration, "daylily" in the third iteration, "sunflower" in the fourth, and finally "begonia" in the fifth. If we instead follow the third pattern and use the `enumerate` function, specifically, `for index, flower in enumerate(test_list)`, the `flower` variable will take on the same values for each iteration of the loop as the first pattern example. The `index` variable will take on the values `0`, `1`, `2`, `3`, and `4` respectively.
 
 
-  The setup is broken down below for this pattern
+The setup is broken down below for this pattern
   
-  1. the word `for`
-  2. the names the variables that each index and each item from the `some_iterable_variable_name` will be stored in: `index`, `value_from_iterable_variable`
-  3. the `in` membership operator to specify that we want items contained in the output from `enumerate()`
-  4. the `enumerate()` function with the `some_iterable_variable_name` over which we want to extract items and their indexes item-by-item.
-  5. A colon, `:`
+    * the word `for`
+    * the names the variables that each index and each item from the `some_iterable_variable_name` will be stored in: `index`, `value_from_iterable_variable`
+    * the `in` membership operator to specify that we want items contained in the output from `enumerate()`
+    * the `enumerate()` function with the `some_iterable_variable_name` over which we want to extract items and their indexes item-by-item.
+    * A colon, `:`
 
 
 ### `for` loop body
@@ -156,7 +156,8 @@ Second, let's go back a step and break down the pattern of the `for` statement.
 
 </details>
 
-Like with conditional statement, the order of execution within the body of the loop (all lines that are indented) follows a downwards linear pattern. Lines listed earlier/first will be executed first and lines listed later will be executed later. Once every iteration of the `for` loop is complete, then lines outside of the `for` loop will be executed, like how the final print statement that asks what other dog innformation should be shared is only displayed after the `for` loop body is complete.
+
+Like with conditional statements, the order of execution within the body of the loop (all lines that are indented) follows a downwards linear pattern. Lines listed earlier/first will be executed first and lines listed later will be executed later. Once every iteration of the `for` loop is complete, then lines outside of the `for` loop will be executed, like how the final print statement that asks what other dog innformation should be shared is only displayed after the `for` loop body is complete.
 
 ### initializing variables before the `for` loop
 
