@@ -17,6 +17,7 @@ After going through this module, students should be able to:
 ## Operators and expressions
 
 What is an operator? In python, an operator is some special symbol or keyword that designates that some specific computation should bbe performed. These include 
+
 * arithmetic operators for addition (`+`), subtraction (`-`), division (`/`), etc.
 * comparison operators for testing equality of any value as well as whether numbers are greater than, less than, or equal to other numbers (`==` )
 * logical operators for boolean values (`and`, `not`, `or`, etc.).   
@@ -113,7 +114,7 @@ testlist = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
 Or if you have a boolean variable `variableName` and you put `not` in front of the variable, then `not variableName` will take on the opposite value of `variableName`. Below `a` is a standin for the boolean variable.
 
 | a | not a |
-| - | ----- |
+|:-:|:-----:|
 | T |   F   |
 | F |   T   |
 
@@ -135,7 +136,7 @@ dog != "dog"
 Sometimes you need to chain expressions together to see if multiple things are True. You can use the `and` operator in between the expressions. Below the letters `a` and `b` are stand-ins for the expressions.
 
 | a | not a | b | a and b |
-| - | ----- | - | ------- |
+|:-:|:-----:|:-:|:-------:|
 | T |   F   | T |    T    |
 | T |   F   | F |    F    |
 | F |   T   | T |    F    |
@@ -146,7 +147,7 @@ Sometimes you need to chain expressions together to see if multiple things are T
 Alternatively, you may chain expressions together to see if at least one is True. You can use the `or` operator in between the expressions. Below the letters `a` and `b` are stand-ins for the expressions.
 
 | a | not a | b | a and b | a or b |
-| - | ----- | - | ------- | ------ |
+|:-:|:-----:|:-:|:-------:|:------:|
 | T |   F   | T |    T    |    T   |
 | T |   F   | F |    F    |    T   |
 | F |   T   | T |    F    |    T   |
@@ -217,8 +218,8 @@ len([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
 
 Conditional statements are used in python to check the value of a boolean variable or expression and specify what behavior or path of steps the script should follow depending on whether the boolean/expression was True or False. An example of an everyday conditional you may think through is like the following:
 
-I am about to leave. Is it raining outside right now?
-Yes --> Grab an umbrella and leave
+I am about to leave. Is it raining outside right now? <br />
+Yes --> Grab an umbrella and leave <br />
 
 In Python, this could look something like the following if we have the boolean variable `rainingNow`.
 
@@ -261,11 +262,11 @@ else:
 
 However, there may be times that there are other things to consider in addition to the initial `if` statement, things that you would want to think about when the initial if statement boolean variable or expression or condition is False. Let's extend the raining example. 
 
-I am about to leave. Is it raining outside right now?
-Yes --> Grab an umbrella and leave
-No --> Will it be raining at some point while I am outside?
-        Yes --> Grab an umbrella and leave
-        No --> leave
+I am about to leave. Is it raining outside right now? <br />
+Yes --> Grab an umbrella and leave <br />
+No --> Will it be raining at some point while I am outside? <br />
+&nbsp;&nbsp;&nbsp;&nbsp;Yes --> Grab an umbrella and leave <br />
+&nbsp;&nbsp;&nbsp;&nbsp;No --> leave <br />
         
 In Python, this could look something like the following if we have the boolean variables `rainingNow` and `rainingLater`. We add an `elif` statement that will be checked if the first variable is False, but will be ignored if the first variable is True:
 
