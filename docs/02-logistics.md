@@ -4,7 +4,12 @@
 
 ## Goal
 
-Be able to run Python scripts from whatever machine you are working on, including accessing local files
+Below we describe two ways you can complete these exercises:
+
+* Online Python -- Work "on the Cloud" using your laptop, browser, and internet connection
+* Your Own Computer -- Work "locally" with your own Python and text editor
+
+By the end of the actual course, you will be able to run Python scripts from whatever machine you are working on, including accessing local files
 
 ## Macs
 
