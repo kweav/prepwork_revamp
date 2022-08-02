@@ -41,7 +41,14 @@ learning-objectives-5
 resources-1
 syntax
 data-types-and-structures
-data-represented-or-stored-as-an-unintended-data-types
+integers
+floats
+strings
+booleans
+lists
+sets
+dictionaries
+data-represented-or-stored-as-an-unintended-data-type
 immutability
 immutable-data-types
 variables

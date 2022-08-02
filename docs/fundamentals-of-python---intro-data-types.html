@@ -191,9 +191,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.4" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#syntax"><i class="fa fa-check"></i><b>7.4</b> Syntax</a></li>
 <li class="chapter" data-level="7.5" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#data-types-and-structures"><i class="fa fa-check"></i><b>7.5</b> Data types and structures</a>
 <ul>
-<li class="chapter" data-level="7.5.1" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#data-represented-or-stored-as-an-unintended-data-types"><i class="fa fa-check"></i><b>7.5.1</b> Data represented or stored as an unintended data types:</a></li>
-<li class="chapter" data-level="7.5.2" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#immutability"><i class="fa fa-check"></i><b>7.5.2</b> Immutability</a></li>
-<li class="chapter" data-level="7.5.3" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#immutable-data-types"><i class="fa fa-check"></i><b>7.5.3</b> Immutable data types</a></li>
+<li class="chapter" data-level="7.5.1" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#integers"><i class="fa fa-check"></i><b>7.5.1</b> Integers:</a></li>
+<li class="chapter" data-level="7.5.2" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#floats"><i class="fa fa-check"></i><b>7.5.2</b> Floats:</a></li>
+<li class="chapter" data-level="7.5.3" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#strings"><i class="fa fa-check"></i><b>7.5.3</b> Strings:</a></li>
+<li class="chapter" data-level="7.5.4" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#booleans"><i class="fa fa-check"></i><b>7.5.4</b> Booleans:</a></li>
+<li class="chapter" data-level="7.5.5" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#lists"><i class="fa fa-check"></i><b>7.5.5</b> Lists:</a></li>
+<li class="chapter" data-level="7.5.6" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#sets"><i class="fa fa-check"></i><b>7.5.6</b> Sets:</a></li>
+<li class="chapter" data-level="7.5.7" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#dictionaries"><i class="fa fa-check"></i><b>7.5.7</b> Dictionaries:</a></li>
+<li class="chapter" data-level="7.5.8" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#data-represented-or-stored-as-an-unintended-data-type"><i class="fa fa-check"></i><b>7.5.8</b> Data represented or stored as an unintended data type:</a></li>
+<li class="chapter" data-level="7.5.9" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#immutability"><i class="fa fa-check"></i><b>7.5.9</b> Immutability</a></li>
+<li class="chapter" data-level="7.5.10" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#immutable-data-types"><i class="fa fa-check"></i><b>7.5.10</b> Immutable data types</a></li>
 </ul></li>
 <li class="chapter" data-level="7.6" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#variables"><i class="fa fa-check"></i><b>7.6</b> Variables</a></li>
 <li class="chapter" data-level="7.7" data-path="fundamentals-of-python---intro-data-types.html"><a href="fundamentals-of-python---intro-data-types.html#a-deeper-dive-into-lists"><i class="fa fa-check"></i><b>7.7</b> A deeper dive into lists</a></li>
@@ -443,9 +450,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">7.5</span> Data types and structures</h2>
 <p>“Data” is information – information that you want to process or perform operations on, simplify, visualize, etc. This information must be stored within Python scripts or else read in from files (<code>csv</code>, <code>txt</code>, etc.). Python stores and represents the data as different data types or within different structures. Another word for data in python is “object”. You often want to explicitly make sure that the data is stored as a specific type so that you can perform specific operations on it (e.g., do specific things with or manipulate/analyze the data in a specific way). Math operations can be performed with integers or floats, but not strings. You can index with integers, but not floats, etc. Terms like these specific data types will be explained in more detail next. Terms like “index” will be explained in more detail in a few sections.</p>
 <p>There are many data types and structures that are used in Python.</p>
+<div id="integers" class="section level3" number="7.5.1">
+<h3><span class="header-section-number">7.5.1</span> Integers:</h3>
 <ul>
-<li>Integers: Integers are whole numbers
-<ul>
+<li>Integers are whole numbers</li>
 <li>These whole number are typed with just the numbers and do not include commas (<code>,</code>) or periods (<code>.</code>).</li>
 <li>Examples:
 <ul>
@@ -454,9 +462,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>10000056</li>
 <li>0</li>
 </ul></li>
-</ul></li>
-<li>Floats: Floats are numbers that have fractional or decimal parts.
+</ul>
+</div>
+<div id="floats" class="section level3" number="7.5.2">
+<h3><span class="header-section-number">7.5.2</span> Floats:</h3>
 <ul>
+<li>Floats are numbers that have fractional or decimal parts.</li>
 <li>These are typed with numbers and do have periods (<code>.</code>) or forward slashes (<code>/</code>) in them.</li>
 <li>Examples:
 <ul>
@@ -464,9 +475,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>8/2</li>
 <li>79/3</li>
 </ul></li>
-</ul></li>
-<li>Strings: Strings are words, phrases, or just single characters that are strung together and enclosed by single (<code>'</code>) or double (<code>"</code>) quotes.
+</ul>
+</div>
+<div id="strings" class="section level3" number="7.5.3">
+<h3><span class="header-section-number">7.5.3</span> Strings:</h3>
 <ul>
+<li>Strings are words, phrases, or just single characters that are strung together and enclosed by single (<code>'</code>) or double (<code>"</code>) quotes.</li>
 <li>Examples:
 <ul>
 <li>“acgt”</li>
@@ -475,13 +489,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>“1”</li>
 <li>‘The quick brown fox jumped over the lazy Gibbs’</li>
 </ul></li>
-</ul></li>
-<li>Booleans: Booleans are variables that store <code>True</code> or <code>False</code>.
+</ul>
+</div>
+<div id="booleans" class="section level3" number="7.5.4">
+<h3><span class="header-section-number">7.5.4</span> Booleans:</h3>
 <ul>
+<li>Booleans are variables that store <code>True</code> or <code>False</code>.</li>
 <li>Unlike integers, floats, and strings which can have many possible values, data that is a boolean data type is either <code>True</code> or <code>False</code>.</li>
-</ul></li>
-<li>Lists: Lists are a data structure, specifically, collections of items that are enclosed in brackets. ( <code>[</code> and <code>]</code> ).
+</ul>
+</div>
+<div id="lists" class="section level3" number="7.5.5">
+<h3><span class="header-section-number">7.5.5</span> Lists:</h3>
 <ul>
+<li>Lists are a data structure, specifically, collections of items that are enclosed in brackets. ( <code>[</code> and <code>]</code> ).</li>
 <li>In Python, lists can be homogeneous, and contain items that are all the same data type (e.g., a list of strings or a list of integers); or lists can be heterogeneous, containing items that are different data types.</li>
 <li>In Python, lists are also ordered, meaning that the elements or items contained in the list have a specific position associated with them.</li>
 <li>Examples:
@@ -492,49 +512,65 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>[“Hello,”, “World!”]</li>
 <li>[“The”, “quick”, “brown”, “fox”, “jumped”, “over”, “the”, “lazy”, “Gibbs”]</li>
 </ul></li>
-</ul></li>
-<li>Sets: Sets are another data structure, specifically, collections of unique (or non-duplicated) items that are enclosed in curly braces ( <code>{</code> and <code>}</code> ).
+</ul>
+</div>
+<div id="sets" class="section level3" number="7.5.6">
+<h3><span class="header-section-number">7.5.6</span> Sets:</h3>
 <ul>
+<li>Sets are another data structure, specifically, collections of unique (or non-duplicated) items that are enclosed in curly braces ( <code>{</code> and <code>}</code> ).</li>
 <li>To make a list into a set, the repeated items from the list are removed. For example, the list [“B”, “a”, “n”, “a”, “n”, “a”] would be the set {“B”, “a”, “n”}. One super cool thing is if you define your set to be {“B”, “a”, “n”, “a”}, Python will simplify it be {“B”, “n”, “a”}. (Also, note this is an example of how the set is unordered.)</li>
 <li>Sets are useful if you want to track all the unique elements present in a large dataset and don’t care if or how many times each element is repeated.</li>
 <li>Note that sets do not have any order so if you print a set out, the order of elements may change</li>
-</ul></li>
-<li>Dictionaries. Dictionaries are another Python data structure, specifically collections of paired key,value items that are enclosed in curly braces. ( <code>{</code> and <code>}</code> ).
+</ul>
+</div>
+<div id="dictionaries" class="section level3" number="7.5.7">
+<h3><span class="header-section-number">7.5.7</span> Dictionaries:</h3>
 <ul>
+<li>Dictionaries are another Python data structure, specifically collections of paired key,value items that are enclosed in curly braces. ( <code>{</code> and <code>}</code> ).</li>
 <li>By paired key,values we mean that a specific key is used to reference some value. For example, in the following dictionary <code>dog_favorite_toys</code>, <code>"Gibbs"</code> is a key used to refer to the value <code>"football"</code> because his favorite toy is a squeaking football.</li>
-</ul></li>
 </ul>
 <div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="fundamentals-of-python---intro-data-types.html#cb13-1" aria-hidden="true" tabindex="-1"></a>dog_favorite_toys <span class="op">=</span> {<span class="st">&quot;Gibbs&quot;</span>: <span class="st">&quot;football&quot;</span>,</span>
 <span id="cb13-2"><a href="fundamentals-of-python---intro-data-types.html#cb13-2" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;Duke&quot;</span>: <span class="st">&quot;squirrel&quot;</span>,</span>
 <span id="cb13-3"><a href="fundamentals-of-python---intro-data-types.html#cb13-3" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;Barnaby&quot;</span>: <span class="st">&quot;frisbee&quot;</span>}</span></code></pre></div>
 <ul>
-<li>(What previously listed data type is each of the keys and values within that dictionary? )</li>
-<li>Note that the key and value in a pair are separated by a colon (<code>:</code>) and the pairs are separated from each other by a comma (<code>,</code>)</li>
-<li>While sets are useful if you want to track all the unique elements present in a large dataset but don’t care if or how many times each element is repeated, dictionaries allow you to track the presence and associate further information like how many times the element is present. The key would be the element (like a gene ID), and the value would the number of times that element (gene ID) is present in the dataset. The key has to be unique within the dictionary. The values may not be unique, like multiple gene IDs may be present in the dataset the same number of times.</li>
-<li>Like sets, dictionaries do not have an order and are more like a jumbled bucket of information</li>
+<li><p>What previously listed data type is each of the keys and values within that dictionary?</p>
+<details>
+<summary>
+<p>Answer</p>
+</summary>
+<p>Strings</p>
+</details></li>
+<li><p>Note that the key and value in a pair are separated by a colon (<code>:</code>) and the pairs are separated from each other by a comma (<code>,</code>)</p></li>
+<li><p>While sets are useful if you want to track all the unique elements present in a large dataset but don’t care if or how many times each element is repeated, dictionaries allow you to track the presence and associate further information like how many times the element is present. The key would be the element (like a gene ID), and the value would the number of times that element (gene ID) is present in the dataset. The key has to be unique within the dictionary. The values may not be unique, like multiple gene IDs may be present in the dataset the same number of times.</p></li>
+<li><p>Like sets, dictionaries do not have an order and are more like a jumbled bucket of information</p></li>
 </ul>
-<div id="data-represented-or-stored-as-an-unintended-data-types" class="section level3" number="7.5.1">
-<h3><span class="header-section-number">7.5.1</span> Data represented or stored as an unintended data types:</h3>
-<p>Note: While we know that -2 is an integer, if you represent this integer in the following ways, it is not considered an integer by Python:
-* -2.0
-* -2/1
-* “-2.0”</p>
-<p>In the first case, Python considers these representations to be floats, which can still be used for mathematical operations, but couldn’t be used to index. In the second case, Python considers the data to be a string, and it cannot be used in mathematical operations unless it is converted to a numerical (integer or float) data type. Examples of converting with the <code>int()</code> and <code>float()</code> functions are available in the <a href="http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html">Python syntax cheatsheet</a> that was mentioned earlier. Often when reading data into Python from a file, numbers will be interpreted by python as strings and need to be converted to the correct data type. The third case is interpreted by Python as float division even in the case of two integers, one that divides evenly into the other. In order to do integer division, you need to use <code>//</code>. This tells Python to return an integer and drop any remainder.</p>
-<p><code>5//2 = 2</code></p>
 </div>
-<div id="immutability" class="section level3" number="7.5.2">
-<h3><span class="header-section-number">7.5.2</span> Immutability</h3>
+<div id="data-represented-or-stored-as-an-unintended-data-type" class="section level3" number="7.5.8">
+<h3><span class="header-section-number">7.5.8</span> Data represented or stored as an unintended data type:</h3>
+<p>Note: While we know that -2 is an integer, if you represent this integer in the following ways, it is not considered an integer by Python:</p>
+<ul>
+<li>-2.0</li>
+<li>-2/1</li>
+<li>“-2.0”</li>
+</ul>
+<p>In the first case, Python considers these representations to be floats, which can still be used for mathematical operations, but couldn’t be used to index.</p>
+<p>The second case is interpreted by Python as float division even in the case of two integers, one that divides evenly into the other. In order to do integer division, you need to use <code>//</code>. This tells Python to return an integer and drop any remainder.</p>
+<p><code>5//2 = 2</code></p>
+<p>In the third case, Python considers the data to be a string, and it cannot be used in mathematical operations unless it is converted to a numerical (integer or float) data type. Examples of converting with the <code>int()</code> and <code>float()</code> functions are available in the <a href="http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html">Python syntax cheatsheet</a> that was mentioned earlier. Often when reading data into Python from a file, numbers will be interpreted by python as strings and need to be converted to the correct data type.</p>
+</div>
+<div id="immutability" class="section level3" number="7.5.9">
+<h3><span class="header-section-number">7.5.9</span> Immutability</h3>
 <p>What does it mean for a data type to be immutable? It means that the value of an object with that data type cannot be changed without creating a new object.</p>
 </div>
-<div id="immutable-data-types" class="section level3" number="7.5.3">
-<h3><span class="header-section-number">7.5.3</span> Immutable data types</h3>
+<div id="immutable-data-types" class="section level3" number="7.5.10">
+<h3><span class="header-section-number">7.5.10</span> Immutable data types</h3>
 <ul>
 <li>Strings</li>
 <li>Integer</li>
 <li>Float</li>
 <li>Boolean</li>
 </ul>
-<p>All other listed data types and structures from the previous section are mutable or can be changed. Pratically speaking, Python is smart enough to recreate a variable but reuse the variable name when needed, such as</p>
+<p>All other listed data types and structures from the previous section are mutable or can be changed. Practically speaking, Python is smart enough to recreate a variable but reuse the variable name when needed, such as</p>
 <p><code>A = A + 1</code></p>
 </div>
 </div>
@@ -553,13 +589,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb14-5"><a href="fundamentals-of-python---intro-data-types.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Since the gene was found, overwrite the gene_found variable to be True and stop looking through the file</span></span>
 <span id="cb14-6"><a href="fundamentals-of-python---intro-data-types.html#cb14-6" aria-hidden="true" tabindex="-1"></a>gene_found <span class="op">=</span> <span class="va">True</span></span></code></pre></div>
 <p>For an example of unintentionally changing a variable’s value, you may reuse a variable name later in a script. Then that variable will no longer reference the value which was stored earlier.</p>
-<p>What can you name a variable? Anything?
-* Variable names should be meaningful and provide a description of what the variable contains. (However, comments within code can be used when defining a variable to accomplish this, especially if variable names are becoming unnecessarily long.)
-* Note that while the name of the variable should be meaningful, the name doesn’t matter in how Python treats the variable. I could name a variable <code>filename</code> and store an integer in it and Python will treat the variable as the numerical value it has, not a string filename like its name suggests.<br />
-* Variable names can contain numbers (e.g., 0, 1, 2, …), but they cannot start with numbers. (i.e., <code>file1</code> is an acceptable variable name, but <code>1file</code> is not)
-* There are “keywords” in Python 3 that are used in expressions and have very specific functionality associated with them. They cannot be used as variable names. You don’t need to memorize the list, but you <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">can find the list of keywords here</a>
-* The case of the variable is important. <code>myVariable</code> is a different variable name than <code>myvariable</code>.
-* It is acceptable to use a combination of upper and lowercase letters in variable names as well as underscores (<code>_</code>). This can be helpful for longer variable names like <code>gene_of_interest</code>.</p>
+<p>What can you name a variable? Anything?</p>
+<ul>
+<li>Variable names should be meaningful and provide a description of what the variable contains. (However, comments within code can be used when defining a variable to accomplish this, especially if variable names are becoming unnecessarily long.)</li>
+<li>Note that while the name of the variable should be meaningful, the name doesn’t matter in how Python treats the variable. I could name a variable <code>filename</code> and store an integer in it and Python will treat the variable as the numerical value it has, not a string filename like its name suggests.<br />
+</li>
+<li>Variable names can contain numbers (e.g., 0, 1, 2, …), but they cannot start with numbers. (i.e., <code>file1</code> is an acceptable variable name, but <code>1file</code> is not)</li>
+<li>There are “keywords” in Python 3 that are used in expressions and have very specific functionality associated with them. They cannot be used as variable names. You don’t need to memorize the list, but you <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">can find the list of keywords here</a></li>
+<li>The case of the variable is important. <code>myVariable</code> is a different variable name than <code>myvariable</code>.</li>
+<li>It is acceptable to use a combination of upper and lowercase letters in variable names as well as underscores (<code>_</code>). This can be helpful for longer variable names like <code>gene_of_interest</code>.</li>
+</ul>
 </div>
 <div id="a-deeper-dive-into-lists" class="section level2" number="7.7">
 <h2><span class="header-section-number">7.7</span> A deeper dive into lists</h2>
