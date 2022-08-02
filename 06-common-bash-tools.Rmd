@@ -48,7 +48,7 @@ python myscript.py
 python myscript.py arg1 arg2
 ```
 
-Obviously this does not apply if you are using the online Python resources.
+This does not apply if you are using the online Python resources.
 
 ## The head tool
 
