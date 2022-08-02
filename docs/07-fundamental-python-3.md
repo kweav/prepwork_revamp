@@ -45,6 +45,7 @@ What is slicing? Slicing is a fancy way of indexing to extract a subset of eleme
 The starting index is inclusive and the ending index is exclusive. That means that every position corresponding to a number in between the starting index and the ending index will be included and the starting index position is included, but the ending index position is not included. This also means that you can tell how many positions you are requesting by subtracting the starting index from the ending index.
 
 Here's a really cool [suggested resource about slicing](https://towardsdatascience.com/the-basics-of-indexing-and-slicing-python-lists-2d12c90a94cf) with examples and visuals.
+
   * Terms within this resource that you are not expected to understand include "list comprehension" and "numpy Arrays" and "pandas DataFrames". 
   * Another term within this resource, `for` loops, will be explained in the next section of this module.
 
@@ -53,6 +54,7 @@ Here's a really cool [suggested resource about slicing](https://towardsdatascien
 `for` loops are a very commonly used tool for iterating in Python and are often necessary when processing file inputs. 
 
 A `for` loop has several components.
+
 1. The `for` statement
 2. The body of the `for` loop
 3. Any variable initialization before the `for` statement
@@ -62,6 +64,7 @@ The first two of these three components are part of every `for` loop. The last c
 ### The `for` statement
 
 The `for` statement has 5 parts to it, in order:
+
 1. the word `for`
 2. the variable name for whatever is being extracted within each iteration or step of the `for` loop
 3. the word `in`
@@ -73,6 +76,7 @@ There 3 common `for` statement patterns in python. Try to connect the 5 parts of
 1. `for value_from_iterable_variable in some_iterable_variable:`
 
   This statement uses the above pattern (its setup broken down below) in order to work with the items contained in a collection of items item-by-item.
+  
   1. the word `for`
   2. then names the variable that each item from the `some_iterable_variable` will be stored in: `value_from_iterable_variable`
   3. the `in` membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the `some_iterable_variable`
@@ -82,6 +86,7 @@ There 3 common `for` statement patterns in python. Try to connect the 5 parts of
 2. `for index in range(len(some_iterable_variable_name)):` or `for index in range(some_integer):`
   
   The `range()` function is a built-in Python function that is used to return a list of numbers from 0 up to, but not including some integer number. You would use this above statement pattern  (its setup broken down below) in order to work with the ordered position numbers rather than the items themselves that are stored in a collection of items. With indexing, you could still access the items item-by-item, but the variable name for whatever is being extracted is storing integers, the index positions, not the items.
+  
   1. the word `for`
   2. then names the variable that each item from the `range()` function will be stored in: `index`
   3. the `in` membership operator to specify that we want items contained in the list the `range()` function returns
@@ -97,6 +102,7 @@ For example, if we have a list `test_list = ["daisy", "poppy", "daylily", "sunfl
 
 
   The setup is broken down below for this pattern
+  
   1. the word `for`
   2. the names the variables that each index and each item from the `some_iterable_variable_name` will be stored in: `index`, `value_from_iterable_variable`
   3. the `in` membership operator to specify that we want items contained in the output from `enumerate()`
@@ -137,9 +143,18 @@ print("What other information should we share about these dogs? Size? Breed? Fav
 First, notice that the print statement that is indented under the `for` statement will be printed four time, each one with a different dog name, and a different dog owner's name. But the print statement that is not indented under the `for` statement, and instead is aligned with it, will only be executed once, after the other 4 lines have printed and the `for` loop is complete.
 
 Second, let's go back a step and break down the pattern of the `for` statement.
+
 * Which pattern of the 3 was used?
 * Why do you think that pattern was used?
 * Is there another pattern that could have been used as effectively? 
+
+<details><summary> Answers: </summary>
+
+* The third pattern
+* We wanted access to each list item and the position of each list item so that we could index a second matching list
+* The second pattern could be used just as effectively, and we would index both lists instead of just one.
+
+</details>
 
 Like with conditional statement, the order of execution within the body of the loop (all lines that are indented) follows a downwards linear pattern. Lines listed earlier/first will be executed first and lines listed later will be executed later. Once every iteration of the `for` loop is complete, then lines outside of the `for` loop will be executed, like how the final print statement that asks what other dog innformation should be shared is only displayed after the `for` loop body is complete.
 
@@ -183,12 +198,15 @@ print(counter)
 When writing pseudo-code and knowing that you'll need to use a `for` loop, we find that it's easiest to go back to the basic structure of a `for` loop.
 
 1. Start by filling in your `for` statement
+
   * Write the `for`, `in`, and `:` and leave blanks for what you're extracting information from (part 5) and what you're extracting (part 3)
   * Then start on part 5. 
     * Add in the variable name for what you're extracting information from
     * Do you want to index or just extract a value or do both?
   * Then fill in informative variable names for part 3 of the `for` statement
+  
 2. Outline in words what you want to do within the `for` loop body
+
   * remember to indent what should be done for each iteration of the loop
   * use your `for` statement part 3 variable names as much as possible within this outline
   * remember that order matters and the steps are going to be executed sequentially within the loop.

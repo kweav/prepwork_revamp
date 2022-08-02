@@ -456,57 +456,65 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">9.4.1</span> Slicing</h3>
 <p>What is slicing? Slicing is a fancy way of indexing to extract a subset of elements from an interable object using a range of the positions within the ordered,iterable object.</p>
 <p>The starting index is inclusive and the ending index is exclusive. That means that every position corresponding to a number in between the starting index and the ending index will be included and the starting index position is included, but the ending index position is not included. This also means that you can tell how many positions you are requesting by subtracting the starting index from the ending index.</p>
-<p>Here’s a really cool <a href="https://towardsdatascience.com/the-basics-of-indexing-and-slicing-python-lists-2d12c90a94cf">suggested resource about slicing</a> with examples and visuals.
-* Terms within this resource that you are not expected to understand include “list comprehension” and “numpy Arrays” and “pandas DataFrames”.
-* Another term within this resource, <code>for</code> loops, will be explained in the next section of this module.</p>
+<p>Here’s a really cool <a href="https://towardsdatascience.com/the-basics-of-indexing-and-slicing-python-lists-2d12c90a94cf">suggested resource about slicing</a> with examples and visuals.</p>
+<ul>
+<li>Terms within this resource that you are not expected to understand include “list comprehension” and “numpy Arrays” and “pandas DataFrames”.</li>
+<li>Another term within this resource, <code>for</code> loops, will be explained in the next section of this module.</li>
+</ul>
 </div>
 </div>
 <div id="for-loops" class="section level2" number="9.5">
 <h2><span class="header-section-number">9.5</span> <code>for</code> loops</h2>
 <p><code>for</code> loops are a very commonly used tool for iterating in Python and are often necessary when processing file inputs.</p>
-<p>A <code>for</code> loop has several components.
-1. The <code>for</code> statement
-2. The body of the <code>for</code> loop
-3. Any variable initialization before the <code>for</code> statement</p>
+<p>A <code>for</code> loop has several components.</p>
+<ol style="list-style-type: decimal">
+<li>The <code>for</code> statement</li>
+<li>The body of the <code>for</code> loop</li>
+<li>Any variable initialization before the <code>for</code> statement</li>
+</ol>
 <p>The first two of these three components are part of every <code>for</code> loop. The last component is only sometimes required. We’ll begin by discussing the <code>for</code> statement and the body of the <code>for loop</code> and then will provide examples of loops that have variable initialization before the statement and those that do not.</p>
 <div id="the-for-statement" class="section level3" number="9.5.1">
 <h3><span class="header-section-number">9.5.1</span> The <code>for</code> statement</h3>
-<p>The <code>for</code> statement has 5 parts to it, in order:
-1. the word <code>for</code>
-2. the variable name for whatever is being extracted within each iteration or step of the <code>for</code> loop
-3. the word <code>in</code>
-4. the iterable variable name for the variable from which something is being extracted within each iteration or step of the <code>for</code> loop
-5. A colon, <code>:</code></p>
+<p>The <code>for</code> statement has 5 parts to it, in order:</p>
+<ol style="list-style-type: decimal">
+<li>the word <code>for</code></li>
+<li>the variable name for whatever is being extracted within each iteration or step of the <code>for</code> loop</li>
+<li>the word <code>in</code></li>
+<li>the iterable variable name for the variable from which something is being extracted within each iteration or step of the <code>for</code> loop</li>
+<li>A colon, <code>:</code></li>
+</ol>
 <p>There 3 common <code>for</code> statement patterns in python. Try to connect the 5 parts of the <code>for</code> statement to these patterns.</p>
 <ol style="list-style-type: decimal">
 <li><code>for value_from_iterable_variable in some_iterable_variable:</code></li>
 </ol>
-<p>This statement uses the above pattern (its setup broken down below) in order to work with the items contained in a collection of items item-by-item.
-1. the word <code>for</code>
-2. then names the variable that each item from the <code>some_iterable_variable</code> will be stored in: <code>value_from_iterable_variable</code>
-3. the <code>in</code> membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the <code>some_iterable_variable</code>
-4. the name of the variable for the collection over which we want to iterate and extract its items item-by-item: <code>some_iterable_variable</code>
-5. A colon, <code>:</code></p>
-<ol start="2" style="list-style-type: decimal">
-<li><code>for index in range(len(some_iterable_variable_name)):</code> or <code>for index in range(some_integer):</code></li>
+<p>This statement uses the above pattern (its setup broken down below) in order to work with the items contained in a collection of items item-by-item.</p>
+<ol style="list-style-type: decimal">
+<li><p>the word <code>for</code></p></li>
+<li><p>then names the variable that each item from the <code>some_iterable_variable</code> will be stored in: <code>value_from_iterable_variable</code></p></li>
+<li><p>the <code>in</code> membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the <code>some_iterable_variable</code></p></li>
+<li><p>the name of the variable for the collection over which we want to iterate and extract its items item-by-item: <code>some_iterable_variable</code></p></li>
+<li><p>A colon, <code>:</code></p></li>
+<li><p><code>for index in range(len(some_iterable_variable_name)):</code> or <code>for index in range(some_integer):</code></p></li>
 </ol>
-<p>The <code>range()</code> function is a built-in Python function that is used to return a list of numbers from 0 up to, but not including some integer number. You would use this above statement pattern (its setup broken down below) in order to work with the ordered position numbers rather than the items themselves that are stored in a collection of items. With indexing, you could still access the items item-by-item, but the variable name for whatever is being extracted is storing integers, the index positions, not the items.
-1. the word <code>for</code>
-2. then names the variable that each item from the <code>range()</code> function will be stored in: <code>index</code>
-3. the <code>in</code> membership operator to specify that we want items contained in the list the <code>range()</code> function returns
-4. the <code>range()</code> function that returns a list of numbers either specified by the <code>len()</code> function and the length of <code>some_iterable_variable_name</code> or just some integer value (<code>some_integer</code>)
-5. A colon, <code>:</code></p>
-<ol start="3" style="list-style-type: decimal">
-<li><code>for index, value_from_iterable_variable in enumerate(some_iterable_variable_name):</code></li>
+<p>The <code>range()</code> function is a built-in Python function that is used to return a list of numbers from 0 up to, but not including some integer number. You would use this above statement pattern (its setup broken down below) in order to work with the ordered position numbers rather than the items themselves that are stored in a collection of items. With indexing, you could still access the items item-by-item, but the variable name for whatever is being extracted is storing integers, the index positions, not the items.</p>
+<ol style="list-style-type: decimal">
+<li><p>the word <code>for</code></p></li>
+<li><p>then names the variable that each item from the <code>range()</code> function will be stored in: <code>index</code></p></li>
+<li><p>the <code>in</code> membership operator to specify that we want items contained in the list the <code>range()</code> function returns</p></li>
+<li><p>the <code>range()</code> function that returns a list of numbers either specified by the <code>len()</code> function and the length of <code>some_iterable_variable_name</code> or just some integer value (<code>some_integer</code>)</p></li>
+<li><p>A colon, <code>:</code></p></li>
+<li><p><code>for index, value_from_iterable_variable in enumerate(some_iterable_variable_name):</code></p></li>
 </ol>
 <p>This third statement is a combination of the first two statements where for each iteration or step in the <code>for</code> loop, you have access to both the value and the index of the value from the iterable variable at the same time. This is achieved because the pattern uses a special base python function <code>enumerate()</code>. You can <a href="https://docs.python.org/3/library/functions.html#enumerate">read more about this function from the online python manual</a>, but suffice it to say that the function takes in an iterable object like a list or a string. Then rather than just returning the elements of the iterable object, it also returns the corresponding indices enumerated or counted out for each of the elements in the iterable object.</p>
 <p>For example, if we have a list <code>test_list = ["daisy", "poppy", "daylily", "sunflower", "begonia"]</code>. In a <code>for</code> loop statement following the first pattern, <code>for flower in test_list:</code>, only elements from the list are returned, specifically to the variable <code>flower</code>. And the <code>flower</code> variable will be “daisy” in the first iteration of the for loop, “poppy” in the second iteration, “daylily” in the third iteration, “sunflower” in the fourth, and finally “begonia” in the fifth. If we instead follow the third pattern and use the <code>enumerate</code> function, specifically, <code>for index, flower in enumerate(test_list)</code>, the <code>flower</code> variable will take on the same values for each iteration of the loop as the first pattern example. The <code>index</code> variable will take on the values <code>0</code>, <code>1</code>, <code>2</code>, <code>3</code>, and <code>4</code> respectively.</p>
-<p>The setup is broken down below for this pattern
-1. the word <code>for</code>
-2. the names the variables that each index and each item from the <code>some_iterable_variable_name</code> will be stored in: <code>index</code>, <code>value_from_iterable_variable</code>
-3. the <code>in</code> membership operator to specify that we want items contained in the output from <code>enumerate()</code>
-4. the <code>enumerate()</code> function with the <code>some_iterable_variable_name</code> over which we want to extract items and their indexes item-by-item.
-5. A colon, <code>:</code></p>
+<p>The setup is broken down below for this pattern</p>
+<ol style="list-style-type: decimal">
+<li>the word <code>for</code></li>
+<li>the names the variables that each index and each item from the <code>some_iterable_variable_name</code> will be stored in: <code>index</code>, <code>value_from_iterable_variable</code></li>
+<li>the <code>in</code> membership operator to specify that we want items contained in the output from <code>enumerate()</code></li>
+<li>the <code>enumerate()</code> function with the <code>some_iterable_variable_name</code> over which we want to extract items and their indexes item-by-item.</li>
+<li>A colon, <code>:</code></li>
+</ol>
 </div>
 <div id="for-loop-body" class="section level3" number="9.5.2">
 <h3><span class="header-section-number">9.5.2</span> <code>for</code> loop body</h3>
@@ -523,10 +531,22 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="fundamentals-of-python---iteration-indexing-and-for-loops.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;What other information should we share about these dogs? Size? Breed? Favorite toy?&quot;</span>)</span></code></pre></div>
 <pre><code>## What other information should we share about these dogs? Size? Breed? Favorite toy?</code></pre>
 <p>First, notice that the print statement that is indented under the <code>for</code> statement will be printed four time, each one with a different dog name, and a different dog owner’s name. But the print statement that is not indented under the <code>for</code> statement, and instead is aligned with it, will only be executed once, after the other 4 lines have printed and the <code>for</code> loop is complete.</p>
-<p>Second, let’s go back a step and break down the pattern of the <code>for</code> statement.
-* Which pattern of the 3 was used?
-* Why do you think that pattern was used?
-* Is there another pattern that could have been used as effectively?</p>
+<p>Second, let’s go back a step and break down the pattern of the <code>for</code> statement.</p>
+<ul>
+<li>Which pattern of the 3 was used?</li>
+<li>Why do you think that pattern was used?</li>
+<li>Is there another pattern that could have been used as effectively?</li>
+</ul>
+<details>
+<summary>
+Answers:
+</summary>
+<ul>
+<li>The third pattern</li>
+<li>We wanted access to each list item and the position of each list item so that we could index a second matching list</li>
+<li>The second pattern could be used just as effectively, and we would index both lists instead of just one.</li>
+</ul>
+</details>
 <p>Like with conditional statement, the order of execution within the body of the loop (all lines that are indented) follows a downwards linear pattern. Lines listed earlier/first will be executed first and lines listed later will be executed later. Once every iteration of the <code>for</code> loop is complete, then lines outside of the <code>for</code> loop will be executed, like how the final print statement that asks what other dog innformation should be shared is only displayed after the <code>for</code> loop body is complete.</p>
 </div>
 <div id="initializing-variables-before-the-for-loop" class="section level3" number="9.5.3">
