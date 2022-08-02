@@ -17,12 +17,10 @@ This course introduces the use of Bash and Python for beginner Bioinformatic stu
 This course will teach learners to:  
 
 - appreciate the use of Bash and Python for working with big data
-- select the appropriate Bash tool to achieve a specific goal
 - break down coding problems into manageable, ordered goals
 - write useful pseudocode
 - create and run scripts of code
 - recreate or code a Bash tool in Python, developing additional functionality not available with the base tool
-- spot and debug errors in code
 
 ## Encountering problems?
 
