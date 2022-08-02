@@ -35,29 +35,44 @@ Python makes use of indentation to define blocks of code. This means that you ca
 
 There are many data types and structures that are used in Python. 
 
-* Integers: Integers are whole numbers 
+### Integers: 
+
+  * Integers are whole numbers 
   * These whole number are typed with just the numbers and do not include commas (`,`) or periods (`.`).
   * Examples: 
     * -2
     * 181
     * 10000056
     * 0
-* Floats: Floats are numbers that have fractional or decimal parts. 
+    
+### Floats:
+
+  * Floats are numbers that have fractional or decimal parts. 
   * These are typed with numbers and do have periods (`.`) or forward slashes (`/`) in them.
   * Examples:
     * -2.5
     * 8/2
     * 79/3
-* Strings: Strings are words, phrases, or just single characters that are strung together and enclosed by single (`'`) or double (`"`) quotes.
+    
+### Strings: 
+
+  * Strings are words, phrases, or just single characters that are strung together and enclosed by single (`'`) or double (`"`) quotes.
   * Examples:
     * "acgt"
     * "Banana"
     * "Hello, World!"
     * "1"
     * 'The quick brown fox jumped over the lazy Gibbs'
-* Booleans: Booleans are variables that store `True` or `False`. 
+
+
+### Booleans:
+
+  * Booleans are variables that store `True` or `False`. 
   * Unlike integers,  floats, and strings which can have many possible values, data that is a boolean data type is either `True` or `False`. 
-* Lists: Lists are a data structure, specifically, collections of items that are enclosed in brackets. ( `[` and `]` ).
+  
+### Lists: 
+  
+  * Lists are a data structure, specifically, collections of items that are enclosed in brackets. ( `[` and `]` ).
   * In Python, lists can be homogeneous, and contain items that are all the same data type (e.g., a list of strings or a list of integers); or lists can be heterogeneous, containing items that are different data types.
   * In Python, lists are also ordered, meaning that the elements or items contained in the list have a specific position associated with them.
   * Examples:
@@ -66,34 +81,50 @@ There are many data types and structures that are used in Python.
     * ["a", 1, "c", 0, "g", 1, "t", 1]
     * ["Hello,", "World!"]
     * ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "Gibbs"]
-* Sets: Sets are another data structure, specifically, collections of unique (or non-duplicated) items that are enclosed in curly braces ( `{` and `}` ).
+
+### Sets: 
+  * Sets are another data structure, specifically, collections of unique (or non-duplicated) items that are enclosed in curly braces ( `{` and `}` ).
   * To make a list into a set, the repeated items from the list are removed. For example, the list ["B", "a", "n", "a", "n", "a"] would be the set {"B", "a", "n"}. One super cool thing is if you define your set to be {"B", "a", "n", "a"}, Python will simplify it be {"B", "n", "a"}. (Also, note this is an example of how the set is unordered.)
   * Sets are useful if you want to track all the unique elements present in a large dataset and don't care if or how many times each element is repeated.
   * Note that sets do not have any order so if you print a set out, the order of elements may change
-* Dictionaries. Dictionaries are another Python data structure, specifically collections of paired key,value items that are enclosed in curly braces. ( `{` and `}` ). 
-  * By paired key,values we mean that a specific key is used to reference some value. For example, in the following dictionary `dog_favorite_toys`, `"Gibbs"` is a key used to refer to the value `"football"` because his favorite toy is a squeaking football. 
+  
+### Dictionaries: 
+
+  * Dictionaries are another Python data structure, specifically collections of paired key,value items that are enclosed in curly braces. ( `{` and `}` ). 
+  * By paired key,values we mean that a specific key is used to reference some value. For example, in the following dictionary `dog_favorite_toys`, `"Gibbs"` is a key used to refer to the value `"football"` because his favorite toy is a squeaking football.
+  
 ```{python}
 dog_favorite_toys = {"Gibbs": "football",
                      "Duke": "squirrel",
                      "Barnaby": "frisbee"}
 
 ```
-  * (What previously listed data type is each of the keys and values within that dictionary? )
+  
+  * What previously listed data type is each of the keys and values within that dictionary?
+    
+    <details><summary>Answer</summary>
+    Strings
+    </details>
+  
   * Note that the key and value in a pair are separated by a colon (`:`) and the pairs are separated from each other by a comma (`,`)
   * While sets are useful if you want to track all the unique elements present in a large dataset but don't care if or how many times each element is repeated, dictionaries allow you to track the presence and associate further information like how many times the element is present. The key would be the element (like a gene ID), and the value would the number of times that element (gene ID) is present in the dataset. The key has to be unique within the dictionary. The values may not be unique, like multiple gene IDs may be present in the dataset the same number of times.
   * Like sets, dictionaries do not have an order and are more like a jumbled bucket of information
   
-### Data represented or stored as an unintended data types:
+### Data represented or stored as an unintended data type:
 
 Note: While we know that -2 is an integer, if you represent this integer in the following ways, it is not considered an integer by Python: 
+
   * -2.0
   * -2/1
   * "-2.0"
   
-In the first case, Python considers these representations to be floats, which can still be used for mathematical operations, but couldn't be used to index. In the second case, Python considers the data to be a string, and it cannot be used in mathematical operations unless it is converted to a numerical (integer or float) data type. Examples of converting with the `int()` and `float()` functions are available in the [Python syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html) that was mentioned earlier. Often when reading data into Python from a file, numbers will be interpreted by python as strings and need to be converted to the correct data type. The third case is interpreted by Python as float division even in the case of two integers, one that divides evenly into the other. In order to do integer division, you need to use `//`. This tells Python to return an integer and drop any remainder.
+In the first case, Python considers these representations to be floats, which can still be used for mathematical operations, but couldn't be used to index. 
+
+The second case is interpreted by Python as float division even in the case of two integers, one that divides evenly into the other. In order to do integer division, you need to use `//`. This tells Python to return an integer and drop any remainder.
 
 `5//2 = 2`
 
+In the third case, Python considers the data to be a string, and it cannot be used in mathematical operations unless it is converted to a numerical (integer or float) data type. Examples of converting with the `int()` and `float()` functions are available in the [Python syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html) that was mentioned earlier. Often when reading data into Python from a file, numbers will be interpreted by python as strings and need to be converted to the correct data type.
 
 ### Immutability
 
@@ -106,7 +137,7 @@ What does it mean for a data type to be immutable? It means that the value of an
 * Float
 * Boolean
 
-All other listed data types and structures from the previous section are mutable or can be changed. Pratically speaking, Python is smart enough to recreate a variable but reuse the variable name when needed, such as 
+All other listed data types and structures from the previous section are mutable or can be changed. Practically speaking, Python is smart enough to recreate a variable but reuse the variable name when needed, such as 
 
 `A = A + 1`
 
@@ -136,6 +167,7 @@ gene_found = True
 For an example of unintentionally changing a variable's value, you may reuse a variable name later in a script. Then that variable will no longer reference the value which was stored earlier.
 
 What can you name a variable? Anything? 
+
   * Variable names should be meaningful and provide a description of what the variable contains. (However, comments within code can be used when defining a variable to accomplish this, especially if variable names are becoming unnecessarily long.)
   * Note that while the name of the variable should be meaningful, the name doesn't matter in how Python treats the variable. I could name a variable `filename` and store an integer in it and Python will treat the variable as the numerical value it has, not a string filename like its name suggests.  
   * Variable names can contain numbers (e.g., 0, 1, 2, ...), but they cannot start with numbers. (i.e., `file1` is an acceptable variable name, but `1file` is not)
