@@ -10,7 +10,7 @@ Get a basic familiarity with what kind of language Python is and why we're using
 
 ## Learning Objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * List the advantages and limitations of Python as a programming language
 * Explain why Python is a complement to bash
