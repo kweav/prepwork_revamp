@@ -28,7 +28,7 @@ Finally, Python is an object-oriented programming language meaning that every va
 
 Although it is a clear language to read and write, Python is not a miracle cure for programming. You will still need to learn the syntax of the language, as well as it's relatively small base vocabulary. Finally, you will still need to be able to translate strategies for answering questions or performing tasks into a logical set of steps that can be executed.
 
-Python is also slower than compiled langauges and bash. This is especially true when dealing with loops. However, there are ways to significantly speed up the execution of Python. Many python packages have compiled C-code hidden within their function calls, such that you have the convenience of Python but the speed of a compiled language.
+Python is also slower than compiled languages and bash. This is especially true when dealing with loops. However, there are ways to significantly speed up the execution of Python. Many python packages have compiled C-code hidden within their function calls, such that you have the convenience of Python but the speed of a compiled language.
 
 ## Why do we need Python if we have bash?
 
@@ -55,3 +55,8 @@ If you perform any data analysis in biology (and you will), it is inevitable tha
 3. tackling common problems like reformatting data
 
 Most importantly, writing code in Python should be fun, not scary. And that is what will keep you using the skills that you learn in this class.
+
+## Other programming languages, pseudocoding, and learning to write code specific to Python
+
+There are other programming languages besides Python which we will not be teaching you in bootcamp. These include R, C++, Java, and many more. Each language has its benefits. Like R is a powerful language for statistics. C++ is fantastic for wanting to write programs that are fast. We've described above why Python is right for this class. Before we delve into the fundamentals of writing code specific to Python, in the next chapter, we first are going to overview pseudocoding. The advantages of learning to pseudocode before actually coding are based on the idea that pseudocode is language agnostic and doesn't use language-specific syntax. Rather, it focuses on logically breaking down problems into smaller, manageable tasks that you express in your natural speaking thoughts. Therefore, in the next chapter (Chapter 6), we'll overview pseudocoding, providing some examples and guidelines. Then in Chapters 7-10, we'll cover fundamentals and specifics of Python syntax, necessary to write code. Finally, in Chapters 12-18, you'll have concrete practice pseudocoding and writing Python code. 
+
