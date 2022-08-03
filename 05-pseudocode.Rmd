@@ -10,7 +10,7 @@ Understanding how to break a problem down into basic steps that can be translate
 
 ## Learning Objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * Explain the purpose of pseudocode
 * Dissect a problem into basic building blocks
