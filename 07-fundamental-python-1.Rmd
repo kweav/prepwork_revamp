@@ -19,11 +19,13 @@ After going through this module, students should be able to:
 
 ## Resources
 
+* Recall that you can use the [online Python interface](https://www.online-python.com) to copy/paste or type in any of the examples within these Python fundamental chapters (Chapters 7-10). Then you can run the example to see what is does, as well as edit/rewrite it to see how changing the code changes the output.
 * [Object-Oriented Programming in Python is freely available documentation on programming in Python](https://python-textbok.readthedocs.io/en/1.0/index.html) and provides examples and thorough descriptions of fundamentals in Python programming. The table of contents is fairly well organized and has a lot of the buzz words contained in this module. There is more information covered in this book than will be required knowledge for you, but as a whole it likely will be a helpful resource to consult during the course.  
 * [Think Python 2nd Edition is freely available as web-based book](https://greenteapress.com/thinkpython2/html/index.html) and explains lots of Python vocabulary, syntax, and operations. The table of contents is quite thorough in describing each chapter's contents. There is more information covered in this book than will be required knowledge for you, but as a whole it likely will be a helpful resource to consult during the course. This resource does not have an easy means to navigate back to the table of contents though.
 * There is a [python syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html) that may be useful, especially throughout the course. 
 * Other website resources will be linked throughout this module for specific topics. If a resource uses terminology or functionality that you are not expected to learn, we will note it after linking the resource. 
 * Use of all linked resources is optional but strongly recommended. 
+
 
 ## Syntax
 
