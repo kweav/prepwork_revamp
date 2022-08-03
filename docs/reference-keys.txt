@@ -33,8 +33,9 @@ goal-4
 learning-objectives-4
 resources
 navigation
-running-a-python-script
-the-head-tool
+examining-directory-contents
+moving-and-copying
+head-and-tail
 fundamentals-of-python---intro-data-types
 goal-5
 learning-objectives-5
