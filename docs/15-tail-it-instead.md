@@ -103,8 +103,7 @@ line_list = []
 for line in open(filename):
   line_list.append(line)
 
-last_n_lines = line_list[len(line_list)-9:]
-#or last_n_lines = line_list[len(line_list)-9:len(line_list)+1]
+last_n_lines = line_list[len(line_list)-n_lines:]
 for line in last_n_lines:
     print(line.strip('\r\n'))
 ```

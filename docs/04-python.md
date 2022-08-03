@@ -10,7 +10,7 @@ Get a basic familiarity with what kind of language Python is and why we're using
 
 After going through this module, students should be able to:
 
-* Be able to list the advantages and limitations of Python as a programming language
+* List the advantages and limitations of Python as a programming language
 * Explain why Python is a complement to bash
 * Understand why Python is being used for this class
 
