@@ -29,6 +29,7 @@ what-python-is
 what-python-is-not
 why-do-we-need-python-if-we-have-bash
 why-python-is-right-for-this-class
+other-programming-languages-pseudocoding-and-learning-to-write-code-specific-to-python
 pseudo-code
 goal-4
 learning-objectives-4
