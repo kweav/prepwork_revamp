@@ -8,7 +8,7 @@ Understanding how to break a problem down into basic steps that can be translate
 
 ## Learning Objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * Explain the purpose of pseudocode
 * Dissect a problem into basic building blocks
@@ -50,7 +50,7 @@ Even once you become a proficient programmer and feel comfortable writing code d
 
 While there is no set of standards for pseudocoding, there are ways to make it more effective. The most important thing you can do is to be consistent. When you pick a term (e.g. repeat or set), make sure that it has the same meaning each time you use it. It can be helpful to put these action words in all caps to highlight them. Some general rules for effective pseudocoding are:
 
-* Make the first work the key action for the step and capitalize
+* Make the first word the key action for the step and capitalize
 * Only list one step per line
 * Indent to show heirarchy of actions and improve readability
 * End multiline blocks of code with `END`
