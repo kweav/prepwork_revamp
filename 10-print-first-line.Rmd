@@ -27,6 +27,8 @@ After going through this module, students should be able to:
 
 Let's start with and edit the pseudocode from the last module to meet the needs of this module.
 
+Note: you may write/edit pseudocode anywhere you would like. You will not have to turn in any pseudocode for any chapter. Just remember that since pseudocode doesn't follow the syntax of any one programming language, if you choose to write it in the online python text editor interface or your local python script, you'll want to make sure when you run the script that the pseudocode is commented out (with a `#` in front of it) so that Python does not try to treat it as real code which will cause errors.
+
 Last module's pseudocode:
 
 First, we need to SET the input file <br />
@@ -35,6 +37,7 @@ Second, FOR every line in the open file <br />
 END FOR <br />
 
 In this module, we want to only print the line if it's the first line of the file. Keeping the for loop, edit the pseudocode, inserting a step that asks which line position it is numerically in the file.
+
 
 ***
 <details><summary> ANSWER: </summary>
@@ -164,7 +167,7 @@ Finally, reuse the code from the first module to print the line (when it is the 
 
 Within your Python script, you should have the four lines of code together which makes our complete indended goal code -- code that prints just the first line in a file.
 
-**Use the command line to run the Python script and look at the output.**
+**Use the command line or the Run button in the online interface to run the Python script and look at the output.**
 
 ## Complete Intended Goal Code
 

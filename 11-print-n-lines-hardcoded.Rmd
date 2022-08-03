@@ -130,7 +130,7 @@ Finally, resue the code from the first two Python exercise modules to print the 
 
 Within your Python script, you should have the five lines of code together which makes our complete intended goal code -- code that prints a specified number of lines from the beginning of a file.
 
-**Use the command line to run the Python script and look at the output**
+**Use the command line or the Run button in the online interface to run the Python script and look at the output.**
 
 ## Complete Intended Goal Code
 
