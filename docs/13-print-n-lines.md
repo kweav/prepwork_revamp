@@ -206,7 +206,7 @@ Finally, reuse the code from the first four Python exercise modules to print the
 
 Within your Python script, you should have the ten lines of code together which makes our complete intended goal code -- code that recreates the Bash tool `head` -- a program that prints a user specified number of lines from the beginning a user-specified input file, unless no specific number of lines is specified, then it prints a default of 10 lines.
 
-**Use the command line to run the Python script and look at the output**
+**Use the command line or the Run button in the online interface to run the Python script and look at the output.**
   
 ## Complete Intended Goal Code
 

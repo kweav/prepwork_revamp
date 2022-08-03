@@ -289,7 +289,7 @@ If we were to end writing the program now, our script would print every line in 
 
 Within your Python script, you should now have the twelve lines of code together which makes our complete intended goal code -- code that prints a user specified number of lines from the beginning of a user specified input file, skipping header lines that begin with a pound sign (`#`).
 
-**Use the command line to run the Python script and look at the output**
+**Use the command line or the Run button in the online interface to run the Python script and look at the output.**
 
 ## Complete Intended Goal Code
 

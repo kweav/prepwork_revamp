@@ -117,7 +117,7 @@ If we were just to use the code above, there would be a blank line printed at th
 
 Finally, within your Python script, you should have the three lines of code together which makes our complete intended goal code -- code that prints every line in a file.
 
-**Use the command line to run the Python script and look at the output.**
+**Use the command line or the Run button in the online interface to run the Python script and look at the output.**
 
 ## Complete Intended Goal Code
 

@@ -83,7 +83,7 @@ END FOR <br />
 
 Much like how we used the base pseudocode from the fifth Python exercise module, start with the base code that you have from the fifth Python exercise module. Reuse code that is applicable to the task at hand and write new code for the new parts of the program that you specified in the new pseudocode. Consult the learning objectives above to see what data types, structures, and fundamentals we think you will need to build the code. Also, consult the notes on Python fundamentals. Remember to indent when appropriate.
 
-**Use the command line to run the Python script and look at the output**
+**Use the command line or the Run button in the online interface to run the Python script and look at the output.**
 
 **Submit your completed script**
 
