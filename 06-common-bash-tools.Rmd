@@ -17,7 +17,7 @@ After going through this module, students should be able to:
 * Move and copy files
 * Run the `head` and `tail` commands
 * Describe what a usage statement is and print it for `head` and `tail`
-* Explain what a "man page" page is
+* Explain what a "man page" is
 <!--
 cd, pwd, ls, mv, cp, head, tail, --help, man
 -->
