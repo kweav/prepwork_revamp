@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Fundamentals of Python - Expressions, Built-in Functions, and Conditionals | QBB-Prepwork</title>
+  <title>Chapter 3 Bash | QBB-Prepwork</title>
   <meta name="description" content="" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 8 Fundamentals of Python - Expressions, Built-in Functions, and Conditionals | QBB-Prepwork" />
+  <meta property="og:title" content="Chapter 3 Bash | QBB-Prepwork" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Fundamentals of Python - Expressions, Built-in Functions, and Conditionals | QBB-Prepwork" />
+  <meta name="twitter:title" content="Chapter 3 Bash | QBB-Prepwork" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="fundamentals-of-python---intro-data-types.html"/>
-<link rel="next" href="fundamentals-of-python---iteration-indexing-and-for-loops.html"/>
+<link rel="prev" href="logistics.html"/>
+<link rel="next" href="basic-bash.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -430,256 +430,36 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container">
   <img class= "hero-image" src= "https://github.com/jhudsl/OTTR_Template/raw/main/assets/dasl_thin_main_image.png">
 </div>
-<div id="fundamentals-of-python---expressions-built-in-functions-and-conditionals" class="section level1" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Fundamentals of Python - Expressions, Built-in Functions, and Conditionals</h1>
-<div id="goal-6" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Goal</h2>
-<p>Understanding how to compare variables and selectively execute code</p>
+<div id="bash-1" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Bash</h1>
+<div id="goal-1" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Goal</h2>
+<p>Gain an understanding of what bash is and what it can do for you</p>
 </div>
-<div id="learning-objectives-6" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Learning objectives</h2>
+<div id="learning-objectives-1" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Learning Objectives</h2>
 <p>After going through this module, students should be able to:</p>
 <ul>
-<li>Perform equality and inclusion testing between variables</li>
-<li>Demonstrate how to use common built-in functions, including printing and opening files</li>
-<li>Describe the use of conditionals to make choices within scripts</li>
+<li>Explain the difference between the command line and bash</li>
+<li>List advantages of bash over a graphical user interface (GUI)</li>
 </ul>
 </div>
-<div id="operators-and-expressions" class="section level2" number="8.3">
-<h2><span class="header-section-number">8.3</span> Operators and expressions</h2>
-<p>What is an operator? In python, an operator is some special symbol or keyword that designates that some specific computation should bbe performed. These include</p>
-<ul>
-<li>arithmetic operators for addition (<code>+</code>), subtraction (<code>-</code>), division (<code>/</code>), etc.</li>
-<li>comparison operators for testing equality of any value as well as whether numbers are greater than, less than, or equal to other numbers (<code>==</code> )</li>
-<li>logical operators for boolean values (<code>and</code>, <code>not</code>, <code>or</code>, etc.).</li>
-</ul>
-<p>What is an expression? In python, an expression is some combination or sequence of values or variables and operators.</p>
-<p>What is a built-in function? There are common built-in functions that are available to use in Python to perform specific tasks. These functions have names which are followed by parentheses. If the function takes any arguments that affect its behavior, these are included inside the parentheses when calling or using the function. Examples of built-in functions include <code>print()</code>, <code>len()</code>, etc.</p>
+<div id="what-is-bash" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> What is bash</h2>
+<p>In order to understand what bash is, we first need to define what the command line is. The command line is the text interface with your computer that is brought up when you run <code>terminal</code> or another similar program. In computers with no graphical interface, the command line is the only way to interact with the computer.</p>
+<p>Bash is a command line interpreter. There are several different interpreters, but bash is quite common and the default on the provided CMDB laptops. Bash allows you to:</p>
+<ol style="list-style-type: decimal">
+<li>navigate through the filesystem</li>
+<li>interact with files by creating, editing, examining, moving, or deleting them</li>
+<li>run built-in tools</li>
+<li>perform some basic logical operations, i.e. a simple form of programming</li>
+</ol>
+<p>Though it lacks some of the features of other programming languages (which we will discuss in the Chapter 5), bash is similar in that it executes commands. Bash is particularly specialized for file system navigation and management, networking, and administration tasks, such as setting up the environment (what programs are available to be used), and chaining together code written in other languages.</p>
 </div>
-<div id="testing-equality-and-inclusion" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Testing equality and inclusion</h2>
-<p>You can test whether the value of two objects are equal to one other by testing equality with a double equals sign (<code>==</code>) operator. Therefore an expression to test equality would look like the following pattern:</p>
-<p><code>variable1 == variable2</code></p>
-<p>Testing equality expressions are evaluated by Python, (i.e., Python finds the value of the expression) and return a boolean, so either <code>True</code> or <code>False</code>.</p>
-<p>Here’s an example of a testing equality expression that will be evaluated as <code>True</code>.</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">==</span> <span class="fl">3.0</span></span></code></pre></div>
-<pre><code>## True</code></pre>
-<p>And here’s an example of a testing equality expression that will be evaluated as <code>False</code>.</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb59-1" aria-hidden="true" tabindex="-1"></a>dog <span class="op">=</span> <span class="st">&quot;Gibbs&quot;</span></span>
-<span id="cb59-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb59-2" aria-hidden="true" tabindex="-1"></a>dog <span class="op">==</span> <span class="st">&quot;dog&quot;</span></span></code></pre></div>
-<pre><code>## False</code></pre>
-<div id="in" class="section level3" number="8.4.1">
-<h3><span class="header-section-number">8.4.1</span> <code>in</code></h3>
-<p>You can test whether some item is contained in a list or as a dictionary key, etc. using the <code>in</code> operator. Again, an expression that contains the <code>in</code> operator will be evaluated and return either <code>True</code> or <code>False</code>.</p>
-<p>The structure for this expression follows this pattern:</p>
-<p><code>variable in variable_for_data_structure</code></p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb61-1" aria-hidden="true" tabindex="-1"></a>testlist <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>, <span class="dv">55</span>, <span class="dv">89</span>, <span class="dv">144</span>]</span>
-<span id="cb61-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span> <span class="kw">in</span> testlist</span></code></pre></div>
-<pre><code>## False</code></pre>
-<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb63-1" aria-hidden="true" tabindex="-1"></a>testlist <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>, <span class="dv">55</span>, <span class="dv">89</span>, <span class="dv">144</span>]</span>
-<span id="cb63-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span> <span class="kw">in</span> testlist</span></code></pre></div>
-<pre><code>## True</code></pre>
-<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb65-1" aria-hidden="true" tabindex="-1"></a>dog_favorite_toys <span class="op">=</span> {<span class="st">&quot;Gibbs&quot;</span>: <span class="st">&quot;football&quot;</span>,</span>
-<span id="cb65-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb65-2" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;Duke&quot;</span>: <span class="st">&quot;squirrel&quot;</span>,</span>
-<span id="cb65-3"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb65-3" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;Barnaby&quot;</span>: <span class="st">&quot;frisbee&quot;</span>}</span>
-<span id="cb65-4"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb65-4" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Gibbs&quot;</span> <span class="kw">in</span> dog_favorite_toys</span></code></pre></div>
-<pre><code>## True</code></pre>
-</div>
-<div id="not-or" class="section level3" number="8.4.2">
-<h3><span class="header-section-number">8.4.2</span> <code>not</code> or <code>!</code></h3>
-<p>If you add <code>not</code> before <code>in</code>, you can test whether an item is not contained in some collection of items. While <code>7 in testlist</code> was False, because 7 was not in the collection of items in <code>testlist</code>, <code>7 not in testlist</code> should be True, because 7 is in fact not in the <code>testlist</code> collection.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb67-1" aria-hidden="true" tabindex="-1"></a>testlist <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>, <span class="dv">55</span>, <span class="dv">89</span>, <span class="dv">144</span>]</span>
-<span id="cb67-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span> <span class="kw">not</span> <span class="kw">in</span> testlist</span></code></pre></div>
-<pre><code>## True</code></pre>
-<p>Or if you have a boolean variable <code>variableName</code> and you put <code>not</code> in front of the variable, then <code>not variableName</code> will take on the opposite value of <code>variableName</code>. Below <code>a</code> is a standin for the boolean variable.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">a</th>
-<th align="center">not a</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">T</td>
-<td align="center">F</td>
-</tr>
-<tr class="even">
-<td align="center">F</td>
-<td align="center">T</td>
-</tr>
-</tbody>
-</table>
-<p>In a similar manner, while testing for equality or inequality of two variables or values, rather than using the double equals (<code>==</code>) to test for equality, you can use an exclamation point and a single equals sign (<code>!=</code>) to test if two variables or values are not equal.</p>
-<p>And while the value of the variable <code>dog</code> didn’t equal the string <code>"dog"</code>, and the expression <code>dog == "dog"</code> evaluated to False, <code>dog != "dog"</code> will evaluate to True.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb69-1" aria-hidden="true" tabindex="-1"></a>dog <span class="op">!=</span> <span class="st">&quot;dog&quot;</span></span></code></pre></div>
-<pre><code>## True</code></pre>
-</div>
-<div id="and" class="section level3" number="8.4.3">
-<h3><span class="header-section-number">8.4.3</span> <code>and</code></h3>
-<p>Sometimes you need to chain expressions together to see if multiple things are True. You can use the <code>and</code> operator in between the expressions. Below the letters <code>a</code> and <code>b</code> are stand-ins for the expressions.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">a</th>
-<th align="center">not a</th>
-<th align="center">b</th>
-<th align="center">a and b</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">T</td>
-<td align="center">F</td>
-<td align="center">T</td>
-<td align="center">T</td>
-</tr>
-<tr class="even">
-<td align="center">T</td>
-<td align="center">F</td>
-<td align="center">F</td>
-<td align="center">F</td>
-</tr>
-<tr class="odd">
-<td align="center">F</td>
-<td align="center">T</td>
-<td align="center">T</td>
-<td align="center">F</td>
-</tr>
-<tr class="even">
-<td align="center">F</td>
-<td align="center">T</td>
-<td align="center">F</td>
-<td align="center">F</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="or" class="section level3" number="8.4.4">
-<h3><span class="header-section-number">8.4.4</span> <code>or</code></h3>
-<p>Alternatively, you may chain expressions together to see if at least one is True. You can use the <code>or</code> operator in between the expressions. Below the letters <code>a</code> and <code>b</code> are stand-ins for the expressions.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="center">a</th>
-<th align="center">not a</th>
-<th align="center">b</th>
-<th align="center">a and b</th>
-<th align="center">a or b</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center">T</td>
-<td align="center">F</td>
-<td align="center">T</td>
-<td align="center">T</td>
-<td align="center">T</td>
-</tr>
-<tr class="even">
-<td align="center">T</td>
-<td align="center">F</td>
-<td align="center">F</td>
-<td align="center">F</td>
-<td align="center">T</td>
-</tr>
-<tr class="odd">
-<td align="center">F</td>
-<td align="center">T</td>
-<td align="center">T</td>
-<td align="center">F</td>
-<td align="center">T</td>
-</tr>
-<tr class="even">
-<td align="center">F</td>
-<td align="center">T</td>
-<td align="center">F</td>
-<td align="center">F</td>
-<td align="center">F</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="common-built-in-functions" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Common Built-in Functions</h2>
-<div id="print" class="section level3" number="8.5.1">
-<h3><span class="header-section-number">8.5.1</span> <code>print()</code></h3>
-<p>The <code>print()</code> function is used to display formatted messages onto the screen or in a file. The function is also very useful in debugging to see what values certain variables are, their type, their length, etc when code isn’t behaving as expected.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Hello, World!&quot;</span>)</span></code></pre></div>
-<pre><code>## Hello, World!</code></pre>
-<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb73-1" aria-hidden="true" tabindex="-1"></a>the_temperature_today <span class="op">=</span> <span class="dv">88</span></span>
-<span id="cb73-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;The temperature outside in Baltimore today is&quot;</span>, the_temperature_today, <span class="st">&quot;degrees F.&quot;</span>)</span></code></pre></div>
-<pre><code>## The temperature outside in Baltimore today is 88 degrees F.</code></pre>
-</div>
-<div id="open" class="section level3" number="8.5.2">
-<h3><span class="header-section-number">8.5.2</span> <code>open()</code></h3>
-<p>In Python, you can open a file with data to read by passing the filename to the <code>open()</code> function. We will be using this function as we recreate the <code>head</code> bash tool later.</p>
-</div>
-<div id="len" class="section level3" number="8.5.3">
-<h3><span class="header-section-number">8.5.3</span> <code>len()</code></h3>
-<p>Data types and structures that are collections of items (e.g., a string which is a collection of characters strung together; a list which is a collection of items, a set which is a collection of non-duplicated items, and a dictionary which is a collection of key-value pairs) have a length associated with them. This is the number of items in the collection. you can find the length of variables of these types using the Python function <code>len()</code>.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(<span class="st">&quot;acgt&quot;</span>)</span></code></pre></div>
-<pre><code>## 4</code></pre>
-<div class="sourceCode" id="cb77"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb77-1" aria-hidden="true" tabindex="-1"></a>dog_favorite_toys <span class="op">=</span> {<span class="st">&quot;Gibbs&quot;</span>: <span class="st">&quot;football&quot;</span>,</span>
-<span id="cb77-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb77-2" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;Duke&quot;</span>: <span class="st">&quot;squirrel&quot;</span>,</span>
-<span id="cb77-3"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb77-3" aria-hidden="true" tabindex="-1"></a>                     <span class="st">&quot;Barnaby&quot;</span>: <span class="st">&quot;frisbee&quot;</span>}</span>
-<span id="cb77-4"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb77-4" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(dog_favorite_toys)</span></code></pre></div>
-<pre><code>## 3</code></pre>
-<div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">8</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">34</span>, <span class="dv">55</span>, <span class="dv">89</span>, <span class="dv">144</span>])</span></code></pre></div>
-<pre><code>## 13</code></pre>
-</div>
-</div>
-<div id="conditionals" class="section level2" number="8.6">
-<h2><span class="header-section-number">8.6</span> Conditionals</h2>
-<p>Conditional statements are used in python to check the value of a boolean variable or expression and specify what behavior or path of steps the script should follow depending on whether the boolean/expression was True or False. An example of an everyday conditional you may think through is like the following:</p>
-<p>I am about to leave. Is it raining outside right now? <br />
-Yes –&gt; Grab an umbrella and leave <br /></p>
-<p>In Python, this could look something like the following if we have the boolean variable <code>rainingNow</code>.</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb81-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb81-1" aria-hidden="true" tabindex="-1"></a>rainingNow <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb81-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> rainingNow:</span>
-<span id="cb81-3"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb81-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&#39;Grab the umbrella&#39;</span>)</span></code></pre></div>
-<pre><code>## Grab the umbrella</code></pre>
-<p>In the above code example, the boolean variable for whether it is currently raining is set to True, and the indented code under the <code>if</code> statement is executed. Also note that the conditional statement ends with “:”. This is required to denote the end of the conditional statement.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb83-1" aria-hidden="true" tabindex="-1"></a>rainingNow <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb83-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb83-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> rainingNow:</span>
-<span id="cb83-3"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb83-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Grab the umbrella&quot;</span>)</span></code></pre></div>
-<p>In the same above code example, the only change is that the boolean variable for whether it is currently raining is set to False, and the indented code under the <code>if</code> statement is not executed/you don’t see the print statement.</p>
-<p>In general, when using conditional statements, the boolean values are checked and anything indented under True boolean expressions/variables wll be executed linearly by the script. In python, you can have an <code>if</code> statement ( <code>if booleanVariable:</code>) without an <code>else</code> statement. Or you can have an <code>if</code> statement followed by an <code>else</code> statement. In that case, anything indented after the <code>else</code> statement will only be executed by the script if the value of the boolean variable is False.</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb84-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb84-1" aria-hidden="true" tabindex="-1"></a>rainingNow <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb84-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> rainingNow:</span>
-<span id="cb84-3"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb84-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Grab the umbrella&quot;</span>)</span>
-<span id="cb84-4"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb84-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb84-5"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb84-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Leave without the umbrella&quot;</span>)</span></code></pre></div>
-<pre><code>## Leave without the umbrella</code></pre>
-<p>However, there may be times that there are other things to consider in addition to the initial <code>if</code> statement, things that you would want to think about when the initial if statement boolean variable or expression or condition is False. Let’s extend the raining example.</p>
-<p>I am about to leave. Is it raining outside right now? <br />
-Yes –&gt; Grab an umbrella and leave <br />
-No –&gt; Will it be raining at some point while I am outside? <br />
-    Yes –&gt; Grab an umbrella and leave <br />
-    No –&gt; leave <br /></p>
-<p>In Python, this could look something like the following if we have the boolean variables <code>rainingNow</code> and <code>rainingLater</code>. We add an <code>elif</code> statement that will be checked if the first variable is False, but will be ignored if the first variable is True:</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb86-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb86-1" aria-hidden="true" tabindex="-1"></a>rainingNow <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb86-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb86-2" aria-hidden="true" tabindex="-1"></a>rainingLater <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb86-3"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> rainingNow:</span>
-<span id="cb86-4"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb86-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Grab the umbrella for now&quot;</span>)</span>
-<span id="cb86-5"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb86-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> rainingLater:</span>
-<span id="cb86-6"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb86-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Grab the umbrella for later&quot;</span>)</span>
-<span id="cb86-7"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb86-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb86-8"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb86-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Leave without the umbrella&quot;</span>)</span></code></pre></div>
-<pre><code>## Grab the umbrella for now</code></pre>
-<p>This little code block asks if <code>rainingNow</code> is True. If it is, then the script will conclude that you should grab the umbrella, and it won’t check the <code>elif</code> statement to see if that variable is True. If it is False, the script ignores what is indented under the <code>if rainingNow:</code> and will check the value of <code>rainingLater</code> variable. If that’s True, the script will conclude you should grab the umbrella. But if that is also False, then, the script again ignores what is indented under the <code>elif rainingLater:</code> statement and the script goes to the else statement and concludes that you leave without the umbrella.</p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb88-1" aria-hidden="true" tabindex="-1"></a>rainingNow <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb88-2"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb88-2" aria-hidden="true" tabindex="-1"></a>rainingLater <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb88-3"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> rainingNow:</span>
-<span id="cb88-4"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb88-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Grab the umbrella for now&quot;</span>)</span>
-<span id="cb88-5"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb88-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> rainingLater:</span>
-<span id="cb88-6"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb88-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Grab the umbrella for later&quot;</span>)</span>
-<span id="cb88-7"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb88-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb88-8"><a href="fundamentals-of-python---expressions-built-in-functions-and-conditionals.html#cb88-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">&quot;Leave without the umbrella&quot;</span>)</span></code></pre></div>
-<pre><code>## Grab the umbrella for later</code></pre>
-<p>Note here in this example how the print statements include the “for now” and “for later” phrases so we can distinguish which conditional statement was executed. Unique print statement usage is a tool you can use in debugging scripts.</p>
-<p>Sections 5.2 - 5.7 on conditionals in the Think Python resource are especially helpful in looking at conditional statements.</p>
+<div id="bash-vs.-a-graphical-user-interface-gui" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Bash vs. a graphical user interface (GUI)</h2>
+<p>While all of us are very familiar with GUIs (e.g. macOSX or windows, excel, gimp, photoshop), many will be less (or not) familiar with getting the same or more functionality out of the command line through bash. Some of the most powerful features of using bash are text manipulation and performing repetitive tasks. While on a GUI there is not an easy way to perform the same task or set of tasks repeatedly, bash allows you to create a script that can easily handle even complex sets of tasks repeated on each input.</p>
+<p>The biggest disadvantage of the command line and bash compared to a GUI is the learning curve. Many people are nervous to use the command line because of its unfamiliarity, but with a few simple commands, you will be using bash with ease.</p>
 
 </div>
 </div>
@@ -696,8 +476,8 @@ No –&gt; Will it be raining at some point while I am outside? <br />
           </div>
         </div>
       </div>
-<a href="fundamentals-of-python---intro-data-types.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="fundamentals-of-python---iteration-indexing-and-for-loops.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="logistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="basic-bash.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
