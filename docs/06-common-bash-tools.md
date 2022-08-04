@@ -1,10 +1,10 @@
 
 
-# Basic bash
+# Fundamentals of Bash
 
 ## Goal
 
-A basic grasp of navigating bash and using some basic commands
+A fundamental grasp of navigating bash and using some common commands
 
 ## Learning Objectives
 

@@ -20,7 +20,7 @@ goal-1
 learning-objectives-1
 what-is-bash
 bash-vs.-a-graphical-user-interface-gui
-basic-bash
+fundamentals-of-bash
 goal-2
 learning-objectives-2
 resources
