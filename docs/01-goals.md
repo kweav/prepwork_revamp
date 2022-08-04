@@ -5,7 +5,7 @@
 
 ## Learning objectives
 
-This set of prepwork chapters is intended to give you a brief exposure to the fundamentals of the Python programming language. By the time you've completed the prepwork, you should be able to
+This set of prepwork chapters is intended to give you a brief exposure to the fundamentals of Bash and the Python programming language. By the time you've completed the prepwork, you should be able to
 
 * Navigate around a file system using the command line
 * Understand why we use both bash and Python in Computational Biology to analyze biological data
