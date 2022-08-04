@@ -488,8 +488,8 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="applied-python-exercise-4.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="co">#USAGE: python scriptname.py input_filename number_lines_to_display</span></span>
-<span id="cb118-2"><a href="applied-python-exercise-4.html#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="applied-python-exercise-4.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="co">#USAGE: python scriptname.py input_filename number_lines_to_display</span></span>
+<span id="cb119-2"><a href="applied-python-exercise-4.html#cb119-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span></code></pre></div>
 </details>
 <hr />
 <div id="set-the-input-filename" class="section level3" number="15.4.1">
@@ -500,7 +500,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="applied-python-exercise-4.html#cb119-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="applied-python-exercise-4.html#cb120-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> sys.argv[<span class="dv">1</span>]</span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -512,9 +512,9 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="applied-python-exercise-4.html#cb120-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> sys.argv[<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="applied-python-exercise-4.html#cb121-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> sys.argv[<span class="dv">2</span>]</span></code></pre></div>
 <p>However, we need the variable to be an integer, and the values in the <code>sys.argv</code> list are always stored as strings, even if they are numbers. Therefore, edit the line within your Python script to convert the value that is being stored to an integer.</p>
-<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="applied-python-exercise-4.html#cb121-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="applied-python-exercise-4.html#cb122-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>])</span></code></pre></div>
 </details>
 <hr />
 <p>Now that we’ve managed to set the input file and the desired number of lines to values that are specified by the user on the command line, we can reuse the rest of the code for the next three steps that we used in the previous module.</p>
@@ -527,7 +527,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="applied-python-exercise-4.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)):</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="applied-python-exercise-4.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)):</span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -539,7 +539,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="applied-python-exercise-4.html#cb123-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines:</span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb124-1"><a href="applied-python-exercise-4.html#cb124-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines:</span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -551,7 +551,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb124"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb124-1"><a href="applied-python-exercise-4.html#cb124-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb125-1"><a href="applied-python-exercise-4.html#cb125-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
 </details>
 <hr />
 <p>Within your Python script, you should have the seven lines of code together which makes our complete intended goal code – code that prints a user specified number of lines from the beginning of a user specified input file.</p>
@@ -565,13 +565,13 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb125"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb125-1"><a href="applied-python-exercise-4.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="co">#USAGE: python scriptname.py input_filename number_lines_to_display</span></span>
-<span id="cb125-2"><a href="applied-python-exercise-4.html#cb125-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys <span class="co">#import module</span></span>
-<span id="cb125-3"><a href="applied-python-exercise-4.html#cb125-3" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> sys.argv[<span class="dv">1</span>] <span class="co"># SET the input filename</span></span>
-<span id="cb125-4"><a href="applied-python-exercise-4.html#cb125-4" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>]) <span class="co"># SET the desired number of lines</span></span>
-<span id="cb125-5"><a href="applied-python-exercise-4.html#cb125-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)): <span class="co">#FOR every line in the open file</span></span>
-<span id="cb125-6"><a href="applied-python-exercise-4.html#cb125-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines: <span class="co">#IF a desired line by its numerical position</span></span>
-<span id="cb125-7"><a href="applied-python-exercise-4.html#cb125-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a href="applied-python-exercise-4.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="co">#USAGE: python scriptname.py input_filename number_lines_to_display</span></span>
+<span id="cb126-2"><a href="applied-python-exercise-4.html#cb126-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys <span class="co">#import module</span></span>
+<span id="cb126-3"><a href="applied-python-exercise-4.html#cb126-3" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> sys.argv[<span class="dv">1</span>] <span class="co"># SET the input filename</span></span>
+<span id="cb126-4"><a href="applied-python-exercise-4.html#cb126-4" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>]) <span class="co"># SET the desired number of lines</span></span>
+<span id="cb126-5"><a href="applied-python-exercise-4.html#cb126-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)): <span class="co">#FOR every line in the open file</span></span>
+<span id="cb126-6"><a href="applied-python-exercise-4.html#cb126-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines: <span class="co">#IF a desired line by its numerical position</span></span>
+<span id="cb126-7"><a href="applied-python-exercise-4.html#cb126-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
 </details>
 <hr />
 
