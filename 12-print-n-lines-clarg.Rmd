@@ -10,7 +10,7 @@ Write Python code that works towards recreating the Bash tool `head`, displaying
 
 ## Learning Objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * State the sub-steps needed to meet the coding goal
 * Use the following datatypes, structures, and fundamentals to meet the coding goal:
@@ -26,9 +26,9 @@ After going through this module, students should be able to:
 
 ## Coding Blueprint
 
-Let's again start with and edit the pseudocode from the last module to meet the needs of this module.
+Let's again start with and edit the pseudocode from the previous chapter to meet the needs of this chapter.
 
-Last module's pseudocode:
+Previous chapter's pseudocode:
 
 First, we need to SET the input file <br />
 Next, we need to SET the desired number of displayed lines <br />
@@ -43,7 +43,7 @@ Do we need to change this pseudocode at all or does it accurately reflect what w
 ***
 <details><summary> ANSWER: </summary>
 
-No we don't need to change the pseudocode from the last module because it still accurately reflects the goal we want to accomplish within this module. 
+No we don't need to change the pseudocode from the previous Applied Python Exercise chapter because it still accurately reflects the goal we want to accomplish within this chapter. 
 
 </details>
 ***
@@ -52,7 +52,7 @@ No we don't need to change the pseudocode from the last module because it still 
 
 **Create a new Python script**
 
-We may not need to edit the pseudocode for this module, but we will need to edit the code. The end users of tools don't have access to the values of variables within code unless the variables can be passed information through the command line. So rather than defining the variables for the input filename and desired number of lines within the script as hardcoded, inflexible variables with specific values, we're going to define the variables based on input arguments used when running the script, increasing the flexibility of the tool.
+We may not need to edit the pseudocode for this chapter, but we will need to edit the code. The end users of tools don't have access to the values of variables within code unless the variables can be passed information through the command line. So rather than defining the variables for the input filename and desired number of lines within the script as hardcoded, inflexible variables with specific values, we're going to define the variables based on input arguments used when running the script, increasing the flexibility of the tool.
 
 The `sys` module is useful for this in Python. Specifically, it allows you to use a structure called `sys.argv` which is a list that stores the command line arguments passed to a Python script. `sys.argv[0]` is always the script name with the additional information/arguments starting at index 1 or `sys.argv[1]`. 
 
@@ -73,7 +73,7 @@ import sys
 
 ### SET the input filename
 
-In the code for the past modules, we've set the filename as a hardcoded string variable. Now you want to set it as the first command line argument passed to the program when calling the script. Do this within your Python script.
+In the code for the past chapters, we've set the filename as a hardcoded string variable. Now you want to set it as the first command line argument passed to the program when calling the script. Do this within your Python script.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -87,7 +87,7 @@ filename = sys.argv[1]
 
 ### SET the desired number of lines
 
-In the code for the last module, we set the desired number of lines as a hardcoded integer variable. Now you want to set it as second command line argument passed to the program when calling the script. Do this within your Python script.
+In the code for the previous Applied Python Exercise chapter, we set the desired number of lines as a hardcoded integer variable. Now you want to set it as second command line argument passed to the program when calling the script. Do this within your Python script.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -96,7 +96,7 @@ In the code for the last module, we set the desired number of lines as a hardcod
 n_lines = sys.argv[2]
 ```
 
-However, we need the variable to be an integer, and the values in the `sys.argv` list are always stored as strings, even if they are numbers. Therefore, edit the line within your Python script to convert the value that is being stored to an integer.
+However, we need the variable to be an integer, and the values in the `sys.argv` list are always stored as strings, even if they are numbers. Therefore, edit the line within your Python script to convert the value that is being stored to an integer (if you hadn't already converted the string to an integer).
 
 ```{python, eval = FALSE}
 n_lines = int(sys.argv[2])
@@ -105,11 +105,11 @@ n_lines = int(sys.argv[2])
 </details>
 ***
 
-Now that we've managed to set the input file and the desired number of lines to values that are specified by the user on the command line, we can reuse the rest of the code for the next three steps that we used in the previous module. 
+Now that we've managed to set the input file and the desired number of lines to values that are specified by the user on the command line, we can reuse the rest of the code for the next three steps that we used in the previous Applied Python Exercise chapter. 
 
 ### FOR every line in the open file
 
-To loop through every line in the open file, use the `for` statement structure from the second and third Python exercise modules. Write this line of code within your Python script.
+To loop through every line in the open file, use the `for` statement structure from the second and third Applied Python Exercise chapters. Write this line of code within your Python script.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -123,7 +123,7 @@ for i, line in enumerate(open(filename)):
 
 ### IF a desired line (by its numerical position)
 
-To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third Python exercise module. Write this line of code within your Python script, indenting correctly under the `for` loop statement.
+To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third Applied Python Exercise chapter. Write this line of code within your Python script, indenting correctly under the `for` loop statement.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -137,7 +137,7 @@ To ask if the line is one of the desired beginning lines, use the conditional st
 
 ### PRINT the line
 
-Finally, reuse the code from the first three Python exercise modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
+Finally, reuse the code from the first three Applied Python Exercise chapters to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
 
 ***
 <details><summary> ANSWER: </summary>

@@ -10,7 +10,7 @@ Write Python code that works towards recreating the Bash tool `head`, displaying
 
 ## Learning Objectives
 
-After going through this module, students should be able to: 
+After going through this chapter, students should be able to: 
 
 * State the sub-steps needed to meet the coding goal
 * Use the following datatypes, structures, and fundamentals to meet the coding goal:
@@ -22,7 +22,7 @@ After going through this module, students should be able to:
 
 ## Coding Blueprint
 
-Within this module, you will write code that displays every line in an input file. To complete this goal, consider the most basic tasks that would be required.
+Within this chapter, you will write code that displays every line in an input file. To complete this goal, consider the most basic tasks that would be required.
 
 First, we need to SET the input file<br />
 Second, FOR every line in the open file<br />
@@ -61,7 +61,7 @@ Let's focus on the FOR portion of the pseudocode now, specifically building the 
 
 To SET what the input file is, we will create a variable which stores the string of the filename for the input file.
 
-Consult the notes on variable assignment earlier to SET a variable equal to the input file. Within your Python script, write a line of code that does this. 
+Consult the notes from earlier, specifically variable assignment, to SET a variable equal to the input file. Within your Python script, write a line of code that does this. 
 
 ***
 <details><summary> ANSWER: </summary>

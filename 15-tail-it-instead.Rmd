@@ -4,15 +4,15 @@ ottrpal::set_knitr_image_path()
 
 # Applied Python Exercise 7
 
-Reminder: you will turn in your final script from this module by emailing it to your TA Kate Weaver (kweave23@jhu.edu). Please name it LASTNAME_tail.py replace "LASTNAME" with your last name.
+Reminder: you will turn in your final script from this chapter by emailing it to your TA Kate Weaver (kweave23@jhu.edu). Please name it LASTNAME_tail.py (replacing "LASTNAME" with your last name).
 
 ## Goal -- Print the desired number of lines from the end of the input file
 
-The goal of this module is to edit your recreated `head` program from the fifth Python exercise module such that it `tail`'s an input file. As such, it should print the desired number of lines from the end of the input file, rather than from the beginning. 
+The goal of this chapter is to edit your recreated `head` program from the fifth Applied Python Exercise chapter such that it `tail`s an input file. As such, it should print the desired number of lines from the end of the input file, rather than from the beginning. 
 
 ## Learning Objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * State the sub-steps needed to meet the coding goal
 * Use the following datatypes, structures, and fundamentals to meet the coding goal:
@@ -32,7 +32,7 @@ After going through this module, students should be able to:
   
 ## Coding Blueprint
 
-We recommend that you start with the final pseudocode from the fifth Python exercise module: 
+We recommend that you start with the final pseudocode from the fifth Applied Python Exercise chapter: 
 
 First, we need to SET the input file <br />
 Next, IF the user-specified a desired number of lines to display <br />
@@ -83,7 +83,7 @@ END FOR <br />
 
 **Create a new Python script**
 
-Much like how we used the base pseudocode from the fifth Python exercise module, start with the base code that you have from the fifth Python exercise module. Reuse code that is applicable to the task at hand and write new code for the new parts of the program that you specified in the new pseudocode. Consult the learning objectives above to see what data types, structures, and fundamentals we think you will need to build the code. Also, consult the notes on Python fundamentals. Remember to indent when appropriate.
+Much like how we used the base pseudocode from the fifth Applied Python Exercise chapter, start with the final code that you have from the fifth Applied Python Exercise chapter. Reuse lines that are applicable to the task at hand and write new code for the new parts of the program that you specified in your new pseudocode. Consult the learning objectives above to see what data types, structures, and fundamentals we think you will need to build the code. Also, consult the notes on Python fundamentals. Remember to indent when appropriate.
 
 **Use the command line or the Run button in the online interface to run the Python script and look at the output.**
 
