@@ -165,7 +165,7 @@ drwxrwxrwx 1 0 0 4096 Aug  3 12:30 terminal-basics
 drwxrwxrwx 1 0 0 4096 Aug  3 12:31 new-basics
 ```
 
-We can also move and rename files using the `mv` command. Like copy, you give it a target file or directory and a destination. If the destination is an exisiting directory, the target is moved into that destination directory. If the destination is a file name (with or without a path), then the target is renamed (and moved if there is a path to a different directory than the target is in).
+We can also move and rename files using the `mv` command. Like copy, you give it a target file or directory and a destination. If the destination is an existing directory, the target is moved into that destination directory. If the destination is a file name (with or without a path), then the target is renamed (and moved if there is a path to a different directory than the target is in).
 
 Unfortunately, the online terminal also does not allow moving but it does allow renaming. So, if we are in "terminal-basics" and want to rename our "ref.fa.bak" file to "my_ref.fa", what command would we use? What about moving it into the parent directory? And if we wanted to move it and give it the new name "my_ref.fa"?
 
@@ -279,6 +279,6 @@ Full documentation <https://www.gnu.org/software/coreutils/head>
 or available locally via: info '(coreutils) head invocation'
 ```
 
-The first line shows the usage statement, a description of how to run the command. Options (information based with a preceeding identifier list `-n`) and arguments (information passed without a preceeding identifier like `-n`) are denoted as optional when enclosed by **[]** and required when enclosed by **<>** or nothing at all. The usage statement also provides the order of options and arguments required by the command.
+The first line shows the usage statement, a description of how to run the command. Options (information based with a preceeding identifier like `-n`) and arguments (information passed without a preceeding identifier like `-n`) are denoted as optional when enclosed by **[]** and required when enclosed by **<>** or nothing at all. The usage statement also provides the order of options and arguments required by the command.
 
 Most commands and tools have a help statement and usage statement, but not all. In addition, we can get even more information by looking at the manual, or **man** page for a command. To do this, we would type `man head`. Unfortunately this is one more feature missing in this online terminal. A man page is a text manual with a general description of the tool, an explanation of all of the possible arguments, and more. You can navigate with the up and down arrows. To move more quickly, hold down *fn*. To exit, push *q*.
