@@ -1,6 +1,6 @@
 
 
-# Basic bash
+# Fundamentals of Bash
 
 ## Goal
 
