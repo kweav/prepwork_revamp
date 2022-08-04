@@ -8,7 +8,7 @@ Gain a basic familiarity with Python data types
 
 ## Learning Objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * Differentiate between the fundamental data types and structures in Python
 * Define mutability
@@ -17,10 +17,10 @@ After going through this module, students should be able to:
 ## Resources
 
 * Recall that you can use the [online Python interface](https://www.online-python.com) to copy/paste or type in any of the examples within these Python fundamental chapters (Chapters 7-10). Then you can run the example to see what is does, as well as edit/rewrite it to see how changing the code changes the output.
-* [Object-Oriented Programming in Python is freely available documentation on programming in Python](https://python-textbok.readthedocs.io/en/1.0/index.html) and provides examples and thorough descriptions of fundamentals in Python programming. The table of contents is fairly well organized and has a lot of the buzz words contained in this module. There is more information covered in this book than will be required knowledge for you, but as a whole it likely will be a helpful resource to consult during the course.  
+* [Object-Oriented Programming in Python is freely available documentation on programming in Python](https://python-textbok.readthedocs.io/en/1.0/index.html) and provides examples and thorough descriptions of fundamentals in Python programming. The table of contents is fairly well organized and has a lot of the buzz words contained in these fundamental python chapters. There is more information covered in this book than will be required knowledge for you, but as a whole it likely will be a helpful resource to consult during the course.  
 * [Think Python 2nd Edition is freely available as web-based book](https://greenteapress.com/thinkpython2/html/index.html) and explains lots of Python vocabulary, syntax, and operations. The table of contents is quite thorough in describing each chapter's contents. There is more information covered in this book than will be required knowledge for you, but as a whole it likely will be a helpful resource to consult during the course. This resource does not have an easy means to navigate back to the table of contents though.
 * There is a [python syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html) that may be useful, especially throughout the course. 
-* Other website resources will be linked throughout this module for specific topics. If a resource uses terminology or functionality that you are not expected to learn, we will note it after linking the resource. 
+* Other website resources will be linked throughout this chapter for specific topics. If a resource uses terminology or functionality that you are not expected to learn, we will note it after linking the resource. 
 * Use of all linked resources is optional but strongly recommended. 
 
 
@@ -150,7 +150,7 @@ The variable name is set within a variable assignment statement. We use an `=` (
 
 You've already seen an example of this with the dictionary `dog_favorite_toys` above. The data we are storing is saved in a variable named dog_favorite_toys. By using variables to store data, you can reference the variable later and use or modify the data stored in the variable. Assigning a value to a variable name is also called "defining" a variable or "initializing" a variable. 
 
-This variable assignment statement is considered an "expression" in Python. We'll discuss more expressions in the next section of this module.
+This variable assignment statement is considered an "expression" in Python. We'll discuss more expressions in the next section of this chapter.
 
 Variables can be overwritten, either intentionally or unintentionally. So for an example intentionally changing a variable's value, consider that you may be looking through results of a genetic screen, wondering if a specific gene of interest was affected by the screen. You would store the gene of interest in a variable named `gene_of_interest`, and you set a boolean variable `gene_found` to `False` because you don't know if the gene of interest is in the large file. The script then looks through the file as long as the gene of interest isn't found (and `gene_found` is `False`). Once the script finds the gene of interest, you want to overwrite the `gene_found` variable or change its value to `True`.
 

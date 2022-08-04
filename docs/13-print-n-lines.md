@@ -8,7 +8,7 @@ Write Python code that recreates the Bash tool `head`, displaying a default numb
 
 ## Learning Objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * State the sub-steps needed to meet the coding goal
 * Use the following datatypes, structures, and fundamentals to meet the coding goal:
@@ -25,9 +25,9 @@ After going through this module, students should be able to:
   
 ## Coding Blueprint
 
-Let's again start with and edit the pseudocode from the last module to meet the needs of this module.
+Let's again start with and edit the pseudocode from the previous chapter to meet the needs of this chapter
 
-Last module's pseudocode:
+Previous chapter's pseudocode:
 
 First, we need to SET the input file <br />
 Next, we need to SET the desired number of displayed lines <br />
@@ -66,7 +66,7 @@ END FOR <br />
 
 We again want to import the `sys` module so that users specify the input file and can specify the desired number of lines (if they want). Within your new Python script, import the module. 
 
-We'll want to update our usage statement comment to reflect that only the filename is required. Adding brackets (`[`, `]`) around an argument description in the usage statement is the preferred way to say that the argument is not required as input. Within your Python script, update your previous usage statement from the fourth Python exercise module to show that the number of lines to display is no longer a required argument.
+We'll want to update our usage statement comment to reflect that only the filename is required. Adding brackets (`[`, `]`) around an argument description in the usage statement is the preferred way to say that the argument is not required as input. Within your Python script, update your previous usage statement from the fourth Applied Python Exercise chapter to show that the number of lines to display is no longer a required argument.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -82,7 +82,7 @@ import sys
 
 ### SET the input filename
 
-Within your Python script, set the filename variable to be equal to the first command line argument like you did in fourth Python exercise module.
+Within your Python script, set the filename variable to be equal to the first command line argument like you did in fourth Applied Python Exercise chapter.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -97,9 +97,9 @@ filename = sys.argv[1]
 
 ### IF the user-specified a desired number of lines to display
 
-In the previous Python exercise module, we wanted the second command line argument to be the number of lines that would be displayed by the program. In this module, we want to see if the user provided a desired number of lines as a command line argument. To do this, let's consider what information we know and what variables/objects/functions are available to us.
+In the previous Applied Python Exercise chapter, we wanted the second command line argument to be the number of lines that would be displayed by the program. In this chapter, we want to see if the user provided a desired number of lines as a command line argument. To do this, let's consider what information we know and what variables/objects/functions are available to us.
 
-Command-line arguments are stored in the `sys.argv` object which we already said is a list. We've discussed previously that lists have a length associated with them where their length is equal to the number of elements in the list. Given that `sys.argv[0]` is always the name of the script, if no arguments are passed to a script when calling it from the command line, the length of the list would be 1. If only one argument is passed, then the length would be 2. And finally, if two arguments are passed, then the length would be 3. Consult your notes on the `len()` Python built-in function, and write code in your Python script that checks if the length of the `sys.argv` list suggests that the user specified a number of lines to display.
+Command-line arguments are stored in the `sys.argv` object which we already said is a list. We've discussed previously that lists have a length associated with them where their length is equal to the number of elements in the list. Given that `sys.argv[0]` is always the name of the script, if no arguments are passed to a script when calling it from the command line, the length of the list would be 1. If only one argument is passed, then the length would be 2. And finally, if two arguments are passed, then the length would be 3. Consult the notes on the `len()` Python built-in function, and write code in your Python script that checks if the length of the `sys.argv` list suggests that the user specified a number of lines to display.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -114,7 +114,7 @@ if len(sys.argv) > 2:
 
 ### THEN SET the desired number of lines
 
-If the user did specify the number of desired lines, we want define the variable for the desired number of lines to equal this value. Within your Python script and indented under the conditional you've just written, follow the method we used in the fourth Python exercise module to define this variable.
+If the user did specify the number of desired lines, we want define the variable for the desired number of lines to equal this value. Within your Python script and indented under the conditional you've just written, follow the method we used in the fourth Applied Python Exercise chapter to define this variable.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -144,7 +144,7 @@ else:
 
 ### THEN SET the desired number of lines to a default
 
-In the third Python exercise module, we previously hardcoded the number of lines we wanted to display. Within your Python script, indented under the `else` statement, write code that defines the default number of lines as 10.
+In the third Applied Python Exercise chapter, we previously hardcoded the number of lines we wanted to display. Within your Python script, indented under the `else` statement, write code that defines the default number of lines as 10.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -157,11 +157,11 @@ In the third Python exercise module, we previously hardcoded the number of lines
 </details>
 ***
 
-Now that we've managed to set the input file and the desired number of lines to values that are specified by the user or a default value, we can reuse the rest of the code for the next three steps that we used in the previous two Python exercise modules. 
+Now that we've managed to set the input file and the desired number of lines to values that are specified by the user or a default value, we can reuse the rest of the code for the next three steps that we used in the previous two Applied Python Exercise chapters. 
 
 ### FOR every line in the open file
 
-To loop through every line in the open file, use the `for` statement structure from the second, third, and fourth Python exercise modules. Write this line of code within your Python script.
+To loop through every line in the open file, use the `for` statement structure from the second, third, and fourth Applied Python Exercise chapters. Write this line of code within your Python script.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -176,7 +176,7 @@ for i, line in enumerate(open(filename)):
 
 ### IF a desired line (by its numerial position)
 
-To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third and fourth Python exercise modules. Write this line of code within your Python script, indenting correctly under the `for` loop statement.
+To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third and fourth Applied Python Exercise chapters. Write this line of code within your Python script, indenting correctly under the `for` loop statement.
 
 ***
 <details><summary> ANSWER: </summary>
@@ -191,7 +191,7 @@ To ask if the line is one of the desired beginning lines, use the conditional st
 
 ### PRINT the line
 
-Finally, reuse the code from the first four Python exercise modules to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
+Finally, reuse the code from the first four Applied Python Exercise chapters to print the line, adding this `print()` statement indented correctly under the conditional within your Python script.
 
 ***
 <details><summary> ANSWER: </summary>

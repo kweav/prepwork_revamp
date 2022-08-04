@@ -434,14 +434,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 19</span> Conclusion: Looking Ahead</h1>
 <div id="learning-objectives-17" class="section level2" number="19.1">
 <h2><span class="header-section-number">19.1</span> Learning Objectives</h2>
-<p>After going through this module, students should be able to:</p>
+<p>After going through this chapter, students should be able to:</p>
 <ul>
-<li>Describe how they will use the Python skills they’ve practiced within these prepwork modules during Quantitative Biology Bootcamp</li>
+<li>Describe how they will use the Bash and Python skills they’ve practiced within these prepwork chapters during Quantitative Biology Bootcamp</li>
 </ul>
 </div>
 <div id="looking-ahead-to-next-steps" class="section level2" number="19.2">
 <h2><span class="header-section-number">19.2</span> Looking ahead to next steps</h2>
-<p>These prepwork modules were intended to give you a brief exposure to the fundamentals of the Python programming language. Within the modules you worked with a <code>.vcf</code> (or variant call format) file that contained data specific to genetic variants. <a href="https://www.internationalgenome.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-40/">As explained by this resource</a>, a<code>.vcf</code> file has a multi-line metadata header, a data header line, and then data lines.</p>
+<p>These prepwork chapters were intended to give you a brief exposure to the fundamentals of Bash and the Python programming language. Within the chapters you worked with a <code>.vcf</code> (or variant call format) file that contained data specific to genetic variants. <a href="https://www.internationalgenome.org/wiki/Analysis/Variant%20Call%20Format/vcf-variant-call-format-version-40/">As explained by this resource</a>, a<code>.vcf</code> file has a multi-line metadata header, a data header line, and then data lines.</p>
 <p>The <strong>metadata header lines</strong> start with <code>##</code> and provide meta-information specific to the file such as the VCF format version number, when the file was created, what source made the file, if it was quality checked, etc. These lines also may include descriptions of the FILTER, INFO, and FORMAT columns in the data lines. For example, the INFO column likely includes entries for several pieces of information such as the variant’s allele frequency, population specific estimates of the variant’s allele frequency, etc. Each piece of information that is provided in the INFO column will have its own description line in the metadata header.</p>
 <p>The <strong>data header line</strong> starts with <code>#</code> and lists at least the 8 required columns for a VCF file. It may include the FORMAT column if genotype data is included in the file. If genotype data is included, it’ll also list the sample/individual IDs.</p>
 <p>There are multiple <strong>data lines</strong>. Each data line has information pertaining to a single variant. There is required info about variant location, identity, etc. and, depending on the file, the data lines may or may not contain genotype information for specific samples or individuals. The required columns are</p>
@@ -450,20 +450,20 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>POS – the position at which the variant occurs</li>
 <li>ID</li>
 <li>REF – the reference base(s) of the allele</li>
-<li>ALT – the alternate non-reference allele(s) called on at least one o the samples</li>
+<li>ALT – the alternate non-reference allele(s) called on at least one of the samples</li>
 <li>QUAL</li>
 <li>FILTER</li>
 <li>INFO – the additional info entries discussed earlier like allele frequency, etc.</li>
 </ul>
 <p>If genotype information is provided for samples, these will be included after the FORMAT column, with a column for each included sample.</p>
-<p>For the file that you used within these prepwork modules, genotype information was included for 10,000 genetics variants across 2548 samples.</p>
+<p>For the file that you used within these prepwork chapters, genotype information was included for 80 genetics variants across 2548 samples. These 80 genetic variants were subset from a file of 10,000 genetic variants. The genotypes were displayed as 0|0, 0|1, 1|0, or 1|1.</p>
 <ul>
 <li>0|0 corresponds to a sample being homozygous reference for a variant</li>
 <li>0|1 or 1|0 correspond to a sample being heterozygous alternate for a variant</li>
 <li>1|1 corresponds to a sample being homozygous alternate for a variant</li>
 </ul>
 <p>In addition to providing each sample’s genotyping information for each variant, the estimated allele frequency of that variant within the population is included.</p>
-<p>Using the Python skills that you have practiced and more that you will learn in Quantitative Biology Bootcamp, you will learn to further parse a <code>.vcf</code> file, extracting and visualize specific information like the allele frequencies and genotyptes to make allele frequency histograms and PCAs of the genetic variation:</p>
+<p>Using the Python skills that you have practiced and more that you will learn in Quantitative Biology Bootcamp, you will learn to further parse a <code>.vcf</code> file, extracting, describing, and visualizing specific information like the allele frequencies and amount of genetic variation explained, producing plots like this allele frequency histogram and PCA:</p>
 <div class="figure">
 <img src="resources/images/af_hist.png" alt="" />
 <p class="caption">Allele Frequency Histogram</p>
@@ -472,7 +472,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <img src="resources/images/pca.png" alt="" />
 <p class="caption">PCA</p>
 </div>
-<p>The skills that you learn throughout Quantitative Biology Bootcamp will help you gain comfort and skills working with many other bioinformatic data files beyond just this <code>.vcf</code> file. Upon completing the course, students should be comfortable using and writing software to work with large-scale biological data. The motivation of this goal is to develop computational and statistical competence in preparation for courses, rotations, thesis research, and careers. Rather than blindly outsourcing bioinformatic components of their work, students will be empowered to understand methodological details and their associated advantages and limitations. This will in turn advance the broader goal of rigor in experimental design, promoting robust and unbiased results.</p>
+<p>The skills that you learn throughout Quantitative Biology Bootcamp will help you gain comfort working with many other bioinformatic data files beyond just this <code>.vcf</code> file. Upon completing the course, students should be comfortable using and writing software to work with large-scale biological data. The motivation of this goal is to develop computational and statistical competence in preparation for courses, rotations, thesis research, and careers. Rather than blindly outsourcing bioinformatic components of their work, students will be empowered to understand methodological details and their associated advantages and limitations. This will in turn advance the broader goal of rigor in experimental design, promoting robust and unbiased results.</p>
 
 </div>
 </div>

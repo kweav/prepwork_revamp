@@ -8,7 +8,7 @@ Gain an understanding of what bash is and what it can do for you
 
 ## Learning Objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * Explain the difference between the command line and bash
 * List advantages of bash over a graphical user interface (GUI)

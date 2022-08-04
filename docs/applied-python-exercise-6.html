@@ -438,7 +438,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="learning-objectives-15" class="section level2" number="17.2">
 <h2><span class="header-section-number">17.2</span> Learning Objectives</h2>
-<p>After going through this module, students should be able to:</p>
+<p>After going through this chapter, students should be able to:</p>
 <ul>
 <li>State the sub-steps needed to meet the coding goal</li>
 <li>Use the following datatypes, structures, and fundamentals to meet the coding goal:
@@ -450,7 +450,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>integer conversion</li>
 <li>opening a file</li>
 <li>initializing a counter variable before a for loop</li>
-<li>updating a counter variablbe within a the body of a for loop</li>
+<li>updating a counter variable within a the body of a for loop</li>
 <li>for loop</li>
 <li>chaining logical expressions</li>
 <li>looking at the character a line starts with</li>
@@ -461,8 +461,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="coding-blueprint-6" class="section level2" number="17.3">
 <h2><span class="header-section-number">17.3</span> Coding Blueprint</h2>
-<p>Let’s again start with and edit the pseudocode from the last module to meet the needs of this module.</p>
-<p>Last module’s pseudocode:</p>
+<p>Let’s again start with and edit the pseudocode from the previous chapter to meet the needs of this chapter.</p>
+<p>Previous chapter’s pseudocode:</p>
 <p>First, we need to SET the input file <br />
 Next, IF the user-specified a desired number of lines to display <br />
    THEN we need to SET the desired number of displayed lines <br />
@@ -523,7 +523,7 @@ END FOR <br /></p>
 <p><strong>Create a new Python script</strong></p>
 <div id="usage-statement-and-module-importing-1" class="section level3" number="17.4.1">
 <h3><span class="header-section-number">17.4.1</span> Usage statement and module importing</h3>
-<p>The usage statement and module importing from the previous Python exercise module are still accurate for this module, so go ahead and reuse the usage and import statements from the fifth python exercise module within your new Python script.</p>
+<p>The usage statement and module importing from the previous Applied Python Exercise chapter are still accurate for this chapter, so go ahead and reuse the usage and import statements from the fifth Applied Python Exercise chapter within your new Python script.</p>
 <hr />
 <details>
 <summary>
@@ -536,7 +536,7 @@ ANSWER:
 </div>
 <div id="set-the-input-filename-2" class="section level3" number="17.4.2">
 <h3><span class="header-section-number">17.4.2</span> SET the input filename</h3>
-<p>Within your Python script, set the filename variable to be equal to the first command line argument like you did in fourth and fifth Python exercise modules.</p>
+<p>Within your Python script, set the filename variable to be equal to the first command line argument like you did in fourth and fifth Applied Python Exercise chapters.</p>
 <hr />
 <details>
 <summary>
@@ -548,7 +548,7 @@ ANSWER:
 </div>
 <div id="if-the-user-specified-a-desired-number-of-lines-to-display-1" class="section level3" number="17.4.3">
 <h3><span class="header-section-number">17.4.3</span> IF the user-specified a desired number of lines to display</h3>
-<p>Within your Python script, set up the conditional statement structure like you did in the fifth Python exercise module to check if the user has provided a desired number of lines to display.</p>
+<p>Within your Python script, set up the conditional statement structure like you did in the fifth Applied Python Exercise chapter to check if the user has provided a desired number of lines to display.</p>
 <hr />
 <details>
 <summary>
@@ -560,7 +560,7 @@ ANSWER:
 </div>
 <div id="then-set-the-desired-number-of-lines-1" class="section level3" number="17.4.4">
 <h3><span class="header-section-number">17.4.4</span> THEN SET the desired number of lines</h3>
-<p>Within your Python script, use the variable assignment statement from the fourth and fifth Python exercise modules to define the desired number of lines as specified by the user, indenting under the conditional statement.</p>
+<p>Within your Python script, use the variable assignment statement from the fourth and fifth Applied Python exercise chapters to define the desired number of lines as specified by the user, indenting under the conditional statement.</p>
 <hr />
 <details>
 <summary>
@@ -572,7 +572,7 @@ ANSWER:
 </div>
 <div id="otherwise-1" class="section level3" number="17.4.5">
 <h3><span class="header-section-number">17.4.5</span> OTHERWISE</h3>
-<p>Use the alternate conditional statement structure from the fifth Python exercise module to start defining the alternate behavior in how we define the desired number of lines variable if the user didn’t specify a specific value. Put this statement in your Python script.</p>
+<p>Use the alternate conditional statement structure from the fifth Applied Python Exercise chapter to start defining the alternate behavior we will want (in how we define the desired number of lines variable in cases where the user didn’t specify a specific value). Put this statement in your Python script.</p>
 <hr />
 <details>
 <summary>
@@ -584,7 +584,7 @@ ANSWER:
 </div>
 <div id="then-set-the-desired-number-of-lines-to-a-default-1" class="section level3" number="17.4.6">
 <h3><span class="header-section-number">17.4.6</span> THEN SET the desired number of lines to a default</h3>
-<p>Use the alternate variable assignment statement from the fifth Python exercise module to define the desired number of lines varialbe if the user didn’t specify a specific value. Put this statement in your Python script, indented correctly.</p>
+<p>Use the alternate variable assignment statement from the fifth Applied Python Exercise chapter to define the desired number of lines variable if the user didn’t specify a specific value. Put this statement in your Python script, indented correctly.</p>
 <hr />
 <details>
 <summary>
@@ -596,7 +596,7 @@ ANSWER:
 </div>
 <div id="set-counter-of-number-of-lines-that-have-been-displayed-to-0" class="section level3" number="17.4.7">
 <h3><span class="header-section-number">17.4.7</span> SET counter of number of lines that have been displayed to 0</h3>
-<p>Because we no longer assume that the numerical position of the line within the file corresponds to the number of lines that are printed since we’re filtering out the header lines, we need to define a counter variable we can use to track the number of lines that we print. When first initializing this variable, we haven’t printed any lines. Therefore, you want to set the counter variable equal to the value of zero. Do this within your Python script.</p>
+<p>Because we no longer assume that the numerical position of the line within the file corresponds to the number of lines that are printed, since we’re filtering out the header lines, we need to define a counter variable we can use to track the number of lines that we print. When first initializing this variable, we haven’t printed any lines. Therefore, you want to set the counter variable equal to the value of zero. Do this within your Python script.</p>
 <hr />
 <details>
 <summary>
@@ -608,7 +608,7 @@ ANSWER:
 </div>
 <div id="for-every-line-in-the-open-file-7" class="section level3" number="17.4.8">
 <h3><span class="header-section-number">17.4.8</span> FOR every line in the open file</h3>
-<p>Next, we no longer need to track the position of the line in the f ile, only wanting to work with each line line-by-line in the open file. Therefore, we can go back to the <code>for</code> loop statement that we used in the first Python exercise module. Add the appropriate <code>for</code> loop statement to your Python script.</p>
+<p>Next, we no longer need to track the position of the line in the file. We only want to work with each line line-by-line in the open file. Therefore, we can go back to the <code>for</code> loop statement that we used in the first Applied Python Exercise chapter. Add the appropriate <code>for</code> loop statement to your Python script.</p>
 <hr />
 <details>
 <summary>
@@ -621,7 +621,7 @@ ANSWER:
 <div id="if-a-desired-line-because-counter-hasnt-reached-the-desired-number-of-lines-and-not-a-header-line" class="section level3" number="17.4.9">
 <h3><span class="header-section-number">17.4.9</span> IF a desired line (because counter hasn’t reached the desired number of lines) and NOT a header line</h3>
 <p>Let’s break this task down into two separate conditions and then chain the conditions together into one conditional expression.</p>
-<p>First, we want to check if the value of the counter is less than the number of desired lines. Write an expression that will evaluate to a boolean variable answering whether an integer is less than another integer using the appropriate variable names.</p>
+<p>First, we want to check if the value of the counter is less than the number of desired lines. Write an expression that will evaluate to a boolean variable answering whether an integer is less than another integer. Use the appropriate variable names that refer to the integer variable we’re interested in.</p>
 <hr />
 <details>
 <summary>
@@ -651,7 +651,7 @@ ANSWER:
 </div>
 <div id="print-the-line-6" class="section level3" number="17.4.10">
 <h3><span class="header-section-number">17.4.10</span> PRINT the line</h3>
-<p>Finally, reuse the code from the first five Python exercise modules to print the line, adding this <code>print()</code> statement indented correctly under the conditional within your Python script.</p>
+<p>Finally, reuse the code from the first five Applied Python Exercise chapters to print the line, adding this <code>print()</code> statement indented correctly under the conditional within your Python script.</p>
 <hr />
 <details>
 <summary>
@@ -663,7 +663,16 @@ ANSWER:
 </div>
 <div id="set-counter-to-add-one" class="section level3" number="17.4.11">
 <h3><span class="header-section-number">17.4.11</span> SET counter to ADD one</h3>
-<p>If we were to end writing the program now, our script would print every line in the file that wasn’t a header line. Therefore, we have to update the counter every time we print a line so we have an accurate count of the number of lines we’ve printed. Write a variable assignment statement within your Python script that updates the value of the counter variable, adding one to it. Make sure it is appropriately indented in line with the print statement under the conditional statement.</p>
+<p>If we were to end writing the program now, our script would print every line in the file that wasn’t a header line. What can we do to avoid this and only print the specific number of lines we want?</p>
+<hr />
+<details>
+<summary>
+ANSWER:
+</summary>
+To avoid this, we have to update the counter every time we print a line so we have an accurate count of the number of lines we’ve printed.
+</details>
+<hr />
+<p>Write a variable assignment statement within your Python script that updates the value of the counter variable, adding one to it. Make sure it is appropriately indented in line with the print statement under the conditional statement.</p>
 <hr />
 <details>
 <summary>

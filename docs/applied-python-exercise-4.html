@@ -438,7 +438,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="learning-objectives-13" class="section level2" number="15.2">
 <h2><span class="header-section-number">15.2</span> Learning Objectives</h2>
-<p>After going through this module, students should be able to:</p>
+<p>After going through this chapter, students should be able to:</p>
 <ul>
 <li>State the sub-steps needed to meet the coding goal</li>
 <li>Use the following datatypes, structures, and fundamentals to meet the coding goal:
@@ -457,8 +457,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="coding-blueprint-4" class="section level2" number="15.3">
 <h2><span class="header-section-number">15.3</span> Coding Blueprint</h2>
-<p>Let’s again start with and edit the pseudocode from the last module to meet the needs of this module.</p>
-<p>Last module’s pseudocode:</p>
+<p>Let’s again start with and edit the pseudocode from the previous chapter to meet the needs of this chapter.</p>
+<p>Previous chapter’s pseudocode:</p>
 <p>First, we need to SET the input file <br />
 Next, we need to SET the desired number of displayed lines <br />
 Then, FOR every line in the open file <br />
@@ -472,14 +472,14 @@ END FOR <br /></p>
 <summary>
 ANSWER:
 </summary>
-<p>No we don’t need to change the pseudocode from the last module because it still accurately reflects the goal we want to accomplish within this module.</p>
+<p>No we don’t need to change the pseudocode from the previous Applied Python Exercise chapter because it still accurately reflects the goal we want to accomplish within this chapter.</p>
 </details>
 <hr />
 </div>
 <div id="building-the-code-3" class="section level2" number="15.4">
 <h2><span class="header-section-number">15.4</span> Building the code</h2>
 <p><strong>Create a new Python script</strong></p>
-<p>We may not need to edit the pseudocode for this module, but we will need to edit the code. The end users of tools don’t have access to the values of variables within code unless the variables can be passed information through the command line. So rather than defining the variables for the input filename and desired number of lines within the script as hardcoded, inflexible variables with specific values, we’re going to define the variables based on input arguments used when running the script, increasing the flexibility of the tool.</p>
+<p>We may not need to edit the pseudocode for this chapter, but we will need to edit the code. The end users of tools don’t have access to the values of variables within code unless the variables can be passed information through the command line. So rather than defining the variables for the input filename and desired number of lines within the script as hardcoded, inflexible variables with specific values, we’re going to define the variables based on input arguments used when running the script, increasing the flexibility of the tool.</p>
 <p>The <code>sys</code> module is useful for this in Python. Specifically, it allows you to use a structure called <code>sys.argv</code> which is a list that stores the command line arguments passed to a Python script. <code>sys.argv[0]</code> is always the script name with the additional information/arguments starting at index 1 or <code>sys.argv[1]</code>.</p>
 <p>When you use <code>sys.argv</code> in a script, it’s a good practice to include a USAGE statement comment at the beginning of the script showing how the script should be called. In our case, we want the user to pass the input filename as the first argument and the desired number of lines as the second: <code>#USAGE: python scriptname.py input_filename number_lines_to_display</code> (Note that calling the python interpreter is not included in the list since it’s before the script name).</p>
 <p>So in building our code, we want to make sure to import the <code>sys</code> module and set a USAGE comment statement. Within your new Python script, do these two things.</p>
@@ -494,7 +494,7 @@ ANSWER:
 <hr />
 <div id="set-the-input-filename" class="section level3" number="15.4.1">
 <h3><span class="header-section-number">15.4.1</span> SET the input filename</h3>
-<p>In the code for the past modules, we’ve set the filename as a hardcoded string variable. Now you want to set it as the first command line argument passed to the program when calling the script. Do this within your Python script.</p>
+<p>In the code for the past chapters, we’ve set the filename as a hardcoded string variable. Now you want to set it as the first command line argument passed to the program when calling the script. Do this within your Python script.</p>
 <hr />
 <details>
 <summary>
@@ -506,22 +506,22 @@ ANSWER:
 </div>
 <div id="set-the-desired-number-of-lines-1" class="section level3" number="15.4.2">
 <h3><span class="header-section-number">15.4.2</span> SET the desired number of lines</h3>
-<p>In the code for the last module, we set the desired number of lines as a hardcoded integer variable. Now you want to set it as second command line argument passed to the program when calling the script. Do this within your Python script.</p>
+<p>In the code for the previous Applied Python Exercise chapter, we set the desired number of lines as a hardcoded integer variable. Now you want to set it as second command line argument passed to the program when calling the script. Do this within your Python script.</p>
 <hr />
 <details>
 <summary>
 ANSWER:
 </summary>
 <div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="applied-python-exercise-4.html#cb121-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> sys.argv[<span class="dv">2</span>]</span></code></pre></div>
-<p>However, we need the variable to be an integer, and the values in the <code>sys.argv</code> list are always stored as strings, even if they are numbers. Therefore, edit the line within your Python script to convert the value that is being stored to an integer.</p>
+<p>However, we need the variable to be an integer, and the values in the <code>sys.argv</code> list are always stored as strings, even if they are numbers. Therefore, edit the line within your Python script to convert the value that is being stored to an integer (if you hadn’t already converted the string to an integer).</p>
 <div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="applied-python-exercise-4.html#cb122-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="bu">int</span>(sys.argv[<span class="dv">2</span>])</span></code></pre></div>
 </details>
 <hr />
-<p>Now that we’ve managed to set the input file and the desired number of lines to values that are specified by the user on the command line, we can reuse the rest of the code for the next three steps that we used in the previous module.</p>
+<p>Now that we’ve managed to set the input file and the desired number of lines to values that are specified by the user on the command line, we can reuse the rest of the code for the next three steps that we used in the previous Applied Python Exercise chapter.</p>
 </div>
 <div id="for-every-line-in-the-open-file-5" class="section level3" number="15.4.3">
 <h3><span class="header-section-number">15.4.3</span> FOR every line in the open file</h3>
-<p>To loop through every line in the open file, use the <code>for</code> statement structure from the second and third Python exercise modules. Write this line of code within your Python script.</p>
+<p>To loop through every line in the open file, use the <code>for</code> statement structure from the second and third Applied Python Exercise chapters. Write this line of code within your Python script.</p>
 <hr />
 <details>
 <summary>
@@ -533,7 +533,7 @@ ANSWER:
 </div>
 <div id="if-a-desired-line-by-its-numerical-position-1" class="section level3" number="15.4.4">
 <h3><span class="header-section-number">15.4.4</span> IF a desired line (by its numerical position)</h3>
-<p>To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third Python exercise module. Write this line of code within your Python script, indenting correctly under the <code>for</code> loop statement.</p>
+<p>To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third Applied Python Exercise chapter. Write this line of code within your Python script, indenting correctly under the <code>for</code> loop statement.</p>
 <hr />
 <details>
 <summary>
@@ -545,7 +545,7 @@ ANSWER:
 </div>
 <div id="print-the-line-4" class="section level3" number="15.4.5">
 <h3><span class="header-section-number">15.4.5</span> PRINT the line</h3>
-<p>Finally, reuse the code from the first three Python exercise modules to print the line, adding this <code>print()</code> statement indented correctly under the conditional within your Python script.</p>
+<p>Finally, reuse the code from the first three Applied Python Exercise chapters to print the line, adding this <code>print()</code> statement indented correctly under the conditional within your Python script.</p>
 <hr />
 <details>
 <summary>

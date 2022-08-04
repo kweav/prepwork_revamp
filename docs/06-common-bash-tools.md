@@ -8,7 +8,7 @@ A fundamental grasp of navigating bash and using some common commands
 
 ## Learning Objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * Move between directories in bash
 * Examine folder contents
@@ -22,7 +22,7 @@ cd, pwd, ls, mv, cp, head, tail, --help, man
 
 ## Resources
 
-* This module will be performed online in a [bash sandbox](https://sandbox.bio/playground). 
+* This chapter will be performed online in a [bash sandbox](https://sandbox.bio/playground). 
   * Use of this resource avoids issues that can arise from people using different operating systems and having trouble finding the terminal on their own computers. 
   * Once you open the link, you should see a black window with the prompt `guest@sandbox$`. This is the bash interface.
 * The [Bash syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/unix.html) may be useful to refer to, especially throughout the course.

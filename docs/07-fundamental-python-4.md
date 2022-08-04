@@ -8,7 +8,7 @@ Understanding the importance of code commenting and how to use external code
 
 ## Learning objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * Clearly annotate their code
 * Load external code into their scripts
@@ -61,6 +61,6 @@ Sometimes it is too bulky to type out the complete name of the module and functi
 import matplotlib.pyplot as plt
 ```
 
-Anytime we type `plt`, Python interprets this as `matplotlib.pyplot`. So if we want to call the `subplots` function from this module, we can simply type `plt.subplots()`.
+Anytime we type `plt`, Python interprets this as `matplotlib.pyplot`. So if we want to call the `subplots` function from this imported module, we can simply type `plt.subplots()`.
 
 Note that you should use this aliasing with caution. As with importing functions without reference to their module, aliases will replace another function or variable of the same name in your script.

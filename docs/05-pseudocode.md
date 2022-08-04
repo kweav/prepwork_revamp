@@ -42,9 +42,9 @@ The advantage of writing pseudocode first rather than just writing a script in y
 
 * Helps transition novice programmers into thinking through the logic needed to solve a task
 * Easier to breakdown and express tasks in natural language
-* Not dependent on langauge-specific syntax
+* Not dependent on language-specific syntax
 
-Even once you become a proficient programmer and feel comfortable writing code directly, more complex tasks can be facilited by pseudocoding the task. This also makes breaking code into discrete parts for collaborative coding much easier and can be used to talk about expected outputs and inputs for each subtask.
+Even once you become a proficient programmer and feel comfortable writing code directly, more complex tasks can be facilitated by pseudocoding the task. This also makes breaking code into discrete parts for collaborative coding much easier and can be used to talk about expected outputs and inputs for each subtask.
 
 ## Good practices
 
@@ -52,7 +52,7 @@ While there is no set of standards for pseudocoding, there are ways to make it m
 
 * Make the first word the key action for the step and capitalize
 * Only list one step per line
-* Indent to show heirarchy of actions and improve readability
+* Indent to show hierarchy of actions and improve readability
 * End multiline blocks of code with `END`
 * Make your pseudocode programming language independent
 * Keep it simple, concise, and readable

@@ -438,7 +438,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="learning-objectives-11" class="section level2" number="13.2">
 <h2><span class="header-section-number">13.2</span> Learning Objectives</h2>
-<p>After going through this module, students should be able to:</p>
+<p>After going through this chapter, students should be able to:</p>
 <ul>
 <li>State the sub-steps needed to meet the coding goal</li>
 <li>Use the following datatypes, structures, and fundamentals to meet the coding goal:
@@ -456,14 +456,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="coding-blueprint-2" class="section level2" number="13.3">
 <h2><span class="header-section-number">13.3</span> Coding Blueprint</h2>
-<p>Let’s start with and edit the pseudocode from the last module to meet the needs of this module.</p>
+<p>Let’s start with and edit the pseudocode from the previous chapter to meet the needs of this chapter</p>
 <p>Note: you may write/edit pseudocode anywhere you would like. You will not have to turn in any pseudocode for any chapter. Just remember that since pseudocode doesn’t follow the syntax of any one programming language, if you choose to write it in the online python text editor interface or your local python script, you’ll want to make sure when you run the script that the pseudocode is commented out (with a <code>#</code> in front of it) so that Python does not try to treat it as real code which will cause errors.</p>
-<p>Last module’s pseudocode:</p>
+<p>Previous chapter’s pseudocode:</p>
 <p>First, we need to SET the input file <br />
 Second, FOR every line in the open file <br />
    PRINT the line <br />
 END FOR <br /></p>
-<p>In this module, we want to only print the line if it’s the first line of the file. Keeping the for loop, edit the pseudocode, inserting a step that asks which line position it is numerically in the file.</p>
+<p>In this chapter, we want to only print the line if it’s the first line of the file. Keeping the for loop, edit the pseudocode, inserting a step that asks which line position it is numerically in the file.</p>
 <hr />
 <details>
 <summary>
@@ -479,7 +479,7 @@ END FOR <br /></p>
 <hr />
 <div id="set-the-input-file-2" class="section level3" number="13.3.1">
 <h3><span class="header-section-number">13.3.1</span> SET the input file</h3>
-<p>Much like how we reused the pseudocode of the last module, we’ll be able to reuse much of the code from the last module. Do you think that defining a variable with the input file name is one of those reusable steps?</p>
+<p>Much like how we reused the pseudocode of the previous chapter, we’ll be able to reuse much of the code from the previous chapter. Do you think that defining a variable with the input file name is one of those reusable steps?</p>
 <hr />
 <details>
 <summary>
@@ -491,11 +491,11 @@ ANSWER:
 </div>
 <div id="for-every-line-in-the-open-file-2" class="section level3" number="13.3.2">
 <h3><span class="header-section-number">13.3.2</span> FOR every line in the open file</h3>
-<p>Let’s again focus on building the <code>for</code> loop structure by considering the 2 components of the loop used in the first module</p>
+<p>Let’s again focus on building the <code>for</code> loop structure by considering the 2 components of the loop used in the first Applied Python Exercise chapter.</p>
 <ol style="list-style-type: decimal">
 <li>The <code>for</code> statement</li>
 </ol>
-<p>Do you think that the <code>for</code> statement from the last module is the best pattern for this problem? Consider that the <code>for</code> statement in the last module only provided you access to each line (or item) in the file (or collection of items), but did not provide you any information on which line position numerically it was in the file.</p>
+<p>Do you think that the <code>for</code> statement from the previous chapter. is the best pattern for this problem? Consider that the <code>for</code> statement in the previous chapter only provided you access to each line (or item) in the file (or collection of items), but did not provide you any information on which line position numerically it was in the file.</p>
 <hr />
 <details>
 <summary>
@@ -510,7 +510,7 @@ ANSWER:
 <ol start="2" style="list-style-type: decimal">
 <li>The body of the <code>for</code> loop</li>
 </ol>
-<p>Considering that the body of the for loop is where the pseudocode was added, we also need to add to the body of the <code>for</code> loop. However, does the code that we already have from the first module still work well for this module?</p>
+<p>Considering that the body of the for loop is where the pseudocode was added, we also need to add to the body of the <code>for</code> loop. However, does the code that we already have from the first Applied Python Exercise chapter still work well for this chapter?</p>
 <hr />
 <details>
 <summary>
@@ -535,7 +535,7 @@ ANSWER:
 <p><strong>Create a new Python script</strong></p>
 <div id="set-the-input-file-3" class="section level3" number="13.4.1">
 <h3><span class="header-section-number">13.4.1</span> SET the input file</h3>
-<p>To SET what the input file is, we will use the variable assignment code from the first module. Within your Python script, write that variable assignment expression.</p>
+<p>To SET what the input file is, we will use the variable assignment code from the first Python Applied Exercise chapter. Within your Python script, write that variable assignment expression.</p>
 <hr />
 <details>
 <summary>
@@ -547,7 +547,7 @@ ANSWER:
 </div>
 <div id="for-every-line-in-the-open-file-3" class="section level3" number="13.4.2">
 <h3><span class="header-section-number">13.4.2</span> FOR every line in the open file</h3>
-<p>Consult the notes on the third pattern of the <code>for</code> statement and edit the first modules <code>for</code> statement code to meet the needs of this module. Within your python script, write the revised <code>for</code> statement.</p>
+<p>Consult the notes on the third pattern of the <code>for</code> statement and edit the first Applied Python Exercise chapter’s <code>for</code> statement code to meet the needs of this chapter. Within your python script, write the revised <code>for</code> statement.</p>
 <hr />
 <details>
 <summary>
@@ -559,7 +559,7 @@ ANSWER:
 </div>
 <div id="if-the-first-line" class="section level3" number="13.4.3">
 <h3><span class="header-section-number">13.4.3</span> IF the first line</h3>
-<p>Next, edit the body of the <code>for</code> loop from the first module such that it asks if the line is the first line. Consult your notes on indexing to see what integer you want the index to be equal to (e.g., 0 or 1). Write the conditional and logical expression code within your Python script within the <code>for</code> loop body.</p>
+<p>Next, edit the body of the <code>for</code> loop from the first Applied Python Exercise chapter such that it asks if the line is the first line. Consult the notes on indexing to see what integer you want the index to be equal to (e.g., 0 or 1). Write the conditional and logical expression code within your Python script within the <code>for</code> loop body.</p>
 <hr />
 <details>
 <summary>
@@ -571,7 +571,7 @@ ANSWER:
 </div>
 <div id="print-the-line-2" class="section level3" number="13.4.4">
 <h3><span class="header-section-number">13.4.4</span> PRINT the line</h3>
-<p>Finally, reuse the code from the first module to print the line (when it is the first line). Add this <code>print()</code> statement to your Python script, indenting correctly under the conditional statement.</p>
+<p>Finally, reuse the code from the first Applied Python Exercise chapter to print the line (when it is the first line). Add this <code>print()</code> statement to your Python script, indenting correctly under the conditional statement.</p>
 <hr />
 <details>
 <summary>
@@ -580,7 +580,7 @@ ANSWER:
 <div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="applied-python-exercise-2.html#cb111-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
 </details>
 <hr />
-<p>Within your Python script, you should have the four lines of code together which makes our complete indended goal code – code that prints just the first line in a file.</p>
+<p>Within your Python script, you should have the four lines of code together which makes our complete intended goal code – code that prints just the first line in a file.</p>
 <p><strong>Use the command line or the Run button in the online interface to run the Python script and look at the output.</strong></p>
 </div>
 </div>

@@ -8,7 +8,7 @@ Understanding how to compare variables and selectively execute code
 
 ## Learning objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * Perform equality and inclusion testing between variables
 * Demonstrate how to use common built-in functions, including printing and opening files
@@ -16,7 +16,7 @@ After going through this module, students should be able to:
 
 ## Operators and expressions
 
-What is an operator? In python, an operator is some special symbol or keyword that designates that some specific computation should bbe performed. These include 
+What is an operator? In python, an operator is some special symbol or keyword that designates that some specific computation should be performed. These include 
 
 * arithmetic operators for addition (`+`), subtraction (`-`), division (`/`), etc.
 * comparison operators for testing equality of any value as well as whether numbers are greater than, less than, or equal to other numbers (`==` )

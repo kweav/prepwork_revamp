@@ -8,7 +8,7 @@ Understanding how to access data in Python data structures through indexing and 
 
 ## Learning objectives
 
-After going through this module, students should be able to:
+After going through this chapter, students should be able to:
 
 * Define iteration
 * Define and use indexing
@@ -47,7 +47,7 @@ The starting index is inclusive and the ending index is exclusive. That means th
 Here's a really cool [suggested resource about slicing](https://towardsdatascience.com/the-basics-of-indexing-and-slicing-python-lists-2d12c90a94cf) with examples and visuals.
 
   * Terms within this resource that you are not expected to understand include "list comprehension" and "numpy Arrays" and "pandas DataFrames". 
-  * Another term within this resource, `for` loops, will be explained in the next section of this module.
+  * Another term within this resource, `for` loops, will be explained in the next section of this chapter.
 
 ## `for` loops
 

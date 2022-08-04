@@ -438,7 +438,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="learning-objectives-14" class="section level2" number="16.2">
 <h2><span class="header-section-number">16.2</span> Learning Objectives</h2>
-<p>After going through this module, students should be able to:</p>
+<p>After going through this chapter, students should be able to:</p>
 <ul>
 <li>State the sub-steps needed to meet the coding goal</li>
 <li>Use the following datatypes, structures, and fundamentals to meet the coding goal:
@@ -458,8 +458,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="coding-blueprint-5" class="section level2" number="16.3">
 <h2><span class="header-section-number">16.3</span> Coding Blueprint</h2>
-<p>Let’s again start with and edit the pseudocode from the last module to meet the needs of this module.</p>
-<p>Last module’s pseudocode:</p>
+<p>Let’s again start with and edit the pseudocode from the previous chapter to meet the needs of this chapter</p>
+<p>Previous chapter’s pseudocode:</p>
 <p>First, we need to SET the input file <br />
 Next, we need to SET the desired number of displayed lines <br />
 Then, FOR every line in the open file <br />
@@ -494,7 +494,7 @@ END FOR <br /></p>
 <div id="usage-statement-and-module-importing" class="section level3" number="16.4.1">
 <h3><span class="header-section-number">16.4.1</span> Usage statement and module importing</h3>
 <p>We again want to import the <code>sys</code> module so that users specify the input file and can specify the desired number of lines (if they want). Within your new Python script, import the module.</p>
-<p>We’ll want to update our usage statement comment to reflect that only the filename is required. Adding brackets (<code>[</code>, <code>]</code>) around an argument description in the usage statement is the preferred way to say that the argument is not required as input. Within your Python script, update your previous usage statement from the fourth Python exercise module to show that the number of lines to display is no longer a required argument.</p>
+<p>We’ll want to update our usage statement comment to reflect that only the filename is required. Adding brackets (<code>[</code>, <code>]</code>) around an argument description in the usage statement is the preferred way to say that the argument is not required as input. Within your Python script, update your previous usage statement from the fourth Applied Python Exercise chapter to show that the number of lines to display is no longer a required argument.</p>
 <hr />
 <details>
 <summary>
@@ -507,7 +507,7 @@ ANSWER:
 </div>
 <div id="set-the-input-filename-1" class="section level3" number="16.4.2">
 <h3><span class="header-section-number">16.4.2</span> SET the input filename</h3>
-<p>Within your Python script, set the filename variable to be equal to the first command line argument like you did in fourth Python exercise module.</p>
+<p>Within your Python script, set the filename variable to be equal to the first command line argument like you did in fourth Applied Python Exercise chapter.</p>
 <hr />
 <details>
 <summary>
@@ -519,8 +519,8 @@ ANSWER:
 </div>
 <div id="if-the-user-specified-a-desired-number-of-lines-to-display" class="section level3" number="16.4.3">
 <h3><span class="header-section-number">16.4.3</span> IF the user-specified a desired number of lines to display</h3>
-<p>In the previous Python exercise module, we wanted the second command line argument to be the number of lines that would be displayed by the program. In this module, we want to see if the user provided a desired number of lines as a command line argument. To do this, let’s consider what information we know and what variables/objects/functions are available to us.</p>
-<p>Command-line arguments are stored in the <code>sys.argv</code> object which we already said is a list. We’ve discussed previously that lists have a length associated with them where their length is equal to the number of elements in the list. Given that <code>sys.argv[0]</code> is always the name of the script, if no arguments are passed to a script when calling it from the command line, the length of the list would be 1. If only one argument is passed, then the length would be 2. And finally, if two arguments are passed, then the length would be 3. Consult your notes on the <code>len()</code> Python built-in function, and write code in your Python script that checks if the length of the <code>sys.argv</code> list suggests that the user specified a number of lines to display.</p>
+<p>In the previous Applied Python Exercise chapter, we wanted the second command line argument to be the number of lines that would be displayed by the program. In this chapter, we want to see if the user provided a desired number of lines as a command line argument. To do this, let’s consider what information we know and what variables/objects/functions are available to us.</p>
+<p>Command-line arguments are stored in the <code>sys.argv</code> object which we already said is a list. We’ve discussed previously that lists have a length associated with them where their length is equal to the number of elements in the list. Given that <code>sys.argv[0]</code> is always the name of the script, if no arguments are passed to a script when calling it from the command line, the length of the list would be 1. If only one argument is passed, then the length would be 2. And finally, if two arguments are passed, then the length would be 3. Consult the notes on the <code>len()</code> Python built-in function, and write code in your Python script that checks if the length of the <code>sys.argv</code> list suggests that the user specified a number of lines to display.</p>
 <hr />
 <details>
 <summary>
@@ -532,7 +532,7 @@ ANSWER:
 </div>
 <div id="then-set-the-desired-number-of-lines" class="section level3" number="16.4.4">
 <h3><span class="header-section-number">16.4.4</span> THEN SET the desired number of lines</h3>
-<p>If the user did specify the number of desired lines, we want define the variable for the desired number of lines to equal this value. Within your Python script and indented under the conditional you’ve just written, follow the method we used in the fourth Python exercise module to define this variable.</p>
+<p>If the user did specify the number of desired lines, we want define the variable for the desired number of lines to equal this value. Within your Python script and indented under the conditional you’ve just written, follow the method we used in the fourth Applied Python Exercise chapter to define this variable.</p>
 <hr />
 <details>
 <summary>
@@ -556,7 +556,7 @@ ANSWER:
 </div>
 <div id="then-set-the-desired-number-of-lines-to-a-default" class="section level3" number="16.4.6">
 <h3><span class="header-section-number">16.4.6</span> THEN SET the desired number of lines to a default</h3>
-<p>In the third Python exercise module, we previously hardcoded the number of lines we wanted to display. Within your Python script, indented under the <code>else</code> statement, write code that defines the default number of lines as 10.</p>
+<p>In the third Applied Python Exercise chapter, we previously hardcoded the number of lines we wanted to display. Within your Python script, indented under the <code>else</code> statement, write code that defines the default number of lines as 10.</p>
 <hr />
 <details>
 <summary>
@@ -565,11 +565,11 @@ ANSWER:
 <div class="sourceCode" id="cb132"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb132-1"><a href="applied-python-exercise-5.html#cb132-1" aria-hidden="true" tabindex="-1"></a>  n_lines <span class="op">=</span> <span class="dv">10</span></span></code></pre></div>
 </details>
 <hr />
-<p>Now that we’ve managed to set the input file and the desired number of lines to values that are specified by the user or a default value, we can reuse the rest of the code for the next three steps that we used in the previous two Python exercise modules.</p>
+<p>Now that we’ve managed to set the input file and the desired number of lines to values that are specified by the user or a default value, we can reuse the rest of the code for the next three steps that we used in the previous two Applied Python Exercise chapters.</p>
 </div>
 <div id="for-every-line-in-the-open-file-6" class="section level3" number="16.4.7">
 <h3><span class="header-section-number">16.4.7</span> FOR every line in the open file</h3>
-<p>To loop through every line in the open file, use the <code>for</code> statement structure from the second, third, and fourth Python exercise modules. Write this line of code within your Python script.</p>
+<p>To loop through every line in the open file, use the <code>for</code> statement structure from the second, third, and fourth Applied Python Exercise chapters. Write this line of code within your Python script.</p>
 <hr />
 <details>
 <summary>
@@ -581,7 +581,7 @@ ANSWER:
 </div>
 <div id="if-a-desired-line-by-its-numerial-position" class="section level3" number="16.4.8">
 <h3><span class="header-section-number">16.4.8</span> IF a desired line (by its numerial position)</h3>
-<p>To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third and fourth Python exercise modules. Write this line of code within your Python script, indenting correctly under the <code>for</code> loop statement.</p>
+<p>To ask if the line is one of the desired beginning lines, use the conditional statement structure from the third and fourth Applied Python Exercise chapters. Write this line of code within your Python script, indenting correctly under the <code>for</code> loop statement.</p>
 <hr />
 <details>
 <summary>
@@ -593,7 +593,7 @@ ANSWER:
 </div>
 <div id="print-the-line-5" class="section level3" number="16.4.9">
 <h3><span class="header-section-number">16.4.9</span> PRINT the line</h3>
-<p>Finally, reuse the code from the first four Python exercise modules to print the line, adding this <code>print()</code> statement indented correctly under the conditional within your Python script.</p>
+<p>Finally, reuse the code from the first four Applied Python Exercise chapters to print the line, adding this <code>print()</code> statement indented correctly under the conditional within your Python script.</p>
 <hr />
 <details>
 <summary>
