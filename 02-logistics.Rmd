@@ -21,9 +21,9 @@ If you would like to practice creating and running scripts to most closely mirro
 
 ### Online Bash
 
-There is [an online bash interface resource](https://sandbox.bio/tutorials?id=terminal-basics) which you will have to use for Chapter 4. It will not help you in running Python scripts for the later chapters.
+There is [an online bash interface resource](https://sandbox.bio/playground) which you will have to use for Chapter 4. It will not help you in running Python scripts for the later chapters.
 
-This online interface contains a b lack window which is the bash interface with which you will be interacting. It also contains a side panel of instructions with which you will not be interacting. 
+This online interface contains a black window which is the bash interface with which you will be interacting.
 
 ### Online Python
 
@@ -78,7 +78,7 @@ If for some reason Python is not installed or for any reason you would prefer to
 
 ### Bash
 
-Chapter 4 requires that you use the [online bash sandbox](https://sandbox.bio/tutorials?id=terminal-basics) resource discussed above. 
+Chapter 4 requires that you use the [online bash sandbox](https://sandbox.bio/playground) resource discussed above. 
 
 ### Python
 

@@ -24,10 +24,9 @@ cd, pwd, ls, mv, cp, head, tail, --help, man
 
 ## Resources
 
-* This module will be performed online in a [bash sandbox](https://sandbox.bio/tutorials?id=terminal-basics). 
+* This module will be performed online in a [bash sandbox](https://sandbox.bio/playground). 
   * Use of this resource avoids issues that can arise from people using different operating systems and having trouble finding the terminal on their own computers. 
   * Once you open the link, you should see a black window with the prompt `guest@sandbox$`. This is the bash interface.
-  * Do not read or interact with the side panel instructions. Instead focus on the bash interface.
 * The [Bash syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/unix.html) may be useful to refer to, especially throughout the course.
 
 ## Navigation
@@ -40,46 +39,51 @@ What directory name was printed out?
 <details><summary> ANSWER: </summary>
 
 ```
-/shared/data/tutorials/terminal-basics
+/shared/data/
 ```
 </details>
 ***
 
 You can see that not only the name of the working directory was printed, but also, the name of every parent directory all the way up to the **root**, the left-hand "/" that contains all files and directories on the computer. This is nested list of directories is called the "path". In this case, it is an **absolute** path because it tells us how to get to this directory from the root. 
 
-In order to move to another directory, we can use the command `cd`, which stands for "change directory". If we wanted to move to the "tutorials" directory, we could type the `cd` command and the path to that directory.
+In order to move to another directory, we can use the command `cd`, which stands for "change directory". If we wanted to move to the "shared" directory, we could type the `cd` command and the path to that directory.
 
 ```{bash, eval = FALSE}
-cd /shared/data/tutorials
+cd /shared
 ```
 
-Once you have done this, verify that you are in this directory using the `pwd` command. In this case, "tutorials" is the **parent** directory of "terminal-basics".
+Once you have done this, verify that you are in this directory using the `pwd` command. In this case, "shared" is the **parent** directory of "data".
 
 If we had to type a long directory path in every time we wanted to change directories, it would be very tedious, especially with highly nested directories. Luckily, there is another way to navigate using **relative** paths. This means giving directions based on your current working directory. So, to move back to the "terminal-basics" directory, instead of typing out the full path, we will simply give the directory name since it is located in our working directory.
 
 ```{bash, eval = FALSE}
-cd terminal-basics
+cd data
 ```
 
-But what about going back to the "tutorials" directory? To do that, we need to use the special notation ".." which means the parent of a directory. So, to go back to the "tutorials" directory, use the following command.
+But what about going back to the "shared" directory? To do that, we need to use the special notation ".." which means the parent of a directory. So, to go back to the "shared" directory, use the following command.
 
 ```{bash, eval = FALSE}
 cd ..
 ```
 
-Use `pwd` to make sure that you are working in the "tutorials" directory now. If you are in the "tutorials" directory, you don't need to do anything until the paragraph "You can also give longer relative ...". If you aren't in the "tutorials" directory, review what commands you used by pressing the up arrow and compare your history of commands to the directions above. Pressing the up arrow will show you a command you used, most recent first. Pressing it again will show you the command you used before that, continuing all the way to the first command being the last time pressing the up arrow changes what command is displayed on the screen. Pressing the down arrow will take you back through down the history back to the most recent command. Then use an absolute path to move back into the "tutorials" directory: `cd /shared/data/tutorials`
+Use `pwd` to make sure that you are working in the "shared" directory now. If you are in the "shared" directory, you don't need to do anything until the paragraph "You can also give longer relative ...". If you aren't in the "shared" directory, review what commands you used by pressing the up arrow and compare your history of commands to the directions above. Pressing the up arrow will show you a command you used, most recent first. Pressing it again will show you the command you used before that, continuing all the way to the first command being the last time pressing the up arrow changes what command is displayed on the screen. Pressing the down arrow will take you back through down the history back to the most recent command. Then use an absolute path to move back into the "shared" directory: `cd /shared`
 
 ```{bash, eval = FALSE}
-cd /shared/data/tutorials
+cd /shared
 ```
 
-You can also give longer relative paths by combining directions. The directory "shared" which contains "data" also contains a directory named "home". To move there from the "tutorials" directory, use the relative path "../../home".
+You can also give longer relative paths by combining directions. To demonstrate this, let's move to a directory a little further down the file structure: `/shared/data/tutorials`
+
+```{bash, eval = FALSE}
+cd data/tutorials/
+```
+The directory "shared" which contains "data" also contains a directory named "home". To move there from the "tutorials" directory, use the relative path "../../home".
 
 ```{bash, eval = FALSE}
 cd ../../home
 ```
 
-Now, using a relative path, how can you get back from `/shared/home` to the directory where we began this lesson `/shared/data/tutorials/terminal-basics`?
+Now, using a relative path, how can you get from `/shared/home` to a directory with files we will explore as we continue this lesson: `/shared/data/tutorials/terminal-basics`?
 
 ***
 <details><summary> ANSWER: </summary>
