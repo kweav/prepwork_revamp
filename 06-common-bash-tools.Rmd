@@ -30,11 +30,11 @@ This chapter will be performed online.
 
 UPDATE based on issue reported by students. In order to load the sample data from the Terminal Basics tutorial provided by this website, please follow these steps before beginning this chapter:
 
-    1. [Load this link](https://sandbox.bio/playground)
-    2. Click on "Tutorials" at the top right of the screen, followed by "Terminal Basics" in the dropdown menu.
-    3. In the black window with the prompt `guest@sandbox$`, type `ls`
-    3. Hit `<Enter>` or `<return>`.
-    4. Click on "Playgrounds" at the top right of the screen, followed by "Command Line" in the dropdown menu.
+  1. [Load this link](https://sandbox.bio/playground)
+  2. Click on "Tutorials" at the top right of the screen, followed by "Terminal Basics" in the dropdown menu.
+  3. In the black window with the prompt `guest@sandbox$`, type `ls`
+  3. Hit `<Enter>` or `<return>`.
+  4. Click on "Playgrounds" at the top right of the screen, followed by "Command Line" in the dropdown menu.
 
 </div>
     
