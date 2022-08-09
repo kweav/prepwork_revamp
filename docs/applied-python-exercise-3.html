@@ -492,7 +492,7 @@ END FOR <br /></p>
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb113"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb113-1"><a href="applied-python-exercise-3.html#cb113-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="applied-python-exercise-3.html#cb114-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span></span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -504,7 +504,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="applied-python-exercise-3.html#cb114-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="dv">10</span></span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="applied-python-exercise-3.html#cb115-1" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="dv">10</span></span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -516,7 +516,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="applied-python-exercise-3.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)):</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="applied-python-exercise-3.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)):</span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -528,7 +528,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="applied-python-exercise-3.html#cb116-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines:</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="applied-python-exercise-3.html#cb117-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines:</span></code></pre></div>
 </details>
 <hr />
 </div>
@@ -540,7 +540,7 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="applied-python-exercise-3.html#cb117-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="applied-python-exercise-3.html#cb118-1" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>))</span></code></pre></div>
 </details>
 <hr />
 <p>Within your Python script, you should have the five lines of code together which makes our complete intended goal code – code that prints a specified number of lines from the beginning of a file.</p>
@@ -554,11 +554,11 @@ ANSWER:
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="applied-python-exercise-3.html#cb118-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span> <span class="co">#SET the input filename</span></span>
-<span id="cb118-2"><a href="applied-python-exercise-3.html#cb118-2" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="dv">10</span> <span class="co">#SET the desired number of lines</span></span>
-<span id="cb118-3"><a href="applied-python-exercise-3.html#cb118-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)): <span class="co">#FOR every line in the open file</span></span>
-<span id="cb118-4"><a href="applied-python-exercise-3.html#cb118-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines: <span class="co">#IF a desired line by its numerical position</span></span>
-<span id="cb118-5"><a href="applied-python-exercise-3.html#cb118-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="applied-python-exercise-3.html#cb119-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">&quot;random_snippet.vcf&quot;</span> <span class="co">#SET the input filename</span></span>
+<span id="cb119-2"><a href="applied-python-exercise-3.html#cb119-2" aria-hidden="true" tabindex="-1"></a>n_lines <span class="op">=</span> <span class="dv">10</span> <span class="co">#SET the desired number of lines</span></span>
+<span id="cb119-3"><a href="applied-python-exercise-3.html#cb119-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, line <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">open</span>(filename)): <span class="co">#FOR every line in the open file</span></span>
+<span id="cb119-4"><a href="applied-python-exercise-3.html#cb119-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> i <span class="op">&lt;</span> n_lines: <span class="co">#IF a desired line by its numerical position</span></span>
+<span id="cb119-5"><a href="applied-python-exercise-3.html#cb119-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(line.strip(<span class="st">&#39;</span><span class="ch">\r\n</span><span class="st">&#39;</span>)) <span class="co">#PRINT the line</span></span></code></pre></div>
 </details>
 <hr />
 

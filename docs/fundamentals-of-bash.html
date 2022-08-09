@@ -455,12 +455,12 @@ cd, pwd, ls, mv, cp, head, tail, --help, man
 <h2><span class="header-section-number">4.3</span> Resources</h2>
 <div class="notice">
 <p>This chapter will be performed online.</p>
-<p>UPDATE based on issue reported by students. In order to load the sample data from the Terminal Basics tutorial provided by this website, please follow these steps before beginning this chapter:
-1. <a href="https://sandbox.bio/playground">Load this link</a>
-2. Click on “Tutorials” at the top right of the screen, followed by “Terminal Basics” in the dropdown menu.
-3. In the black window with the prompt <code>guest@sandbox$</code>, type <code>ls</code>
-3. Hit <code>&lt;Enter&gt;</code> or <code>&lt;return&gt;</code>.
-4. Click on “Playgrounds” at the top right of the screen, followed by “Command Line” in the dropdown menu.</p>
+<p>UPDATE based on issue reported by students. In order to load the sample data from the Terminal Basics tutorial provided by this website, please follow these steps before beginning this chapter:</p>
+<pre><code>1. [Load this link](https://sandbox.bio/playground)
+2. Click on &quot;Tutorials&quot; at the top right of the screen, followed by &quot;Terminal Basics&quot; in the dropdown menu.
+3. In the black window with the prompt `guest@sandbox$`, type `ls`
+3. Hit `&lt;Enter&gt;` or `&lt;return&gt;`.
+4. Click on &quot;Playgrounds&quot; at the top right of the screen, followed by &quot;Command Line&quot; in the dropdown menu.</code></pre>
 </div>
 <ul>
 <li>Use of this online resource avoids issues that can arise from people using different operating systems and having trouble finding the terminal on their own computers. Once you have loaded the Command Line Playground, you should see a black window with the prompt <code>guest@sandbox$</code>. This is the bash interface.</li>
@@ -481,25 +481,25 @@ ANSWER:
 <hr />
 <p>You can see that not only the name of the working directory was printed but also the name of every parent directory all the way up to the <strong>root</strong>, the left-hand “/”, that contains all files and directories on the computer. This nested list of directories is called the “path”. In this case, it is an <strong>absolute</strong> path because it tells us how to get to this directory from the root.</p>
 <p>In order to move to another directory, we can use the command <code>cd</code>, which stands for “change directory”. If we wanted to move to the “shared” directory, we could type the <code>cd</code> command and the path to that directory.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="fundamentals-of-bash.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /shared</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="fundamentals-of-bash.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /shared</span></code></pre></div>
 <p>Once you have done this, verify that you are in the “shared” directory using the <code>pwd</code> command. In this case, “shared” is the <strong>parent</strong> directory of “data”.</p>
 <p>If we had to type a long directory path every time we wanted to change directories, it would be very tedious, especially with highly nested directories. Luckily, there is another way to navigate using <strong>relative</strong> paths. This means giving directions based on your current working directory. So, to move back to the “data” directory, instead of typing out the full path, we will simply give the directory name since it is located in our working directory.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="fundamentals-of-bash.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> data</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="fundamentals-of-bash.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> data</span></code></pre></div>
 <p>But what about going back to the “shared” directory? To do that, we need to use the special notation “..” which means the parent of a directory. So, to go back to the “shared” directory, use the following command.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="fundamentals-of-bash.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="fundamentals-of-bash.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..</span></code></pre></div>
 <p>Use <code>pwd</code> to make sure that you are working in the “shared” directory now. If you are in the “shared” directory, you don’t need to do anything until the paragraph “You can also give longer relative …”. If you aren’t in the “shared” directory, review what commands you used by pressing the up arrow and compare your history of commands to the directions above. Pressing the up arrow will show you a command you used, most recent first. Pressing it again will show you the command you used before that. You can keep hitting the up arrow to see previous commands up to the number saved by bash, which defaults to 500. Pressing the down arrow will take you back through down the history back to the most recent command and finally the prompt with anything you have typed without pressing enter. Now use an absolute path to move back into the “shared” directory: <code>cd /shared</code></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="fundamentals-of-bash.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /shared</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="fundamentals-of-bash.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /shared</span></code></pre></div>
 <p>You can also give longer relative paths by combining directions. To demonstrate this, let’s move to a directory a little further down the file structure: <code>/shared/data/tutorials</code></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="fundamentals-of-bash.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> data/tutorials/</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="fundamentals-of-bash.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> data/tutorials/</span></code></pre></div>
 <p>The directory “shared” which contains “data” also contains a directory named “home”. To move there from the “tutorials” directory, use the relative path “../../home”.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="fundamentals-of-bash.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../../home</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="fundamentals-of-bash.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../../home</span></code></pre></div>
 <p>Now, using a relative path, how can you get from <code>/shared/home</code> to a directory with files we will explore as we continue this lesson: <code>/shared/data/tutorials/terminal-basics</code>?</p>
 <hr />
 <details>
 <summary>
 ANSWER:
 </summary>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="fundamentals-of-bash.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../data/tutorials/terminal-basics</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="fundamentals-of-bash.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ../data/tutorials/terminal-basics</span></code></pre></div>
 </details>
 <hr />
 <p>Finally, one other special notation that you can use is <strong>~</strong> which stands for your home directory. You can always use <code>cd ~</code> to return to your home directory. You can also use relative paths from your home directory, like <code>cd ~/mystuff</code>, assuming that the “mystuff” directory exists. Home directories are computer specific, so we will discuss these more in the actual course when you have the CMDB-provided laptop.</p>
@@ -516,14 +516,14 @@ ANSWER:
 </details>
 <hr />
 <p>You should see three files in this directory. If there were any directories here, they would also be listed but there would be no way to tell the difference from the file names. To do that, we need more detail, which is provided by using the option “-l”, which stands for “long”. Let’s see what extra detail is provided.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="fundamentals-of-bash.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="fundamentals-of-bash.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div>
 <pre><code>total 14
 -rw-rw-rw- 1 0 0 105054 Aug  3 10:53 orders.tsv
 -rw-rw-rw- 1 0 0     45 Aug  3 10:53 ref.fa
 -rw-rw-rw- 1 0 0     45 Aug  3 10:53 ref.fa.bak</code></pre>
 <p>The <code>ls -l</code> command tells us about file permissions and several other attributes (don’t worry about these for now), the file size in bytes, the latest modification date, and the name. If you want easier to read file sizes, add the option “-h”, which will print a “human readable” size format.</p>
 <p>We can also use <code>ls</code> with a specific target, for example another directory. If we run the command on our parent directory, we can see what a directory looks like.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="fundamentals-of-bash.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> ..</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="fundamentals-of-bash.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> ..</span></code></pre></div>
 <pre><code>total 1
 drwxrwxrwx 1 0 0 4096 Aug  3 10:53 terminal-basics</code></pre>
 <p>The “d” at the left-hand side indicates that this is a directory, not a file.</p>
@@ -531,14 +531,14 @@ drwxrwxrwx 1 0 0 4096 Aug  3 10:53 terminal-basics</code></pre>
 <div id="moving-and-copying" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Moving and copying</h2>
 <p>What if we need to make a copy of a file or directory because we want to change something but keep a backup? To do this, we can use the <code>cp</code> command, short for copy. The command takes a target, the file you want to copy, and a destination. The destination can either be a directory (in which case the copied file will have the same name, but be located in a new additional location), or a new name (with or without a path). Unfortunately, the online terminal does not allow copying files, so do not type the following command, but if we wanted to copy the “ref.fa” file to “ref.fa.backup”, we would do the following within the “terminal-basics” directory.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="fundamentals-of-bash.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> ref.fa ref.fa.backup</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="fundamentals-of-bash.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> ref.fa ref.fa.backup</span></code></pre></div>
 <p>Then, if we were able to copy the file we could use the <code>ls</code> command to see the additional file in the directory.</p>
 <p>Copying a directory is similar but because directories can contain other things that need to be copied as well, you need to include the option “-R” for recursive. Unfortunately, the online terminal also does not allow copying directories, so do not type any of the following commands. If the online terminal did allow copying directories, it would look something like this:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="fundamentals-of-bash.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="fundamentals-of-bash.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div>
 <pre><code>total 1
 drwxrwxrwx 1 0 0 4096 Aug  3 12:30 terminal-basics</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="fundamentals-of-bash.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-R</span> terminal-basics new-basics</span>
-<span id="cb19-2"><a href="fundamentals-of-bash.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="fundamentals-of-bash.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> <span class="at">-R</span> terminal-basics new-basics</span>
+<span id="cb20-2"><a href="fundamentals-of-bash.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span></span></code></pre></div>
 <pre><code>total 2
 drwxrwxrwx 1 0 0 4096 Aug  3 12:30 terminal-basics
 drwxrwxrwx 1 0 0 4096 Aug  3 12:31 new-basics</code></pre>
@@ -572,7 +572,7 @@ ANSWER for moving it to the parent directory with a new name my_ref.fa:
 <div id="head-and-tail" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> Head and tail</h2>
 <p>There are many bash commands besides those we’ve seen: <code>pwd</code>, <code>cd</code>, <code>ls</code>, <code>cp</code>, and <code>mv</code>. Right now we will focus on two more, <code>head</code> and <code>tail</code>. The <code>head</code> command reads through a text file, printing out the first <em>n</em> lines, where <em>n</em> is an arbitrary number passed as an option with <code>-n</code>. If <em>n</em> is not specified, <code>head</code> defaults to 10 lines. <code>tail</code> is similar but instead of printing out the first <em>n</em> lines, it prints out the <strong>last</strong> <em>n</em> lines. Try both of these out on the file “orders.tsv”.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb24-1"><a href="fundamentals-of-bash.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> orders.tsv</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb25-1"><a href="fundamentals-of-bash.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> orders.tsv</span></code></pre></div>
 <p>What do you get for output from <code>head</code>?</p>
 <hr />
 <details>
@@ -591,7 +591,7 @@ ANSWER:
 4       1       Steak Soft Tacos</code></pre>
 </details>
 <hr />
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="fundamentals-of-bash.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> orders.tsv</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="fundamentals-of-bash.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> orders.tsv</span></code></pre></div>
 <p>What do you get for output from <code>tail</code>?</p>
 <hr />
 <details>
@@ -611,7 +611,7 @@ ANSWER:
 </details>
 <hr />
 <p>If you were to forget the default number of lines or need more information about <code>head</code>, you can get more information from the <em>command help</em>, a detailed list of options and arguments and the usage statement. To see the command help for <code>head</code>, use the option “–help”.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb28-1"><a href="fundamentals-of-bash.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">--help</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="fundamentals-of-bash.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">--help</span></span></code></pre></div>
 <pre><code>Usage: head [OPTION]... [FILE]...
 Print the first 10 lines of each FILE to standard output.
 With more than one FILE, precede each with a header giving the file name.
