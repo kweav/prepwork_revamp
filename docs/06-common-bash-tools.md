@@ -22,12 +22,20 @@ cd, pwd, ls, mv, cp, head, tail, --help, man
 
 ## Resources
 
-* This chapter will be performed online. UPDATE based on issue reported by students. Please follow these steps before beginning this chapter:
-    1. Please open [this link](https://sandbox.bio/tutorials?id=terminal-basics)
-    2. In the black window with the prompt `guest@sandbox$`, type `ls`
+<div class = "notice">
+
+This chapter will be performed online. 
+
+UPDATE based on issue reported by students. In order to load the sample data from the Terminal Basics tutorial provided by this website, please follow these steps before beginning this chapter:
+    1. [Load this link](https://sandbox.bio/playground)
+    2. Click on "Tutorials" at the top right of the screen, followed by "Terminal Basics" in the dropdown menu.
+    3. In the black window with the prompt `guest@sandbox$`, type `ls`
     3. Hit `<Enter>` or `<return>`.
-    4. Then open [the link for the bash sandbox playground](https://sandbox.bio/playground) or refresh the webpage if you already have opened the link. 
-* Use of this online resource avoids issues that can arise from people using different operating systems and having trouble finding the terminal on their own computers. Once you open the second link, you should see a black window with the prompt `guest@sandbox$`. This is the bash interface.
+    4. Click on "Playgrounds" at the top right of the screen, followed by "Command Line" in the dropdown menu.
+
+</div>
+    
+* Use of this online resource avoids issues that can arise from people using different operating systems and having trouble finding the terminal on their own computers. Once you have loaded the Command Line Playground, you should see a black window with the prompt `guest@sandbox$`. This is the bash interface.
 * The [Bash syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/unix.html) may be useful to refer to, especially throughout the course.
 
 ## Navigation
