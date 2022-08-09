@@ -1,0 +1,110 @@
+
+
+# Applied Python Exercise 7
+
+Reminder: you will turn in your final script from this chapter by emailing it to your TA Kate Weaver (kweave23@jhu.edu). Please name it LASTNAME_tail.py (replacing "LASTNAME" with your last name).
+
+## Goal -- Print the desired number of lines from the end of the input file
+
+The goal of this chapter is to edit your recreated `head` program from the fifth Applied Python Exercise chapter such that it `tail`s an input file. As such, it should print the desired number of lines from the end of the input file, rather than from the beginning. 
+
+## Learning Objectives
+
+After going through this chapter, students should be able to:
+
+* State the sub-steps needed to meet the coding goal
+* Use the following datatypes, structures, and fundamentals to meet the coding goal:
+  * importing modules
+  * variable assignment
+  * list indexing
+  * list length
+  * integer conversion
+  * opening a file
+  * list initialization
+  * for loop
+  * appending to a list
+  * list slicing
+  * logical expression
+  * conditional statement
+  * printing output
+  
+## Coding Blueprint
+
+We recommend that you start with the final pseudocode from the fifth Applied Python Exercise chapter: 
+
+First, we need to SET the input file <br />
+Next, IF the user-specified a desired number of lines to display <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines <br />
+END IF <br />
+OTHERWISE <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines to a default <br />
+END OTHERWISE <br />
+Then, FOR every line in the open file <br />
+&nbsp;&nbsp;  IF a desired line (by its numerical position) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    PRINT the line <br />
+&nbsp;&nbsp;  END IF <br />
+END FOR <br />
+
+Edit this pseudocode such that it reflects what you want to do. Keep lines that are still applicable, remove lines that are no longer applicable, add lines that you need.
+
+Consider that two separate `for` loops could be useful for this task. One that extracts and stores every line from the file and then one that prints every line from a subset of those that you've stored with the first loop.
+
+We've provided some pseudocode with blanks that we think will be helpful for you to fill out if you're unsure of where to start or next steps:
+
+***
+<details><summary> Pseudocode with blanks: </summary>
+
+First, we need to SET the input file <br />
+Next, IF the user-specified a desired number of lines to display <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines <br />
+END IF <br />
+OTHERWISE  <br />
+&nbsp;&nbsp;  THEN we need to SET the desired number of displayed lines to a default <br />
+END OTHERWISE <br />
+___ a storage list for lines in the file <br />
+Then, FOR every line in the open file <br />
+&nbsp;&nbsp;  ~~IF a desired line (by its numerical position)~~ <br />
+&nbsp;&nbsp;&nbsp;&nbsp;    ~~PRINT the line~~ <br />
+&nbsp;&nbsp;  ~~END IF~~ <br />
+&nbsp;&nbsp;  ___ the line to the storage list <br />
+END FOR <br />
+
+___ a subset of the storage list to be the last ____ items in the storage list <br />
+___ every line in the subset <br />
+&nbsp;&nbsp;  _____ the line <br />
+END FOR <br />
+
+</details>
+***
+
+## Building the Code
+
+**Create a new Python script**
+
+Much like how we used the base pseudocode from the fifth Applied Python Exercise chapter, start with the final code that you have from the fifth Applied Python Exercise chapter. Reuse lines that are applicable to the task at hand and write new code for the new parts of the program that you specified in your new pseudocode. Consult the learning objectives above to see what data types, structures, and fundamentals we think you will need to build the code. Also, consult the notes on Python fundamentals. Remember to indent when appropriate.
+
+**Use the command line or the Run button in the online interface to run the Python script and look at the output.**
+
+**Submit your completed script**
+
+<!--
+## Completed Intended Goal Code
+
+
+```python
+#USAGE: LASTNAME_tail.py input_filename [desired_number_of_lines]
+import sys
+filename = sys.argv[1]
+if len(sys.argv) > 2:
+  n_lines = int(sys.argv[2])
+else:
+  n_lines = 10
+line_list = []
+for line in open(filename):
+  line_list.append(line)
+
+last_n_lines = line_list[len(line_list)-n_lines:]
+for line in last_n_lines:
+    print(line.strip('\r\n'))
+```
+-->

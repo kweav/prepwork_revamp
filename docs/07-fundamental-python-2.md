@@ -1,0 +1,309 @@
+
+
+# Fundamentals of Python - Expressions, Built-in Functions, and Conditionals
+
+## Goal
+
+Understanding how to compare variables and selectively execute code
+
+## Learning objectives
+
+After going through this chapter, students should be able to:
+
+* Perform equality and inclusion testing between variables
+* Demonstrate how to use common built-in functions, including printing and opening files
+* Describe the use of conditionals to make choices within scripts
+
+## Operators and expressions
+
+What is an operator? In python, an operator is some special symbol or keyword that designates that some specific computation should be performed. These include 
+
+* arithmetic operators for addition (`+`), subtraction (`-`), division (`/`), etc.
+* comparison operators for testing equality of any value as well as whether numbers are greater than, less than, or equal to other numbers (`==` )
+* logical operators for boolean values (`and`, `not`, `or`, etc.).   
+
+What is an expression? In python, an expression is some combination or sequence of values or variables and operators.  
+
+What is a built-in function? There are common built-in functions that are available to use in Python to perform specific tasks. These functions have names which are followed by parentheses. If the function takes any arguments that affect its behavior, these are included inside the parentheses when calling or using the function. Examples of built-in functions include `print()`, `len()`, etc.
+
+## Testing equality and inclusion
+
+You can test whether the value of two objects are equal to one other by testing equality with a double equals sign (`==`) operator. Therefore an expression to test equality would look like the following pattern:
+
+`variable1 == variable2`
+
+Testing equality expressions are evaluated by Python, (i.e., Python finds the value of the expression) and return a boolean, so either `True` or `False`.
+
+Here's an example of a testing equality expression that will be evaluated as `True`.
+
+
+```python
+3 == 3.0
+```
+
+```
+## True
+```
+
+And here's an example of a testing equality expression that will be evaluated as `False`.
+
+
+```python
+dog = "Gibbs"
+dog == "dog"
+```
+
+```
+## False
+```
+
+### `in`
+
+You can test whether some item is contained in a list or as a dictionary key, etc. using the `in` operator. Again, an expression that contains the `in` operator will be evaluated and return either `True` or `False`.
+
+The structure for this expression follows this pattern:
+
+`variable in variable_for_data_structure`
+
+
+```python
+testlist = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+7 in testlist
+```
+
+```
+## False
+```
+
+
+```python
+testlist = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+8 in testlist
+```
+
+```
+## True
+```
+
+
+```python
+dog_favorite_toys = {"Gibbs": "football",
+                     "Duke": "squirrel",
+                     "Barnaby": "frisbee"}
+"Gibbs" in dog_favorite_toys
+```
+
+```
+## True
+```
+
+### `not` or `!`
+
+If you add `not` before `in`, you can test whether an item is not contained in some collection of items. While `7 in testlist` was False, because 7 was not in the collection of items in `testlist`, `7 not in testlist` should be True, because 7 is in fact not in the `testlist` collection.
+
+
+```python
+testlist = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+7 not in testlist
+```
+
+```
+## True
+```
+
+Or if you have a boolean variable `variableName` and you put `not` in front of the variable, then `not variableName` will take on the opposite value of `variableName`. Below `a` is a standin for the boolean variable.
+
+| a | not a |
+|:-:|:-----:|
+| T |   F   |
+| F |   T   |
+
+In a similar manner, while testing for equality or inequality of two variables or values, rather than using the double equals (`==`) to test for equality, you can use an exclamation point and a single equals sign (`!=`) to test if two variables or values are not equal.
+
+And while the value of the variable `dog` didn't equal the string `"dog"`, and the expression `dog == "dog"` evaluated to False, `dog != "dog"` will evaluate to True. 
+
+
+```python
+dog != "dog"
+```
+
+```
+## True
+```
+
+### `and`
+
+Sometimes you need to chain expressions together to see if multiple things are True. You can use the `and` operator in between the expressions. Below the letters `a` and `b` are stand-ins for the expressions.
+
+| a | not a | b | a and b |
+|:-:|:-----:|:-:|:-------:|
+| T |   F   | T |    T    |
+| T |   F   | F |    F    |
+| F |   T   | T |    F    |
+| F |   T   | F |    F    |
+
+### `or`
+
+Alternatively, you may chain expressions together to see if at least one is True. You can use the `or` operator in between the expressions. Below the letters `a` and `b` are stand-ins for the expressions.
+
+| a | not a | b | a and b | a or b |
+|:-:|:-----:|:-:|:-------:|:------:|
+| T |   F   | T |    T    |    T   |
+| T |   F   | F |    F    |    T   |
+| F |   T   | T |    F    |    T   |
+| F |   T   | F |    F    |    F   |
+
+## Common Built-in Functions
+
+### `print()`
+
+The `print()` function is used to display formatted messages onto the screen or in a file. The function is also very useful in debugging to see what values certain variables are, their type, their length, etc when code isn't behaving as expected.
+
+
+```python
+print("Hello, World!")
+```
+
+```
+## Hello, World!
+```
+
+
+```python
+the_temperature_today = 88
+print("The temperature outside in Baltimore today is", the_temperature_today, "degrees F.")
+```
+
+```
+## The temperature outside in Baltimore today is 88 degrees F.
+```
+
+### `open()`
+
+In Python, you can open a file with data to read by passing the filename to the `open()` function. We will be using this function as we recreate the `head` bash tool later.
+
+### `len()`
+
+Data types and structures that are collections of items (e.g., a string which is a collection of characters strung together; a list which is a collection of items, a set which is a collection of non-duplicated items, and a dictionary which is a collection of key-value pairs) have a length associated with them. This is the number of items in the collection. you can find the length of variables of these types using the Python function `len()`.
+
+
+```python
+len("acgt")
+```
+
+```
+## 4
+```
+
+```python
+dog_favorite_toys = {"Gibbs": "football",
+                     "Duke": "squirrel",
+                     "Barnaby": "frisbee"}
+len(dog_favorite_toys)
+```
+
+```
+## 3
+```
+
+```python
+len([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144])
+```
+
+```
+## 13
+```
+
+## Conditionals
+
+Conditional statements are used in python to check the value of a boolean variable or expression and specify what behavior or path of steps the script should follow depending on whether the boolean/expression was True or False. An example of an everyday conditional you may think through is like the following:
+
+I am about to leave. Is it raining outside right now? <br />
+Yes --> Grab an umbrella and leave <br />
+
+In Python, this could look something like the following if we have the boolean variable `rainingNow`.
+
+
+```python
+rainingNow = True
+if rainingNow:
+  print('Grab the umbrella')
+```
+
+```
+## Grab the umbrella
+```
+
+In the above code example, the boolean variable for whether it is currently raining is set to True, and the indented code under the `if` statement is executed. Also note that the conditional statement ends with ":". This is required to denote the end of the conditional statement.
+
+
+```python
+rainingNow = False
+if rainingNow:
+  print("Grab the umbrella")
+```
+
+In the same above code example, the only change is that the boolean variable for whether it is currently raining is set to False, and the indented code under the `if` statement is not executed/you don't see the print statement.
+
+In general, when using conditional statements, the boolean values are checked and anything indented under True boolean expressions/variables wll be executed linearly by the script. In python, you can have an `if` statement ( `if booleanVariable:`) without an `else` statement. Or you can have an `if` statement followed by an `else` statement.  In that case, anything indented after the `else` statement will only be executed by the script if the value of the boolean variable is False.
+
+
+```python
+rainingNow = False
+if rainingNow:
+  print("Grab the umbrella")
+else:
+  print("Leave without the umbrella")
+```
+
+```
+## Leave without the umbrella
+```
+
+However, there may be times that there are other things to consider in addition to the initial `if` statement, things that you would want to think about when the initial if statement boolean variable or expression or condition is False. Let's extend the raining example. 
+
+I am about to leave. Is it raining outside right now? <br />
+Yes --> Grab an umbrella and leave <br />
+No --> Will it be raining at some point while I am outside? <br />
+&nbsp;&nbsp;&nbsp;&nbsp;Yes --> Grab an umbrella and leave <br />
+&nbsp;&nbsp;&nbsp;&nbsp;No --> leave <br />
+        
+In Python, this could look something like the following if we have the boolean variables `rainingNow` and `rainingLater`. We add an `elif` statement that will be checked if the first variable is False, but will be ignored if the first variable is True:
+
+
+```python
+rainingNow = True
+rainingLater = True
+if rainingNow:
+  print("Grab the umbrella for now")
+elif rainingLater:
+  print("Grab the umbrella for later")
+else:
+  print("Leave without the umbrella")
+```
+
+```
+## Grab the umbrella for now
+```
+
+This little code block asks if `rainingNow` is True. If it is, then the script will conclude that you should grab the umbrella, and it won't check the `elif` statement to see if that variable is True. If it is False, the script ignores what is indented under the `if rainingNow:` and will check the value of `rainingLater` variable. If that's True, the script will conclude you should grab the umbrella. But if that is also False, then, the script again ignores what is indented under the `elif rainingLater:` statement and the script goes to the else statement and concludes that you leave without the umbrella.
+
+
+```python
+rainingNow = False
+rainingLater = True
+if rainingNow:
+  print("Grab the umbrella for now")
+elif rainingLater:
+  print("Grab the umbrella for later")
+else:
+  print("Leave without the umbrella")
+```
+
+```
+## Grab the umbrella for later
+```
+
+Note here in this example how the print statements include the "for now" and "for later" phrases so we can distinguish which conditional statement was executed. Unique print statement usage is a tool you can use in debugging scripts.
+
+Sections 5.2 - 5.7 on conditionals in the Think Python resource are especially helpful in looking at conditional statements.

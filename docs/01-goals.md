@@ -1,0 +1,36 @@
+
+
+
+# Introduction
+
+## Learning objectives
+
+This set of prepwork chapters is intended to give you a brief exposure to the fundamentals of Bash and the Python programming language. By the time you've completed the prepwork, you should be able to
+
+* Navigate around a file system using the command line
+* Understand why we use both bash and Python in Computational Biology to analyze biological data
+* Understand the basic data types in Python
+* Open file streams
+* Use conditionals
+* Use a for-loop to iterate
+* Write print statements
+* Use pseudo-coding to identify problems/steps to a solution
+
+## Motivation
+
+We recognize that each of you will be joining the CMDB program with your own unique background. This means that prior exposure to coding will vary from never having used the command line to proficient coders.
+
+For those of you to whom this is all new, know that we understand that this will be challenging but we believe that each and every one of you are capable of learning to code and become capable at bioinformatics. If you feel lost, ask for help. Our goal is for every person in this class to get an A, but more importantly to feel confident in your ability to handle basic programming and bioinformatic tasks.
+
+For the people already comfortable with programming, there are still things to learn, especially with respect to applying your knowledge to bioinformatic problems. Sometimes you will hear things you already know. Just take it as review. But more importantly, take it as an opportunity to help pass on that experience to your fellow classmates.
+
+You all are a cohort of graduate students. The best way to succeed, not just in this class but in your graduate career is to form a support structure with your fellow students now. Helping each other succeed will make your time here more fruitful and enjoyable. You are all in this together and we are here to facilitate your learning, provide support, and encourage.
+
+## Assistance
+
+If at any time you encounter difficulty, please feel free to reach out to one of the TAs through Slack or email. This includes if you have questions or get an error while running through exercises in any chapter and need help debugging.
+
+* Kate Weaver kweave23@jhu.edu
+* Stephanie (Steph) Yan syan11@jhu.edu
+* Dylan Taylor dtaylo95@jhu.edu
+* Andrew Bortvin abortvi2@jhu.edu

@@ -1,0 +1,271 @@
+
+
+# Fundamentals of Python - Intro & Data Types
+
+## Goal
+
+Gain a basic familiarity with Python data types
+
+## Learning Objectives
+
+After going through this chapter, students should be able to:
+
+* Differentiate between the fundamental data types and structures in Python
+* Define mutability
+* Use variable assignment to store data/information within named variables
+
+## Resources
+
+* Recall that you can use the [online Python interface](https://www.online-python.com) to copy/paste or type in any of the examples within these Python fundamental chapters (Chapters 7-10). Then you can run the example to see what is does, as well as edit/rewrite it to see how changing the code changes the output.
+* [Object-Oriented Programming in Python is freely available documentation on programming in Python](https://python-textbok.readthedocs.io/en/1.0/index.html) and provides examples and thorough descriptions of fundamentals in Python programming. The table of contents is fairly well organized and has a lot of the buzz words contained in these fundamental python chapters. There is more information covered in this book than will be required knowledge for you, but as a whole it likely will be a helpful resource to consult during the course.  
+* [Think Python 2nd Edition is freely available as web-based book](https://greenteapress.com/thinkpython2/html/index.html) and explains lots of Python vocabulary, syntax, and operations. The table of contents is quite thorough in describing each chapter's contents. There is more information covered in this book than will be required knowledge for you, but as a whole it likely will be a helpful resource to consult during the course. This resource does not have an easy means to navigate back to the table of contents though.
+* There is a [python syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html) that may be useful, especially throughout the course. 
+* Other website resources will be linked throughout this chapter for specific topics. If a resource uses terminology or functionality that you are not expected to learn, we will note it after linking the resource. 
+* Use of all linked resources is optional but strongly recommended. 
+
+
+## Syntax
+
+Python makes use of indentation to define blocks of code. This means that you cannot mix spaces and tabs (4 spaces are recommended). This makes Python easy to read, but requires you to keep track of the indentation level when things become very nested.
+
+## Data types and structures
+
+"Data" is information -- information that you want to process or perform operations on, simplify, visualize, etc. This information must be stored within Python scripts or else read in from files (`csv`, `txt`, etc.). Python stores and represents the data as different data types or within different structures. Another word for data in python is "object". You often want to explicitly make sure that the data is stored as a specific type so that you can perform specific operations on it (e.g., do specific things with or manipulate/analyze the data in a specific way). Math operations can be performed with integers or floats (two different "types" of numbers), but not strings. You can index with integers, but not floats, etc. Terms like these specific data types will be explained in more detail next. Terms like "index" will be explained in more detail in a few sections.
+
+There are many data types and structures that are used in Python. 
+
+### Integers: 
+
+  * Integers are whole numbers 
+  * These whole number are typed with just the numbers and do not include commas (`,`) or periods (`.`).
+  * Examples: 
+    * -2
+    * 181
+    * 10000056
+    * 0
+    
+### Floats:
+
+  * Floats are numbers that have fractional or decimal parts. 
+  * These are typed with numbers and do have periods (`.`) or forward slashes (`/`) in them.
+  * Examples:
+    * -2.5
+    * 8/2
+    * 79/3
+    
+### Strings: 
+
+  * Strings are words, phrases, or just single characters that are strung together and enclosed by single (`'`) or double (`"`) quotes.
+  * Examples:
+    * "acgt"
+    * "Banana"
+    * "Hello, World!"
+    * "1"
+    * 'The quick brown fox jumped over the lazy Gibbs'
+
+
+### Booleans:
+
+  * Booleans are variables that store `True` or `False`. 
+  * Unlike integers,  floats, and strings which can have many possible values, data that is a boolean data type is either `True` or `False`. 
+  
+### Lists: 
+  
+  * Lists are a data structure, specifically, collections of items that are enclosed in brackets. ( `[` and `]` ).
+  * In Python, lists can be homogeneous, and contain items that are all the same data type (e.g., a list of strings or a list of integers); or lists can be heterogeneous, containing items that are different data types.
+  * In Python, lists are also ordered, meaning that the elements or items contained in the list have a specific position associated with them.
+  * Examples:
+    * [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+    * ["B", "a", "n", "a", "n", "a"]
+    * ["a", 1, "c", 0, "g", 1, "t", 1]
+    * ["Hello,", "World!"]
+    * ["The", "quick", "brown", "fox", "jumped", "over", "the", "lazy", "Gibbs"]
+
+### Sets: 
+  * Sets are another data structure, specifically, collections of unique (or non-duplicated) items that are enclosed in curly braces ( `{` and `}` ).
+  * To make a list into a set, the repeated items from the list are removed. For example, the list ["B", "a", "n", "a", "n", "a"] would be the set {"B", "a", "n"}. One super cool thing is if you define your set to be {"B", "a", "n", "a"}, Python will simplify it be {"B", "n", "a"}. (Also, note this is an example of how the set is unordered.)
+  * Sets are useful if you want to track all the unique elements present in a large dataset and don't care if or how many times each element is repeated.
+  * Note that sets do not have any order so if you print a set out, the order of elements may change
+  
+### Dictionaries: 
+
+  * Dictionaries are another Python data structure, specifically collections of paired key,value items that are enclosed in curly braces. ( `{` and `}` ). 
+  * By paired key,values we mean that a specific key is used to reference some value. For example, in the following dictionary `dog_favorite_toys`, `"Gibbs"` is a key used to refer to the value `"football"` because his favorite toy is a squeaking football.
+  
+
+```python
+dog_favorite_toys = {"Gibbs": "football",
+                     "Duke": "squirrel",
+                     "Barnaby": "frisbee"}
+```
+  
+  * What previously listed data type is each of the keys and values within that dictionary?
+    
+    <details><summary>Answer</summary>
+    Strings
+    </details>
+  
+  * Note that the key and value in a pair are separated by a colon (`:`) and the pairs are separated from each other by a comma (`,`)
+  * While sets are useful if you want to track all the unique elements present in a large dataset but don't care if or how many times each element is repeated, dictionaries allow you to track the presence and associate further information like how many times the element is present. The key would be the element (like a gene ID), and the value would the number of times that element (gene ID) is present in the dataset. The key has to be unique within the dictionary. The values may not be unique, like multiple gene IDs may be present in the dataset the same number of times.
+  * Like sets, dictionaries do not have an order and are more like a jumbled bucket of information
+  
+### Data represented or stored as an unintended data type:
+
+Note: While we know that -2 is an integer, if you represent this integer in the following ways, it is not considered an integer by Python: 
+
+  * -2.0
+  * -2/1
+  * "-2.0"
+  
+In the first case, Python considers these representations to be floats, which can still be used for mathematical operations, but couldn't be used to index. 
+
+The second case is interpreted by Python as float division even in the case of two integers, one that divides evenly into the other. In order to do integer division, you need to use `//`. This tells Python to return an integer and drop any remainder.
+
+`5//2 = 2`
+
+In the third case, Python considers the data to be a string, and it cannot be used in mathematical operations unless it is converted to a numerical (integer or float) data type. Examples of converting with the `int()` and `float()` functions are available in the [Python syntax cheatsheet](http://bxlab.github.io/cmdb-bootcamp/cheatsheet/python.html) that was mentioned earlier. Often when reading data into Python from a file, numbers will be interpreted by python as strings and need to be converted to the correct data type.
+
+### Immutability
+
+What does it mean for a data type to be immutable? It means that the value of an object with that data type cannot be changed without creating a new object. 
+
+### Immutable data types
+
+* Strings
+* Integer
+* Float
+* Boolean
+
+All other listed data types and structures from the previous section are mutable or can be changed. Practically speaking, Python is smart enough to recreate a variable but reuse the variable name when needed, such as 
+
+`A = A + 1`
+
+## Variables
+
+What are variables? A Python variable is a symbolic name that is a reference to a data object. Once a data object is assigned to a variable, you can refer to the object by that name, retrieving it many times. While data objects can exist in Python without being stored in variables, you can't reference and retrieve the data repeatedly without storing it in a variable. Within Python, you can have many variables each storing different values, and you distinguish between these variables according to their names.
+
+The variable name is set within a variable assignment statement. We use an `=` (equals sign) to store data in a specific variable, associating that variable name with the value of the data. Then the variable can be referenced throughout a script. To store data in a variable, the variable name is on the left of the equals sign, and the data is on the right, like the following pattern:
+
+`variable_name =  "some data"`
+
+You've already seen an example of this with the dictionary `dog_favorite_toys` above. The data we are storing is saved in a variable named dog_favorite_toys. By using variables to store data, you can reference the variable later and use or modify the data stored in the variable. Assigning a value to a variable name is also called "defining" a variable or "initializing" a variable. 
+
+This variable assignment statement is considered an "expression" in Python. We'll discuss more expressions in the next section of this chapter.
+
+Variables can be overwritten, either intentionally or unintentionally. So for an example intentionally changing a variable's value, consider that you may be looking through results of a genetic screen, wondering if a specific gene of interest was affected by the screen. You would store the gene of interest in a variable named `gene_of_interest`, and you set a boolean variable `gene_found` to `False` because you don't know if the gene of interest is in the large file. The script then looks through the file as long as the gene of interest isn't found (and `gene_found` is `False`). Once the script finds the gene of interest, you want to overwrite the `gene_found` variable or change its value to `True`.
+
+
+```python
+gene_of_interest = "DENN1B"
+gene_found = False
+#Lots of other code that makes the script load and look through a large file
+#While looking through the file, the script finds the gene_of_interest
+#Since the gene was found, overwrite the gene_found variable to be True and stop looking through the file
+gene_found = True
+```
+
+For an example of unintentionally changing a variable's value, you may reuse a variable name later in a script. Then that variable will no longer reference the value which was stored earlier.
+
+What can you name a variable? Anything? 
+
+  * Variable names should be meaningful and provide a description of what the variable contains. (However, comments within code can be used when defining a variable to accomplish this, especially if variable names are becoming unnecessarily long.)
+  * Note that while the name of the variable should be meaningful, the name doesn't matter in how Python treats the variable. I could name a variable `filename` and store an integer in it and Python will treat the variable as the numerical value it has, not a string filename like its name suggests.  
+  * Variable names can contain numbers (e.g., 0, 1, 2, ...), but they cannot start with numbers. (i.e., `file1` is an acceptable variable name, but `1file` is not)
+  * There are "keywords" in Python 3 that are used in expressions and have very specific functionality associated with them. They cannot be used as variable names. You don't need to memorize the list, but you [can find the list of keywords here](https://docs.python.org/3/reference/lexical_analysis.html#keywords)
+  * The case of the variable is important. `myVariable` is a different variable name than `myvariable`. 
+  * It is acceptable to use a combination of upper and lowercase letters in variable names as well as underscores (`_`). This can be helpful for longer variable names like `gene_of_interest`.  
+
+## A deeper dive into lists
+
+Let's revisit lists. While we've seen how to create them, we also need to know how to alter them. Since a list is a mutable data type, we can alter it without being recreated.
+
+In order to change a single element of a list, you simply need to reference the specific position using its "index".
+
+
+```python
+mylist = [1, 2, 3, 4]
+mylist[0] = "a"
+print(mylist)
+```
+
+```
+## ['a', 2, 3, 4]
+```
+
+You'll notice that the position numbering starts at zero instead of one. We'll talk more about indexing later.
+
+What about adding items to a list? Lists have several built-in methods (a function built-in to a class, and yes, a list is a class. It's an object-oriented langauge thing). We will be using the `append` method.
+
+
+```python
+mylist.append(5)
+print(mylist)
+```
+
+```
+## ['a', 2, 3, 4, 5]
+```
+
+As you can see, we've added an element to the end of our list. Another way to add elements is to combine lists. To do this, we can used the plus sign.
+
+
+```python
+print(mylist + [6, 7])
+```
+
+```
+## ['a', 2, 3, 4, 5, 6, 7]
+```
+
+But what if we wanted to put an item in the middle of the list? We could use the list method `insert`. This places the item in the given position and shifts everything higher than that over.
+
+
+```python
+mylist.insert(3, 'b')
+print(mylist)
+```
+
+```
+## ['a', 2, 3, 'b', 4, 5]
+```
+
+We can also look for items in a list. If we wanted to search for "b", we could use the `index` method.
+
+
+```python
+print(mylist.index("b"))
+```
+
+```
+## 3
+```
+
+This prints out `3`, the index of "b" in the list. We can also remove items from a list either with the `pop` or `remove` methods. `pop` takes an index of the item to be removed while `remove` takes the object that you want to remove.
+
+
+```python
+mylist.remove("b")
+print(mylist)
+```
+
+```
+## ['a', 2, 3, 4, 5]
+```
+
+```python
+mylist.pop(0)
+```
+
+```
+## 'a'
+```
+
+```python
+print(mylist)
+```
+
+```
+## [2, 3, 4, 5]
+```
+
+The last method we'll look at is `sort`. Like its name implies, this reorganizes the list in place. However, you cannot mix strings and numbers when sorting. So sorting `[3, 2, 1]` will work, but not `[3, 2, "a"]`.

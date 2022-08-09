@@ -1,0 +1,213 @@
+
+
+# Fundamentals of Python - Iteration, Indexing, and for Loops
+
+## Goal
+
+Understanding how to access data in Python data structures through indexing and `for` loops
+
+## Learning objectives
+
+After going through this chapter, students should be able to:
+
+* Define iteration
+* Define and use indexing
+* List 'iterable' data types
+* Use a `for` loop 
+
+## Iterating
+
+What is iterating and why do we want it? Iterating is going through a collection of items item-by-item. You likely want to use iterating if you want to apply the same set of operations on each item, or scan through the collection of items and catalog some information about the collection. We'll see an example of use a `for` loop structure to iterate through lists in a few sections.
+
+#### Iterable data types
+
+Iterable data types are those which are a collection of items that can be iterated through item-by-item:
+
+* Strings
+* List
+* Sets
+* Dictionaries
+
+## Indexing
+
+What is indexing? Indexing is a way to refer to individual elements in an ordered, iterable object (like lists or strings) by their position or location within the ordered, iterable object. An index or these positions/indices are specifically integer data types. Floats, strings, and other such data types cannot be used to index.
+
+The indexing "operator" in python is brackets, `[]`. So like the arithmetic, comparison, and logic operators discussed earlier, the indexing operator is a special symbol(s) with a pre-determined set of behaviors associated with it. The brackets directly follow the name of whatever ordered, iterable object you wish to index, and the index position(s) you wish to extract or change are included in between the brackets. If you try to use an indexing operator to index an unordered object like a set, you will see the following error: `TypeError: 'set' object is not subscriptable`.
+
+In Python, indexing starts from 0. So for a list of days of the week `dow = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]`, even though Sunday is the first day of the week, and the first element in the list, its position or index is 0. And Saturday, the last or 7th day of the week has an index or position of 6. If you try to index this list with a position of 1 (e.g., `dow[1]`), that position refers to Monday. And if you try to index this list with a position of 7 (e.g., `dow[7]`), you'll see the following error that says there is no index of 7 in the data structure or list `dow`: `IndexError: list index out of range`. If you want to extract an element from a list and store it in a variable, then you'd use the following pattern like we saw earlier with variable assignment: `last_day_of_week = dow[-1]`. Note that the list name, indexing operator, and index position are on the right side of the equals sign. Note that the `dow` list is unchanged compared to its original identity.
+
+Recall that lists are mutable which means that in addition to using indexing to extract information from the list, grabbing a list element that is in a specific position, you can also use indexing to change the list and overwrite information within the list, modifying a list element that is in a specific position. Becasue of this, if you want to modify a specific list position, where would the list name, indexing operator, and index position be in relation to the equals sign in a variable assignment expression? For example, let's say that you decide to outlaw Mondays and replace them with a second Thursday, the data that you want to store in the variable is `"Thursday"` and the variable that you want to store it in is `dow` but specifically `dow` at position 1, so `dow[1]`. Then your variable assignment statement would be `dow[1] = "Thursday"` and the `dow` list is changed compared to its original identity: `['Sunday', 'Thursday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']`
+
+### Slicing
+
+What is slicing? Slicing is a fancy way of indexing to extract a subset of elements from an interable object using a range of the positions within the ordered,iterable object.
+
+The starting index is inclusive and the ending index is exclusive. That means that every position corresponding to a number in between the starting index and the ending index will be included and the starting index position is included, but the ending index position is not included. This also means that you can tell how many positions you are requesting by subtracting the starting index from the ending index.
+
+Here's a really cool [suggested resource about slicing](https://towardsdatascience.com/the-basics-of-indexing-and-slicing-python-lists-2d12c90a94cf) with examples and visuals.
+
+  * Terms within this resource that you are not expected to understand include "list comprehension" and "numpy Arrays" and "pandas DataFrames". 
+  * Another term within this resource, `for` loops, will be explained in the next section of this chapter.
+
+## `for` loops
+
+`for` loops are a very commonly used tool for iterating in Python and are often necessary when processing file inputs. 
+
+A `for` loop has several components.
+
+1. The `for` statement
+2. The body of the `for` loop
+3. Any variable initialization before the `for` statement
+
+The first two of these three components are part of every `for` loop. The last component is only sometimes required. We'll begin by discussing the `for` statement and the body of the `for loop` and then will provide examples of loops that have variable initialization before the statement and those that do not. 
+
+### The `for` statement
+
+The `for` statement has 5 parts to it, in order:
+
+1. the word `for`
+2. the variable name for whatever is being extracted within each iteration or step of the `for` loop
+3. the word `in`
+4. the iterable variable name for the variable from which something is being extracted within each iteration or step of the `for` loop
+5. A colon, `:`
+
+There 3 common `for` statement patterns in python. Try to connect the 5 parts of the `for` statement to these patterns.
+
+1. `for value_from_iterable_variable in some_iterable_variable:`
+
+  This statement uses the above pattern (its setup broken down below) in order to work with the items contained in a collection of items item-by-item.
+  
+  * the word `for`
+  * then names the variable that each item from the `some_iterable_variable` will be stored in: `value_from_iterable_variable`
+  * the `in` membership operator, not to check containment like the expressions we saw previously, but to specify that we want items contained in the `some_iterable_variable`
+  * the name of the variable for the collection over which we want to iterate and extract its items item-by-item: `some_iterable_variable`
+  * A colon, `:`
+
+2. `for index in range(len(some_iterable_variable_name)):` or `for index in range(some_integer):`
+  
+  The `range()` function is a built-in Python function that is used to return a list of numbers from 0 up to, but not including some integer number. You would use this above statement pattern  (its setup broken down below) in order to work with the ordered position numbers rather than the items themselves that are stored in a collection of items. With indexing, you could still access the items item-by-item, but the variable name for whatever is being extracted is storing integers, the index positions, not the items.
+  
+  * the word `for`
+  * then names the variable that each item from the `range()` function will be stored in: `index`
+  * the `in` membership operator to specify that we want items contained in the list the `range()` function returns
+  * the `range()` function that returns a list of numbers either specified by the `len()` function and the length of `some_iterable_variable_name` or just some integer value (`some_integer`)
+  * A colon, `:`
+
+
+3. `for index, value_from_iterable_variable in enumerate(some_iterable_variable_name):`
+
+This third statement is a combination of the first two statements where for each iteration or step in the `for` loop, you have access to both the value and the index of the value from the iterable variable at the same time. This is achieved because the pattern uses a special base python function `enumerate()`. You can [read more about this function from the online python manual](https://docs.python.org/3/library/functions.html#enumerate), but suffice it to say that the function takes in an iterable object like a list or a string. Then rather than just returning the elements of the iterable object, it also returns the corresponding indices enumerated or counted out for each of the elements in the iterable object. 
+
+For example, if we have a list `test_list = ["daisy", "poppy", "daylily", "sunflower", "begonia"]`. In a `for` loop statement following the first pattern, `for flower in test_list:`, only elements from the list are returned, specifically to the variable `flower`. And the `flower` variable will be "daisy" in the first iteration of the for loop, "poppy" in the second iteration, "daylily" in the third iteration, "sunflower" in the fourth, and finally "begonia" in the fifth. If we instead follow the third pattern and use the `enumerate` function, specifically, `for index, flower in enumerate(test_list)`, the `flower` variable will take on the same values for each iteration of the loop as the first pattern example. The `index` variable will take on the values `0`, `1`, `2`, `3`, and `4` respectively.
+
+
+The setup is broken down below for this pattern
+  
+  * the word `for`
+  * the names the variables that each index and each item from the `some_iterable_variable_name` will be stored in: `index`, `value_from_iterable_variable`
+  * the `in` membership operator to specify that we want items contained in the output from `enumerate()`
+  * the `enumerate()` function with the `some_iterable_variable_name` over which we want to extract items and their indexes item-by-item.
+  * A colon, `:`
+
+
+### `for` loop body
+
+**Indentation**
+
+The `for` loop body is going to be indented below the `for` loop statement. This is necessary because indenting tells Python what is done as part of the `for` loop, and when to re-start the next iteration of the `for` loop.
+
+As an example, consider this for loop: 
+
+
+```python
+dogowners = ["Kate", "Dylan" ,"Mike", "Andrew"]
+for index, dogname in enumerate(["Gibbs", "Chela", "Barnaby", "Duke"]):
+    print("The owner of", dogname, "is", dogowners[index])
+```
+
+```
+## The owner of Gibbs is Kate
+## The owner of Chela is Dylan
+## The owner of Barnaby is Mike
+## The owner of Duke is Andrew
+```
+
+```python
+print("What other information should we share about these dogs? Size? Breed? Favorite toy?")
+```
+
+```
+## What other information should we share about these dogs? Size? Breed? Favorite toy?
+```
+
+First, notice that the print statement that is indented under the `for` statement will be printed four time, each one with a different dog name, and a different dog owner's name. But the print statement that is not indented under the `for` statement, and instead is aligned with it, will only be executed once, after the other 4 lines have printed and the `for` loop is complete.
+
+Second, let's go back a step and break down the pattern of the `for` statement.
+
+* Which pattern of the 3 was used?
+* Why do you think that pattern was used?
+* Is there another pattern that could have been used as effectively? 
+
+<details><summary> Answers: </summary>
+
+* The third pattern
+* We wanted access to each list item and the position of each list item so that we could index a second matching list
+* The second pattern could be used just as effectively, and we would index both lists instead of just one.
+
+</details>
+
+
+Like with conditional statements, the order of execution within the body of the loop (all lines that are indented) follows a downwards linear pattern. Lines listed earlier/first will be executed first and lines listed later will be executed later. Once every iteration of the `for` loop is complete, then lines outside of the `for` loop will be executed, like how the final print statement that asks what other dog innformation should be shared is only displayed after the `for` loop body is complete.
+
+### initializing variables before the `for` loop
+
+An example of when you might want to initialzie variables before the `for` loop that will be edited within the `for` loop body is when you may want to count how many times a condition is met within a `for` loop. In such a case, you would initialize a variable before the for loop and then add one to the counter within the `for` loop body every time the condition is met.
+
+This condition could be as simple as number of times the for loop iterates and so you add one to the counter every single iteration:
+
+
+```python
+dow = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+counter = 0
+for day_of_week in dow:
+    counter = counter + 1
+print(counter)
+```
+
+```
+## 7
+```
+
+Or it may be more complex, like seeing if the day of the week starts with the letter T or S. Here we'll use the first pattern for the `for` statement because we'll want to have access to the actual day of the week name, and then within the `for` loop body, we'll use an if statement with two expressions returning True or False and an `or` logical operator between the two expressions. To see if the day of the week starts with the letter T or S, we'll use a python built-in function `startswith()`. Note that we're re-initializing the `counter` variable to 0 outside of the `for` loop and adding one every time the a or b expression evaluates to True.
+
+
+```python
+counter = 0
+dow = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+for day_of_week in dow:
+    if day_of_week.startswith("T") or day_of_week.startswith("S"):
+        counter = counter + 1
+print(counter)
+```
+
+```
+## 4
+```
+
+### Pseudo-coding a for loop
+
+When writing pseudo-code and knowing that you'll need to use a `for` loop, we find that it's easiest to go back to the basic structure of a `for` loop.
+
+1. Start by filling in your `for` statement
+
+  * Write the `for`, `in`, and `:` and leave blanks for what you're extracting information from (part 5) and what you're extracting (part 3)
+  * Then start on part 5. 
+    * Add in the variable name for what you're extracting information from
+    * Do you want to index or just extract a value or do both?
+  * Then fill in informative variable names for part 3 of the `for` statement
+  
+2. Outline in words what you want to do within the `for` loop body
+
+  * remember to indent what should be done for each iteration of the loop
+  * use your `for` statement part 3 variable names as much as possible within this outline
+  * remember that order matters and the steps are going to be executed sequentially within the loop.
