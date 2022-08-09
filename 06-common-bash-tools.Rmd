@@ -24,7 +24,7 @@ cd, pwd, ls, mv, cp, head, tail, --help, man
 
 ## Resources
 
-* This chapter will be performed online. UPDATE based on student issue. Please follow these steps before beginning this chapter:
+* This chapter will be performed online. UPDATE based on issue reported by students. Please follow these steps before beginning this chapter:
     1. Please open [this link](https://sandbox.bio/tutorials?id=terminal-basics)
     2. In the black window with the prompt `guest@sandbox$`, type `ls`
     3. Hit `<Enter>` or `<return>`.
